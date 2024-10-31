@@ -384,7 +384,7 @@ class Invoice implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets date.
      */
-    public function getDate() : DateTimeInterface
+    public function getDate() : \DateTimeInterface
     {
         return $this->container['date'];
     }
@@ -392,7 +392,7 @@ class Invoice implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets date.
      *
-     * @param DateTimeInterface $date Defines a date and time according to <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a>.
+     * @param \DateTimeInterface $date Defines a date and time according to <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a>.
      */
     public function setDate(DateTimeInterface $date) : self
     {

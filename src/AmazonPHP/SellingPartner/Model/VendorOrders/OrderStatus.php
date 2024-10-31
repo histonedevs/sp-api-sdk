@@ -304,7 +304,7 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Gets purchase_order_date.
      */
-    public function getPurchaseOrderDate() : DateTimeInterface
+    public function getPurchaseOrderDate() : \DateTimeInterface
     {
         return $this->container['purchase_order_date'];
     }
@@ -312,7 +312,7 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Sets purchase_order_date.
      *
-     * @param DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in ISO-8601 date/time format.
+     * @param \DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in ISO-8601 date/time format.
      */
     public function setPurchaseOrderDate(DateTimeInterface $purchase_order_date) : self
     {

@@ -226,8 +226,8 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
     /**
      * Operation getPackingSlips.
      *
-     * @param DateTimeInterface $created_after Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param DateTimeInterface $created_before Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_after Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_before Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned (optional)
      * @param null|string $sort_order Sort ASC or DESC by packing slip creation date. (optional, default to 'ASC')
@@ -236,7 +236,7 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getPackingSlips(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = 'ASC', ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\PackingSlipList
+    public function getPackingSlips(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = 'ASC', ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\PackingSlipList
     {
         $request = $this->getPackingSlipsRequest($accessToken, $region, $created_after, $created_before, $ship_from_party_id, $limit, $sort_order, $next_token);
 
@@ -327,8 +327,8 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
     /**
      * Create request for operation 'getPackingSlips'.
      *
-     * @param DateTimeInterface $created_after Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param DateTimeInterface $created_before Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_after Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_before Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned (optional)
      * @param string $sort_order Sort ASC or DESC by packing slip creation date. (optional, default to 'ASC')
@@ -336,7 +336,7 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getPackingSlipsRequest(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, string $sort_order = 'ASC', ?string $next_token = null) : RequestInterface
+    public function getPackingSlipsRequest(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, string $sort_order = 'ASC', ?string $next_token = null) : RequestInterface
     {
         // verify the required parameter 'created_after' is set
         if ($created_after === null || (\is_array($created_after) && \count($created_after) === 0)) {

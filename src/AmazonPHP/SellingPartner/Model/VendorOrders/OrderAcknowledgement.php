@@ -247,7 +247,7 @@ class OrderAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets acknowledgement_date.
      */
-    public function getAcknowledgementDate() : DateTimeInterface
+    public function getAcknowledgementDate() : \DateTimeInterface
     {
         return $this->container['acknowledgement_date'];
     }
@@ -255,7 +255,7 @@ class OrderAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets acknowledgement_date.
      *
-     * @param DateTimeInterface $acknowledgement_date the date and time when the purchase order is acknowledged, in ISO-8601 date/time format
+     * @param \DateTimeInterface $acknowledgement_date the date and time when the purchase order is acknowledged, in ISO-8601 date/time format
      */
     public function setAcknowledgementDate(DateTimeInterface $acknowledgement_date) : self
     {

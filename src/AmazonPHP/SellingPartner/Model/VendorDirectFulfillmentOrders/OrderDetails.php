@@ -334,7 +334,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets order_date.
      *
-     * @param DateTimeInterface $order_date The date the order was placed. This  field is expected to be in ISO-8601 date/time format, for example:2018-07-16T23:00:00Z/ 2018-07-16T23:00:00-05:00 /2018-07-16T23:00:00-08:00. If no time zone is specified, UTC should be assumed.
+     * @param \DateTimeInterface $order_date The date the order was placed. This  field is expected to be in ISO-8601 date/time format, for example:2018-07-16T23:00:00Z/ 2018-07-16T23:00:00-05:00 /2018-07-16T23:00:00-08:00. If no time zone is specified, UTC should be assumed.
      */
     public function setOrderDate(DateTimeInterface $order_date) : self
     {

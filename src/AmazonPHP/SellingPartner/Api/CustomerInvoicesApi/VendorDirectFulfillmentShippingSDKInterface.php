@@ -42,7 +42,7 @@ interface VendorDirectFulfillmentShippingSDKInterface
      * Operation getCustomerInvoices.
      *
      * @param \DateTimeInterface $created_after Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned (optional)
      * @param null|string $sort_order Sort ASC or DESC by order creation date. (optional)
@@ -51,5 +51,5 @@ interface VendorDirectFulfillmentShippingSDKInterface
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getCustomerInvoices(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\CustomerInvoiceList;
+    public function getCustomerInvoices(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\CustomerInvoiceList;
 }

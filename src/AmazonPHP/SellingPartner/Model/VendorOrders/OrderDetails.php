@@ -351,7 +351,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets purchase_order_date.
      */
-    public function getPurchaseOrderDate() : DateTimeInterface
+    public function getPurchaseOrderDate() : \DateTimeInterface
     {
         return $this->container['purchase_order_date'];
     }
@@ -359,7 +359,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets purchase_order_date.
      *
-     * @param DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in ISO-8601 date/time format.
+     * @param \DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in ISO-8601 date/time format.
      */
     public function setPurchaseOrderDate(DateTimeInterface $purchase_order_date) : self
     {
@@ -391,7 +391,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets purchase_order_state_changed_date.
      */
-    public function getPurchaseOrderStateChangedDate() : DateTimeInterface
+    public function getPurchaseOrderStateChangedDate() : \DateTimeInterface
     {
         return $this->container['purchase_order_state_changed_date'];
     }
@@ -399,7 +399,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets purchase_order_state_changed_date.
      *
-     * @param DateTimeInterface $purchase_order_state_changed_date The date when current purchase order state was changed. Current purchase order state is available in the field 'purchaseOrderState'. Must be in ISO-8601 date/time format.
+     * @param \DateTimeInterface $purchase_order_state_changed_date The date when current purchase order state was changed. Current purchase order state is available in the field 'purchaseOrderState'. Must be in ISO-8601 date/time format.
      */
     public function setPurchaseOrderStateChangedDate(DateTimeInterface $purchase_order_state_changed_date) : self
     {

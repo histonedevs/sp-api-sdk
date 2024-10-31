@@ -232,7 +232,7 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets shipped_date.
      */
-    public function getShippedDate() : DateTimeInterface
+    public function getShippedDate() : \DateTimeInterface
     {
         return $this->container['shipped_date'];
     }
@@ -240,7 +240,7 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets shipped_date.
      *
-     * @param DateTimeInterface $shipped_date This field indicates the date of the departure of the shipment from vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Amazon destination warehouse, whichever is sooner. Shipped date mentioned in the Shipment Confirmation should not be in the future.
+     * @param \DateTimeInterface $shipped_date This field indicates the date of the departure of the shipment from vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Amazon destination warehouse, whichever is sooner. Shipped date mentioned in the Shipment Confirmation should not be in the future.
      */
     public function setShippedDate(DateTimeInterface $shipped_date) : self
     {

@@ -289,7 +289,7 @@ class OrderAcknowledgementItem implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets acknowledgement_date.
      *
-     * @param DateTimeInterface $acknowledgement_date The date and time when the order is acknowledged, in ISO-8601 date/time format. For example: 2018-07-16T23:00:00Z / 2018-07-16T23:00:00-05:00 / 2018-07-16T23:00:00-08:00.
+     * @param \DateTimeInterface $acknowledgement_date The date and time when the order is acknowledged, in ISO-8601 date/time format. For example: 2018-07-16T23:00:00Z / 2018-07-16T23:00:00-05:00 / 2018-07-16T23:00:00-08:00.
      */
     public function setAcknowledgementDate(DateTimeInterface $acknowledgement_date) : self
     {

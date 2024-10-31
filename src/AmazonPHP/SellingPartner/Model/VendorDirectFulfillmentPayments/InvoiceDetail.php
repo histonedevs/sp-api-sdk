@@ -305,7 +305,7 @@ class InvoiceDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets invoice_date.
      *
-     * @param DateTimeInterface $invoice_date invoice date
+     * @param \DateTimeInterface $invoice_date invoice date
      */
     public function setInvoiceDate(DateTimeInterface $invoice_date) : self
     {

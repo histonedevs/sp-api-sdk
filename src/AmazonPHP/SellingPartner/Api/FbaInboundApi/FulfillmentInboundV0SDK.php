@@ -44,7 +44,7 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function confirmPreorder(AccessToken $accessToken, string $region, string $shipment_id, DateTimeInterface $need_by_date, string $marketplace_id) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\ConfirmPreorderResponse
+    public function confirmPreorder(AccessToken $accessToken, string $region, string $shipment_id, \DateTimeInterface $need_by_date, string $marketplace_id) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\ConfirmPreorderResponse
     {
         \trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
 
@@ -138,12 +138,12 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * Create request for operation 'confirmPreorder'.
      *
      * @param string $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
-     * @param DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
+     * @param \DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace the shipment is tied to. (required)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function confirmPreorderRequest(AccessToken $accessToken, string $region, string $shipment_id, DateTimeInterface $need_by_date, string $marketplace_id) : RequestInterface
+    public function confirmPreorderRequest(AccessToken $accessToken, string $region, string $shipment_id, \DateTimeInterface $need_by_date, string $marketplace_id) : RequestInterface
     {
         // verify the required parameter 'shipment_id' is set
         if ($shipment_id === null || (\is_array($shipment_id) && \count($shipment_id) === 0)) {

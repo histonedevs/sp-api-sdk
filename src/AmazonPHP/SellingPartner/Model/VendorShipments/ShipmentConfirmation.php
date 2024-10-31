@@ -538,7 +538,7 @@ class ShipmentConfirmation implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets shipment_confirmation_date.
      */
-    public function getShipmentConfirmationDate() : DateTimeInterface
+    public function getShipmentConfirmationDate() : \DateTimeInterface
     {
         return $this->container['shipment_confirmation_date'];
     }
@@ -546,7 +546,7 @@ class ShipmentConfirmation implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets shipment_confirmation_date.
      *
-     * @param DateTimeInterface $shipment_confirmation_date date on which the shipment confirmation was submitted
+     * @param \DateTimeInterface $shipment_confirmation_date date on which the shipment confirmation was submitted
      */
     public function setShipmentConfirmationDate(DateTimeInterface $shipment_confirmation_date) : self
     {

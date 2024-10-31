@@ -189,7 +189,7 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets required_ship_date.
      *
-     * @param DateTimeInterface $required_ship_date time by which the vendor is required to ship the order
+     * @param \DateTimeInterface $required_ship_date time by which the vendor is required to ship the order
      */
     public function setRequiredShipDate(DateTimeInterface $required_ship_date) : self
     {

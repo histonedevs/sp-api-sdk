@@ -484,7 +484,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets transaction_date.
      */
-    public function getTransactionDate() : DateTimeInterface
+    public function getTransactionDate() : \DateTimeInterface
     {
         return $this->container['transaction_date'];
     }
@@ -492,7 +492,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets transaction_date.
      *
-     * @param DateTimeInterface $transaction_date date on which the transportation request was submitted
+     * @param \DateTimeInterface $transaction_date date on which the transportation request was submitted
      */
     public function setTransactionDate(DateTimeInterface $transaction_date) : self
     {
