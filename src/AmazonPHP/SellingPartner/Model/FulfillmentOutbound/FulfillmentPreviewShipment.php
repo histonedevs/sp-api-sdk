@@ -38,10 +38,10 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'earliest_ship_date' => '\DateTimeInterface',
-        'latest_ship_date' => '\DateTimeInterface',
-        'earliest_arrival_date' => '\DateTimeInterface',
-        'latest_arrival_date' => '\DateTimeInterface',
+        'earliest_ship_date' => 'DateTimeInterface',
+        'latest_ship_date' => 'DateTimeInterface',
+        'earliest_arrival_date' => 'DateTimeInterface',
+        'latest_arrival_date' => 'DateTimeInterface',
         'shipping_notes' => 'string[]',
         'fulfillment_preview_items' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentPreviewItem[]',
     ];
@@ -205,7 +205,7 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Gets earliest_ship_date.
      */
-    public function getEarliestShipDate() : ?\DateTimeInterface
+    public function getEarliestShipDate() : ?DateTimeInterface
     {
         return $this->container['earliest_ship_date'];
     }
@@ -213,9 +213,9 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Sets earliest_ship_date.
      *
-     * @param null|\DateTimeInterface $earliest_ship_date Date timestamp
+     * @param null|DateTimeInterface $earliest_ship_date Date timestamp
      */
-    public function setEarliestShipDate(?\DateTimeInterface $earliest_ship_date) : self
+    public function setEarliestShipDate(?DateTimeInterface $earliest_ship_date) : self
     {
         $this->container['earliest_ship_date'] = $earliest_ship_date;
 
@@ -225,7 +225,7 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Gets latest_ship_date.
      */
-    public function getLatestShipDate() : ?\DateTimeInterface
+    public function getLatestShipDate() : ?DateTimeInterface
     {
         return $this->container['latest_ship_date'];
     }
@@ -233,9 +233,9 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Sets latest_ship_date.
      *
-     * @param null|\DateTimeInterface $latest_ship_date Date timestamp
+     * @param null|DateTimeInterface $latest_ship_date Date timestamp
      */
-    public function setLatestShipDate(?\DateTimeInterface $latest_ship_date) : self
+    public function setLatestShipDate(?DateTimeInterface $latest_ship_date) : self
     {
         $this->container['latest_ship_date'] = $latest_ship_date;
 
@@ -245,7 +245,7 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Gets earliest_arrival_date.
      */
-    public function getEarliestArrivalDate() : ?\DateTimeInterface
+    public function getEarliestArrivalDate() : ?DateTimeInterface
     {
         return $this->container['earliest_arrival_date'];
     }
@@ -253,9 +253,9 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Sets earliest_arrival_date.
      *
-     * @param null|\DateTimeInterface $earliest_arrival_date Date timestamp
+     * @param null|DateTimeInterface $earliest_arrival_date Date timestamp
      */
-    public function setEarliestArrivalDate(?\DateTimeInterface $earliest_arrival_date) : self
+    public function setEarliestArrivalDate(?DateTimeInterface $earliest_arrival_date) : self
     {
         $this->container['earliest_arrival_date'] = $earliest_arrival_date;
 
@@ -265,7 +265,7 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Gets latest_arrival_date.
      */
-    public function getLatestArrivalDate() : ?\DateTimeInterface
+    public function getLatestArrivalDate() : ?DateTimeInterface
     {
         return $this->container['latest_arrival_date'];
     }
@@ -273,9 +273,9 @@ class FulfillmentPreviewShipment implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Sets latest_arrival_date.
      *
-     * @param null|\DateTimeInterface $latest_arrival_date Date timestamp
+     * @param null|DateTimeInterface $latest_arrival_date Date timestamp
      */
-    public function setLatestArrivalDate(?\DateTimeInterface $latest_arrival_date) : self
+    public function setLatestArrivalDate(?DateTimeInterface $latest_arrival_date) : self
     {
         $this->container['latest_arrival_date'] = $latest_arrival_date;
 

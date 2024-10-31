@@ -38,7 +38,7 @@ class TrackingEvent implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'event_date' => '\DateTimeInterface',
+        'event_date' => 'DateTimeInterface',
         'event_address' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\TrackingAddress',
         'event_code' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\EventCode',
         'event_description' => 'string',
@@ -207,7 +207,7 @@ class TrackingEvent implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets event_date.
      */
-    public function getEventDate() : \DateTimeInterface
+    public function getEventDate() : DateTimeInterface
     {
         return $this->container['event_date'];
     }
@@ -215,9 +215,9 @@ class TrackingEvent implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets event_date.
      *
-     * @param \DateTimeInterface $event_date Date timestamp
+     * @param DateTimeInterface $event_date Date timestamp
      */
-    public function setEventDate(\DateTimeInterface $event_date) : self
+    public function setEventDate(DateTimeInterface $event_date) : self
     {
         $this->container['event_date'] = $event_date;
 

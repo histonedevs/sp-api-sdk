@@ -49,8 +49,8 @@ class FulfillmentShipment implements \ArrayAccess, \JsonSerializable, \Stringabl
         'amazon_shipment_id' => 'string',
         'fulfillment_center_id' => 'string',
         'fulfillment_shipment_status' => 'string',
-        'shipping_date' => '\DateTimeInterface',
-        'estimated_arrival_date' => '\DateTimeInterface',
+        'shipping_date' => 'DateTimeInterface',
+        'estimated_arrival_date' => 'DateTimeInterface',
         'shipping_notes' => 'string[]',
         'fulfillment_shipment_item' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentShipmentItem[]',
         'fulfillment_shipment_package' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentShipmentPackage[]',
@@ -324,7 +324,7 @@ class FulfillmentShipment implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets shipping_date.
      */
-    public function getShippingDate() : ?\DateTimeInterface
+    public function getShippingDate() : ?DateTimeInterface
     {
         return $this->container['shipping_date'];
     }
@@ -332,9 +332,9 @@ class FulfillmentShipment implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets shipping_date.
      *
-     * @param null|\DateTimeInterface $shipping_date Date timestamp
+     * @param null|DateTimeInterface $shipping_date Date timestamp
      */
-    public function setShippingDate(?\DateTimeInterface $shipping_date) : self
+    public function setShippingDate(?DateTimeInterface $shipping_date) : self
     {
         $this->container['shipping_date'] = $shipping_date;
 
@@ -344,7 +344,7 @@ class FulfillmentShipment implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets estimated_arrival_date.
      */
-    public function getEstimatedArrivalDate() : ?\DateTimeInterface
+    public function getEstimatedArrivalDate() : ?DateTimeInterface
     {
         return $this->container['estimated_arrival_date'];
     }
@@ -352,9 +352,9 @@ class FulfillmentShipment implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets estimated_arrival_date.
      *
-     * @param null|\DateTimeInterface $estimated_arrival_date Date timestamp
+     * @param null|DateTimeInterface $estimated_arrival_date Date timestamp
      */
-    public function setEstimatedArrivalDate(?\DateTimeInterface $estimated_arrival_date) : self
+    public function setEstimatedArrivalDate(?DateTimeInterface $estimated_arrival_date) : self
     {
         $this->container['estimated_arrival_date'] = $estimated_arrival_date;
 

@@ -46,7 +46,7 @@ class OrderItemStatusReceivingStatus implements \ArrayAccess, \JsonSerializable,
     protected static array $openAPITypes = [
         'receive_status' => 'string',
         'received_quantity' => '\AmazonPHP\SellingPartner\Model\VendorOrders\ItemQuantity',
-        'last_receive_date' => '\DateTimeInterface',
+        'last_receive_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -259,7 +259,7 @@ class OrderItemStatusReceivingStatus implements \ArrayAccess, \JsonSerializable,
     /**
      * Gets last_receive_date.
      */
-    public function getLastReceiveDate() : ?\DateTimeInterface
+    public function getLastReceiveDate() : ?DateTimeInterface
     {
         return $this->container['last_receive_date'];
     }
@@ -267,9 +267,9 @@ class OrderItemStatusReceivingStatus implements \ArrayAccess, \JsonSerializable,
     /**
      * Sets last_receive_date.
      *
-     * @param null|\DateTimeInterface $last_receive_date The date when the most recent item was received at the buyer's warehouse. Must be in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date/time format.
+     * @param null|DateTimeInterface $last_receive_date The date when the most recent item was received at the buyer's warehouse. Must be in ISO-8601 date/time format.
      */
-    public function setLastReceiveDate(?\DateTimeInterface $last_receive_date) : self
+    public function setLastReceiveDate(?DateTimeInterface $last_receive_date) : self
     {
         $this->container['last_receive_date'] = $last_receive_date;
 

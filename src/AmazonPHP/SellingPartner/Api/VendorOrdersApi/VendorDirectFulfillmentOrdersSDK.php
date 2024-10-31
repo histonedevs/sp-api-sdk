@@ -222,8 +222,8 @@ final class VendorDirectFulfillmentOrdersSDK implements VendorDirectFulfillmentO
     /**
      * Operation getOrders.
      *
-     * @param \DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param \DateTimeInterface $created_before Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_before Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouse identifier for the fulfillment warehouse. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|string $status Returns only the purchase orders that match the specified status. If not specified, the result will contain orders that match any status. (optional)
      * @param null|int $limit The limit to the number of purchase orders returned. (optional)
@@ -234,7 +234,7 @@ final class VendorDirectFulfillmentOrdersSDK implements VendorDirectFulfillmentO
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getOrders(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?string $status = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null, bool $include_details = true) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\OrderList
+    public function getOrders(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?string $status = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null, bool $include_details = true) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\OrderList
     {
         $request = $this->getOrdersRequest($accessToken, $region, $created_after, $created_before, $ship_from_party_id, $status, $limit, $sort_order, $next_token, $include_details);
 
@@ -325,8 +325,8 @@ final class VendorDirectFulfillmentOrdersSDK implements VendorDirectFulfillmentO
     /**
      * Create request for operation 'getOrders'.
      *
-     * @param \DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param \DateTimeInterface $created_before Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_before Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouse identifier for the fulfillment warehouse. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|string $status Returns only the purchase orders that match the specified status. If not specified, the result will contain orders that match any status. (optional)
      * @param null|int $limit The limit to the number of purchase orders returned. (optional)
@@ -336,7 +336,7 @@ final class VendorDirectFulfillmentOrdersSDK implements VendorDirectFulfillmentO
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getOrdersRequest(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?string $status = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null, bool $include_details = true) : RequestInterface
+    public function getOrdersRequest(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?string $status = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null, bool $include_details = true) : RequestInterface
     {
         // verify the required parameter 'created_after' is set
         if ($created_after === null || (\is_array($created_after) && \count($created_after) === 0)) {

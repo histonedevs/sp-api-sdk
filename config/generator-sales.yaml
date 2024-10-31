@@ -1,5 +1,5 @@
 generatorName: php
-templateDir: sp-api/resources/php-amazon-selling-partner-api
+templateDir: resources/php-amazon-selling-partner-api
 additionalProperties:
   invokerPackage: AmazonPHP\SellingPartner
   srcBasePath: src/AmazonPHP/SellingPartner

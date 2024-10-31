@@ -39,8 +39,8 @@ class ScheduledDeliveryShipment implements \ArrayAccess, \JsonSerializable, \Str
      */
     protected static array $openAPITypes = [
         'scheduled_delivery_service_type' => 'string',
-        'earliest_nominated_delivery_date' => '\DateTimeInterface',
-        'latest_nominated_delivery_date' => '\DateTimeInterface',
+        'earliest_nominated_delivery_date' => 'DateTimeInterface',
+        'latest_nominated_delivery_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -204,7 +204,7 @@ class ScheduledDeliveryShipment implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets earliest_nominated_delivery_date.
      */
-    public function getEarliestNominatedDeliveryDate() : ?\DateTimeInterface
+    public function getEarliestNominatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['earliest_nominated_delivery_date'];
     }
@@ -212,9 +212,9 @@ class ScheduledDeliveryShipment implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets earliest_nominated_delivery_date.
      *
-     * @param null|\DateTimeInterface $earliest_nominated_delivery_date earliest nominated delivery date for the scheduled delivery
+     * @param null|DateTimeInterface $earliest_nominated_delivery_date earliest nominated delivery date for the scheduled delivery
      */
-    public function setEarliestNominatedDeliveryDate(?\DateTimeInterface $earliest_nominated_delivery_date) : self
+    public function setEarliestNominatedDeliveryDate(?DateTimeInterface $earliest_nominated_delivery_date) : self
     {
         $this->container['earliest_nominated_delivery_date'] = $earliest_nominated_delivery_date;
 
@@ -224,7 +224,7 @@ class ScheduledDeliveryShipment implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets latest_nominated_delivery_date.
      */
-    public function getLatestNominatedDeliveryDate() : ?\DateTimeInterface
+    public function getLatestNominatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['latest_nominated_delivery_date'];
     }
@@ -232,9 +232,9 @@ class ScheduledDeliveryShipment implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets latest_nominated_delivery_date.
      *
-     * @param null|\DateTimeInterface $latest_nominated_delivery_date latest nominated delivery date for the scheduled delivery
+     * @param null|DateTimeInterface $latest_nominated_delivery_date latest nominated delivery date for the scheduled delivery
      */
-    public function setLatestNominatedDeliveryDate(?\DateTimeInterface $latest_nominated_delivery_date) : self
+    public function setLatestNominatedDeliveryDate(?DateTimeInterface $latest_nominated_delivery_date) : self
     {
         $this->container['latest_nominated_delivery_date'] = $latest_nominated_delivery_date;
 

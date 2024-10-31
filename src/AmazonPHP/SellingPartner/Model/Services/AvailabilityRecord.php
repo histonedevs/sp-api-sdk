@@ -38,8 +38,8 @@ class AvailabilityRecord implements \ArrayAccess, \JsonSerializable, \Stringable
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'start_time' => '\DateTimeInterface',
-        'end_time' => '\DateTimeInterface',
+        'start_time' => 'DateTimeInterface',
+        'end_time' => 'DateTimeInterface',
         'recurrence' => '\AmazonPHP\SellingPartner\Model\Services\Recurrence',
         'capacity' => 'int',
     ];
@@ -205,7 +205,7 @@ class AvailabilityRecord implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets start_time.
      */
-    public function getStartTime() : \DateTimeInterface
+    public function getStartTime() : DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -213,9 +213,9 @@ class AvailabilityRecord implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets start_time.
      *
-     * @param \DateTimeInterface $start_time denotes the time from when the resource is available in a day in ISO-8601 format
+     * @param DateTimeInterface $start_time denotes the time from when the resource is available in a day in ISO-8601 format
      */
-    public function setStartTime(\DateTimeInterface $start_time) : self
+    public function setStartTime(DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 
@@ -225,7 +225,7 @@ class AvailabilityRecord implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets end_time.
      */
-    public function getEndTime() : \DateTimeInterface
+    public function getEndTime() : DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -233,9 +233,9 @@ class AvailabilityRecord implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets end_time.
      *
-     * @param \DateTimeInterface $end_time denotes the time till when the resource is available in a day in ISO-8601 format
+     * @param DateTimeInterface $end_time denotes the time till when the resource is available in a day in ISO-8601 format
      */
-    public function setEndTime(\DateTimeInterface $end_time) : self
+    public function setEndTime(DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 

@@ -38,9 +38,9 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'created_at' => '\DateTimeInterface',
+        'created_at' => 'DateTimeInterface',
         'inbound_plan_id' => 'string',
-        'last_updated_at' => '\DateTimeInterface',
+        'last_updated_at' => 'DateTimeInterface',
         'marketplace_ids' => 'string[]',
         'name' => 'string',
         'source_address' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\Address',
@@ -257,7 +257,7 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets created_at.
      */
-    public function getCreatedAt() : \DateTimeInterface
+    public function getCreatedAt() : DateTimeInterface
     {
         return $this->container['created_at'];
     }
@@ -265,9 +265,9 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets created_at.
      *
-     * @param \DateTimeInterface $created_at The ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param DateTimeInterface $created_at The time at which the inbound plan was created. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ssZ`.
      */
-    public function setCreatedAt(\DateTimeInterface $created_at) : self
+    public function setCreatedAt(DateTimeInterface $created_at) : self
     {
         $this->container['created_at'] = $created_at;
 
@@ -297,7 +297,7 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets last_updated_at.
      */
-    public function getLastUpdatedAt() : \DateTimeInterface
+    public function getLastUpdatedAt() : DateTimeInterface
     {
         return $this->container['last_updated_at'];
     }
@@ -305,9 +305,9 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets last_updated_at.
      *
-     * @param \DateTimeInterface $last_updated_at The ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param DateTimeInterface $last_updated_at The time at which the inbound plan was last updated. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ssZ`.
      */
-    public function setLastUpdatedAt(\DateTimeInterface $last_updated_at) : self
+    public function setLastUpdatedAt(DateTimeInterface $last_updated_at) : self
     {
         $this->container['last_updated_at'] = $last_updated_at;
 
@@ -327,7 +327,7 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets marketplace_ids.
      *
-     * @param string[] $marketplace_ids marketplace IDs
+     * @param string[] $marketplace_ids a list of marketplace IDs
      */
     public function setMarketplaceIds(array $marketplace_ids) : self
     {
@@ -387,7 +387,7 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets status.
      *
-     * @param string $status Current status of the inbound plan. Can be: `ACTIVE`, `VOIDED`, `SHIPPED`, 'ERRORED'.
+     * @param string $status The current status of the inbound plan. Possible values: `ACTIVE`, `VOIDED`, `SHIPPED`, `ERRORED`.
      */
     public function setStatus(string $status) : self
     {

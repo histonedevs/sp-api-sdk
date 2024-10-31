@@ -40,9 +40,9 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     protected static array $openAPITypes = [
         'availability_type' => 'string',
         'delivery_window_option_id' => 'string',
-        'editable_until' => '\DateTimeInterface',
-        'end_date' => '\DateTimeInterface',
-        'start_date' => '\DateTimeInterface',
+        'editable_until' => 'DateTimeInterface',
+        'end_date' => 'DateTimeInterface',
+        'start_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -263,7 +263,7 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets editable_until.
      */
-    public function getEditableUntil() : ?\DateTimeInterface
+    public function getEditableUntil() : ?DateTimeInterface
     {
         return $this->container['editable_until'];
     }
@@ -271,9 +271,9 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets editable_until.
      *
-     * @param null|\DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
+     * @param null|DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
      */
-    public function setEditableUntil(?\DateTimeInterface $editable_until) : self
+    public function setEditableUntil(?DateTimeInterface $editable_until) : self
     {
         $this->container['editable_until'] = $editable_until;
 
@@ -283,7 +283,7 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets end_date.
      */
-    public function getEndDate() : \DateTimeInterface
+    public function getEndDate() : DateTimeInterface
     {
         return $this->container['end_date'];
     }
@@ -291,9 +291,9 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets end_date.
      *
-     * @param \DateTimeInterface $end_date the end timestamp of the window
+     * @param DateTimeInterface $end_date the end timestamp of the window
      */
-    public function setEndDate(\DateTimeInterface $end_date) : self
+    public function setEndDate(DateTimeInterface $end_date) : self
     {
         $this->container['end_date'] = $end_date;
 
@@ -303,7 +303,7 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets start_date.
      */
-    public function getStartDate() : \DateTimeInterface
+    public function getStartDate() : DateTimeInterface
     {
         return $this->container['start_date'];
     }
@@ -311,9 +311,9 @@ class SelectedDeliveryWindow implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets start_date.
      *
-     * @param \DateTimeInterface $start_date the start timestamp of the window
+     * @param DateTimeInterface $start_date the start timestamp of the window
      */
-    public function setStartDate(\DateTimeInterface $start_date) : self
+    public function setStartDate(DateTimeInterface $start_date) : self
     {
         $this->container['start_date'] = $start_date;
 

@@ -1,0 +1,14 @@
+generatorName: php
+templateDir: resources/php-amazon-selling-partner-api
+additionalProperties:
+  invokerPackage: AmazonPHP\SellingPartner
+  srcBasePath: src/AmazonPHP/SellingPartner
+  modelPackage: Model\Finances20240619
+  packageName: Finances20240619
+files:
+  api.mustache:
+    templateType: API
+    destinationFilename: /Finances20240619SDK.php
+  api_interface.mustache:
+    templateType: API
+    destinationFilename: /Finances20240619SDKInterface.php

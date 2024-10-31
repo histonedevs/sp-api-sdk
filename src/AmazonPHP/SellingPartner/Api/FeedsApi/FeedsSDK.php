@@ -967,14 +967,14 @@ final class FeedsSDK implements FeedsSDKInterface
      * @param null|string[] $marketplace_ids A list of marketplace identifiers used to filter feeds. The feeds returned will match at least one of the marketplaces that you specify. (optional)
      * @param null|int $page_size The maximum number of feeds to return in a single call. (optional, default to 10)
      * @param null|string[] $processing_statuses A list of processing statuses used to filter feeds. (optional)
-     * @param null|\DateTimeInterface $created_since The earliest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is 90 days ago. Feeds are retained for a maximum of 90 days. (optional)
-     * @param null|\DateTimeInterface $created_until The latest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is now. (optional)
+     * @param null|DateTimeInterface $created_since The earliest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is 90 days ago. Feeds are retained for a maximum of 90 days. (optional)
+     * @param null|DateTimeInterface $created_until The latest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is now. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getFeeds operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getFeeds(AccessToken $accessToken, string $region, ?array $feed_types = null, ?array $marketplace_ids = null, ?int $page_size = 10, ?array $processing_statuses = null, ?\DateTimeInterface $created_since = null, ?\DateTimeInterface $created_until = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\Feeds\GetFeedsResponse
+    public function getFeeds(AccessToken $accessToken, string $region, ?array $feed_types = null, ?array $marketplace_ids = null, ?int $page_size = 10, ?array $processing_statuses = null, ?DateTimeInterface $created_since = null, ?DateTimeInterface $created_until = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\Feeds\GetFeedsResponse
     {
         $request = $this->getFeedsRequest($accessToken, $region, $feed_types, $marketplace_ids, $page_size, $processing_statuses, $created_since, $created_until, $next_token);
 
@@ -1069,13 +1069,13 @@ final class FeedsSDK implements FeedsSDKInterface
      * @param null|string[] $marketplace_ids A list of marketplace identifiers used to filter feeds. The feeds returned will match at least one of the marketplaces that you specify. (optional)
      * @param int $page_size The maximum number of feeds to return in a single call. (optional, default to 10)
      * @param null|string[] $processing_statuses A list of processing statuses used to filter feeds. (optional)
-     * @param null|\DateTimeInterface $created_since The earliest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is 90 days ago. Feeds are retained for a maximum of 90 days. (optional)
-     * @param null|\DateTimeInterface $created_until The latest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is now. (optional)
+     * @param null|DateTimeInterface $created_since The earliest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is 90 days ago. Feeds are retained for a maximum of 90 days. (optional)
+     * @param null|DateTimeInterface $created_until The latest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is now. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getFeeds operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail. (optional)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getFeedsRequest(AccessToken $accessToken, string $region, ?array $feed_types = null, ?array $marketplace_ids = null, int $page_size = 10, ?array $processing_statuses = null, ?\DateTimeInterface $created_since = null, ?\DateTimeInterface $created_until = null, ?string $next_token = null) : RequestInterface
+    public function getFeedsRequest(AccessToken $accessToken, string $region, ?array $feed_types = null, ?array $marketplace_ids = null, int $page_size = 10, ?array $processing_statuses = null, ?DateTimeInterface $created_since = null, ?DateTimeInterface $created_until = null, ?string $next_token = null) : RequestInterface
     {
         if ($feed_types !== null && \count($feed_types) > 10) {
             throw new InvalidArgumentException('invalid value for "$feed_types" when calling FeedsApi.getFeeds, number of items must be less than or equal to 10.');

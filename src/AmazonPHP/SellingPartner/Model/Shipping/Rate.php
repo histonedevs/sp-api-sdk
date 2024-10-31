@@ -41,7 +41,7 @@ class Rate implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
         'rate_id' => 'string',
         'total_charge' => '\AmazonPHP\SellingPartner\Model\Shipping\Currency',
         'billed_weight' => '\AmazonPHP\SellingPartner\Model\Shipping\Weight',
-        'expiration_time' => '\DateTimeInterface',
+        'expiration_time' => 'DateTimeInterface',
         'service_type' => '\AmazonPHP\SellingPartner\Model\Shipping\ServiceType',
         'promise' => '\AmazonPHP\SellingPartner\Model\Shipping\ShippingPromiseSet',
     ];
@@ -273,7 +273,7 @@ class Rate implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Gets expiration_time.
      */
-    public function getExpirationTime() : ?\DateTimeInterface
+    public function getExpirationTime() : ?DateTimeInterface
     {
         return $this->container['expiration_time'];
     }
@@ -281,9 +281,9 @@ class Rate implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Sets expiration_time.
      *
-     * @param null|\DateTimeInterface $expiration_time the time after which the offering will expire
+     * @param null|DateTimeInterface $expiration_time the time after which the offering will expire
      */
-    public function setExpirationTime(?\DateTimeInterface $expiration_time) : self
+    public function setExpirationTime(?DateTimeInterface $expiration_time) : self
     {
         $this->container['expiration_time'] = $expiration_time;
 

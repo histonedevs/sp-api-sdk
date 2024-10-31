@@ -40,7 +40,7 @@ class UpdateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
     protected static array $openAPITypes = [
         'marketplace_id' => 'string',
         'displayable_order_id' => 'string',
-        'displayable_order_date' => '\DateTimeInterface',
+        'displayable_order_date' => 'DateTimeInterface',
         'displayable_order_comment' => 'string',
         'shipping_speed_category' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ShippingSpeedCategory',
         'destination_address' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\Address',
@@ -289,7 +289,7 @@ class UpdateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
     /**
      * Gets displayable_order_date.
      */
-    public function getDisplayableOrderDate() : ?\DateTimeInterface
+    public function getDisplayableOrderDate() : ?DateTimeInterface
     {
         return $this->container['displayable_order_date'];
     }
@@ -297,9 +297,9 @@ class UpdateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
     /**
      * Sets displayable_order_date.
      *
-     * @param null|\DateTimeInterface $displayable_order_date Date timestamp
+     * @param null|DateTimeInterface $displayable_order_date Date timestamp
      */
-    public function setDisplayableOrderDate(?\DateTimeInterface $displayable_order_date) : self
+    public function setDisplayableOrderDate(?DateTimeInterface $displayable_order_date) : self
     {
         $this->container['displayable_order_date'] = $displayable_order_date;
 

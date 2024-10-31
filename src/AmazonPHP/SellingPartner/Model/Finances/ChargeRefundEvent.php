@@ -11,7 +11,7 @@ use AmazonPHP\SellingPartner\ObjectSerializer;
 /**
  * Selling Partner API for Finances.
  *
- * The Selling Partner API for Finances helps you obtain financial information relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
+ * The Selling Partner API for Finances provides financial information that is relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
  *
  * The version of the OpenAPI document: v0
  *
@@ -38,7 +38,7 @@ class ChargeRefundEvent implements \ArrayAccess, \JsonSerializable, \Stringable,
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'posted_date' => '\DateTimeInterface',
+        'posted_date' => 'DateTimeInterface',
         'reason_code' => 'string',
         'reason_code_description' => 'string',
         'charge_refund_transactions' => '\AmazonPHP\SellingPartner\Model\Finances\ChargeRefundTransaction[]',
@@ -190,7 +190,7 @@ class ChargeRefundEvent implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Gets posted_date.
      */
-    public function getPostedDate() : ?\DateTimeInterface
+    public function getPostedDate() : ?DateTimeInterface
     {
         return $this->container['posted_date'];
     }
@@ -198,9 +198,9 @@ class ChargeRefundEvent implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets posted_date.
      *
-     * @param null|\DateTimeInterface $posted_date posted_date
+     * @param null|DateTimeInterface $posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setPostedDate(?\DateTimeInterface $posted_date) : self
+    public function setPostedDate(?DateTimeInterface $posted_date) : self
     {
         $this->container['posted_date'] = $posted_date;
 
@@ -218,7 +218,7 @@ class ChargeRefundEvent implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets reason_code.
      *
-     * @param null|string $reason_code The reason given for a charge refund.  Example: `SubscriptionFeeCorrection`
+     * @param null|string $reason_code The reason given for a charge refund. For example, `SubscriptionFeeCorrection`.
      */
     public function setReasonCode(?string $reason_code) : self
     {
@@ -238,7 +238,7 @@ class ChargeRefundEvent implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets reason_code_description.
      *
-     * @param null|string $reason_code_description A description of the Reason Code.   Example: `SubscriptionFeeCorrection`
+     * @param null|string $reason_code_description A description of the Reason Code. For example, `SubscriptionFeeCorrection`.
      */
     public function setReasonCodeDescription(?string $reason_code_description) : self
     {

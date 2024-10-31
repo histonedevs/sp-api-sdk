@@ -38,8 +38,8 @@ class FulfillmentTime implements \ArrayAccess, \JsonSerializable, \Stringable, M
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'start_time' => '\DateTimeInterface',
-        'end_time' => '\DateTimeInterface',
+        'start_time' => 'DateTimeInterface',
+        'end_time' => 'DateTimeInterface',
     ];
 
     /**
@@ -178,7 +178,7 @@ class FulfillmentTime implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets start_time.
      */
-    public function getStartTime() : ?\DateTimeInterface
+    public function getStartTime() : ?DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -186,9 +186,9 @@ class FulfillmentTime implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets start_time.
      *
-     * @param null|\DateTimeInterface $start_time the date, time in UTC of the fulfillment start time in ISO 8601 format
+     * @param null|DateTimeInterface $start_time the date, time in UTC of the fulfillment start time in ISO 8601 format
      */
-    public function setStartTime(?\DateTimeInterface $start_time) : self
+    public function setStartTime(?DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 
@@ -198,7 +198,7 @@ class FulfillmentTime implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets end_time.
      */
-    public function getEndTime() : ?\DateTimeInterface
+    public function getEndTime() : ?DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -206,9 +206,9 @@ class FulfillmentTime implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets end_time.
      *
-     * @param null|\DateTimeInterface $end_time the date, time in UTC of the fulfillment end time in ISO 8601 format
+     * @param null|DateTimeInterface $end_time the date, time in UTC of the fulfillment end time in ISO 8601 format
      */
-    public function setEndTime(?\DateTimeInterface $end_time) : self
+    public function setEndTime(?DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 

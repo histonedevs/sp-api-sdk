@@ -41,13 +41,13 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
         'contact' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Contact',
         'box_count' => 'int',
         'seller_freight_class' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\SellerFreightClass',
-        'freight_ready_date' => '\DateTimeInterface',
+        'freight_ready_date' => 'DateTimeInterface',
         'pallet_list' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Pallet[]',
         'total_weight' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Weight',
         'seller_declared_value' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Amount',
         'amazon_calculated_value' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Amount',
-        'preview_pickup_date' => '\DateTimeInterface',
-        'preview_delivery_date' => '\DateTimeInterface',
+        'preview_pickup_date' => 'DateTimeInterface',
+        'preview_delivery_date' => 'DateTimeInterface',
         'preview_freight_class' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\SellerFreightClass',
         'amazon_reference_id' => 'string',
         'is_bill_of_lading_available' => 'bool',
@@ -375,7 +375,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets freight_ready_date.
      */
-    public function getFreightReadyDate() : \DateTimeInterface
+    public function getFreightReadyDate() : DateTimeInterface
     {
         return $this->container['freight_ready_date'];
     }
@@ -383,9 +383,9 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets freight_ready_date.
      *
-     * @param \DateTimeInterface $freight_ready_date Type containing date in string format
+     * @param DateTimeInterface $freight_ready_date Type containing date in string format
      */
-    public function setFreightReadyDate(\DateTimeInterface $freight_ready_date) : self
+    public function setFreightReadyDate(DateTimeInterface $freight_ready_date) : self
     {
         $this->container['freight_ready_date'] = $freight_ready_date;
 
@@ -477,7 +477,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets preview_pickup_date.
      */
-    public function getPreviewPickupDate() : ?\DateTimeInterface
+    public function getPreviewPickupDate() : ?DateTimeInterface
     {
         return $this->container['preview_pickup_date'];
     }
@@ -485,9 +485,9 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets preview_pickup_date.
      *
-     * @param \DateTimeInterface $preview_pickup_date Type containing date in string format
+     * @param DateTimeInterface $preview_pickup_date Type containing date in string format
      */
-    public function setPreviewPickupDate(\DateTimeInterface $preview_pickup_date) : self
+    public function setPreviewPickupDate(DateTimeInterface $preview_pickup_date) : self
     {
         $this->container['preview_pickup_date'] = $preview_pickup_date;
 
@@ -497,7 +497,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets preview_delivery_date.
      */
-    public function getPreviewDeliveryDate() : ?\DateTimeInterface
+    public function getPreviewDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['preview_delivery_date'];
     }
@@ -505,9 +505,9 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets preview_delivery_date.
      *
-     * @param \DateTimeInterface $preview_delivery_date Type containing date in string format
+     * @param DateTimeInterface $preview_delivery_date Type containing date in string format
      */
-    public function setPreviewDeliveryDate(\DateTimeInterface $preview_delivery_date) : self
+    public function setPreviewDeliveryDate(DateTimeInterface $preview_delivery_date) : self
     {
         $this->container['preview_delivery_date'] = $preview_delivery_date;
 

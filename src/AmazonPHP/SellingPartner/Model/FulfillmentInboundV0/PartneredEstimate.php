@@ -39,8 +39,8 @@ class PartneredEstimate implements \ArrayAccess, \JsonSerializable, \Stringable,
      */
     protected static array $openAPITypes = [
         'amount' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Amount',
-        'confirm_deadline' => '\DateTimeInterface',
-        'void_deadline' => '\DateTimeInterface',
+        'confirm_deadline' => 'DateTimeInterface',
+        'void_deadline' => 'DateTimeInterface',
     ];
 
     /**
@@ -209,7 +209,7 @@ class PartneredEstimate implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Gets confirm_deadline.
      */
-    public function getConfirmDeadline() : ?\DateTimeInterface
+    public function getConfirmDeadline() : ?DateTimeInterface
     {
         return $this->container['confirm_deadline'];
     }
@@ -217,9 +217,9 @@ class PartneredEstimate implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets confirm_deadline.
      *
-     * @param null|\DateTimeInterface $confirm_deadline timestamp in ISO 8601 format
+     * @param null|DateTimeInterface $confirm_deadline timestamp in ISO 8601 format
      */
-    public function setConfirmDeadline(?\DateTimeInterface $confirm_deadline) : self
+    public function setConfirmDeadline(?DateTimeInterface $confirm_deadline) : self
     {
         $this->container['confirm_deadline'] = $confirm_deadline;
 
@@ -229,7 +229,7 @@ class PartneredEstimate implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Gets void_deadline.
      */
-    public function getVoidDeadline() : ?\DateTimeInterface
+    public function getVoidDeadline() : ?DateTimeInterface
     {
         return $this->container['void_deadline'];
     }
@@ -237,9 +237,9 @@ class PartneredEstimate implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets void_deadline.
      *
-     * @param null|\DateTimeInterface $void_deadline timestamp in ISO 8601 format
+     * @param null|DateTimeInterface $void_deadline timestamp in ISO 8601 format
      */
-    public function setVoidDeadline(?\DateTimeInterface $void_deadline) : self
+    public function setVoidDeadline(?DateTimeInterface $void_deadline) : self
     {
         $this->container['void_deadline'] = $void_deadline;
 

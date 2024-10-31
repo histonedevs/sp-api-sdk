@@ -38,8 +38,8 @@ class GenerateSelfShipAppointmentSlotsRequest implements \ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'desired_end_date' => '\DateTimeInterface',
-        'desired_start_date' => '\DateTimeInterface',
+        'desired_end_date' => 'DateTimeInterface',
+        'desired_start_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -178,7 +178,7 @@ class GenerateSelfShipAppointmentSlotsRequest implements \ArrayAccess, \JsonSeri
     /**
      * Gets desired_end_date.
      */
-    public function getDesiredEndDate() : ?\DateTimeInterface
+    public function getDesiredEndDate() : ?DateTimeInterface
     {
         return $this->container['desired_end_date'];
     }
@@ -186,9 +186,9 @@ class GenerateSelfShipAppointmentSlotsRequest implements \ArrayAccess, \JsonSeri
     /**
      * Sets desired_end_date.
      *
-     * @param null|\DateTimeInterface $desired_end_date The ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param null|DateTimeInterface $desired_end_date The desired end date. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format.
      */
-    public function setDesiredEndDate(?\DateTimeInterface $desired_end_date) : self
+    public function setDesiredEndDate(?DateTimeInterface $desired_end_date) : self
     {
         $this->container['desired_end_date'] = $desired_end_date;
 
@@ -198,7 +198,7 @@ class GenerateSelfShipAppointmentSlotsRequest implements \ArrayAccess, \JsonSeri
     /**
      * Gets desired_start_date.
      */
-    public function getDesiredStartDate() : ?\DateTimeInterface
+    public function getDesiredStartDate() : ?DateTimeInterface
     {
         return $this->container['desired_start_date'];
     }
@@ -206,9 +206,9 @@ class GenerateSelfShipAppointmentSlotsRequest implements \ArrayAccess, \JsonSeri
     /**
      * Sets desired_start_date.
      *
-     * @param null|\DateTimeInterface $desired_start_date The ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param null|DateTimeInterface $desired_start_date The desired start date. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format.
      */
-    public function setDesiredStartDate(?\DateTimeInterface $desired_start_date) : self
+    public function setDesiredStartDate(?DateTimeInterface $desired_start_date) : self
     {
         $this->container['desired_start_date'] = $desired_start_date;
 

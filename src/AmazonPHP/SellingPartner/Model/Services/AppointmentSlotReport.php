@@ -43,8 +43,8 @@ class AppointmentSlotReport implements \ArrayAccess, \JsonSerializable, \Stringa
      */
     protected static array $openAPITypes = [
         'scheduling_type' => 'string',
-        'start_time' => '\DateTimeInterface',
-        'end_time' => '\DateTimeInterface',
+        'start_time' => 'DateTimeInterface',
+        'end_time' => 'DateTimeInterface',
         'appointment_slots' => '\AmazonPHP\SellingPartner\Model\Services\AppointmentSlot[]',
     ];
 
@@ -238,7 +238,7 @@ class AppointmentSlotReport implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets start_time.
      */
-    public function getStartTime() : ?\DateTimeInterface
+    public function getStartTime() : ?DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -246,9 +246,9 @@ class AppointmentSlotReport implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets start_time.
      *
-     * @param null|\DateTimeInterface $start_time start Time from which the appointment slots are generated in ISO 8601 format
+     * @param null|DateTimeInterface $start_time start Time from which the appointment slots are generated in ISO 8601 format
      */
-    public function setStartTime(?\DateTimeInterface $start_time) : self
+    public function setStartTime(?DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 
@@ -258,7 +258,7 @@ class AppointmentSlotReport implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets end_time.
      */
-    public function getEndTime() : ?\DateTimeInterface
+    public function getEndTime() : ?DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -266,9 +266,9 @@ class AppointmentSlotReport implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets end_time.
      *
-     * @param null|\DateTimeInterface $end_time end Time up to which the appointment slots are generated in ISO 8601 format
+     * @param null|DateTimeInterface $end_time end Time up to which the appointment slots are generated in ISO 8601 format
      */
-    public function setEndTime(?\DateTimeInterface $end_time) : self
+    public function setEndTime(?DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 

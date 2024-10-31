@@ -47,7 +47,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
      */
     protected static array $openAPITypes = [
         'customer_order_number' => 'string',
-        'order_date' => '\DateTimeInterface',
+        'order_date' => 'DateTimeInterface',
         'order_status' => 'string',
         'shipment_details' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\ShipmentDetails',
         'tax_total' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\TaxItemDetails',
@@ -326,7 +326,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets order_date.
      */
-    public function getOrderDate() : \DateTimeInterface
+    public function getOrderDate() : DateTimeInterface
     {
         return $this->container['order_date'];
     }
@@ -334,9 +334,9 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets order_date.
      *
-     * @param \DateTimeInterface $order_date The date the order was placed. This  field is expected to be in ISO-8601 date/time format, for example:2018-07-16T23:00:00Z/ 2018-07-16T23:00:00-05:00 /2018-07-16T23:00:00-08:00. If no time zone is specified, UTC should be assumed.
+     * @param DateTimeInterface $order_date The date the order was placed. This  field is expected to be in ISO-8601 date/time format, for example:2018-07-16T23:00:00Z/ 2018-07-16T23:00:00-05:00 /2018-07-16T23:00:00-08:00. If no time zone is specified, UTC should be assumed.
      */
-    public function setOrderDate(\DateTimeInterface $order_date) : self
+    public function setOrderDate(DateTimeInterface $order_date) : self
     {
         $this->container['order_date'] = $order_date;
 

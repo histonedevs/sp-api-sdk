@@ -39,8 +39,8 @@ class CreateWarrantyRequest implements \ArrayAccess, \JsonSerializable, \Stringa
      */
     protected static array $openAPITypes = [
         'attachments' => '\AmazonPHP\SellingPartner\Model\Messaging\Attachment[]',
-        'coverage_start_date' => '\DateTimeInterface',
-        'coverage_end_date' => '\DateTimeInterface',
+        'coverage_start_date' => 'DateTimeInterface',
+        'coverage_end_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -206,7 +206,7 @@ class CreateWarrantyRequest implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets coverage_start_date.
      */
-    public function getCoverageStartDate() : ?\DateTimeInterface
+    public function getCoverageStartDate() : ?DateTimeInterface
     {
         return $this->container['coverage_start_date'];
     }
@@ -214,9 +214,9 @@ class CreateWarrantyRequest implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets coverage_start_date.
      *
-     * @param null|\DateTimeInterface $coverage_start_date the start date of the warranty coverage to include in the message to the buyer
+     * @param null|DateTimeInterface $coverage_start_date the start date of the warranty coverage to include in the message to the buyer
      */
-    public function setCoverageStartDate(?\DateTimeInterface $coverage_start_date) : self
+    public function setCoverageStartDate(?DateTimeInterface $coverage_start_date) : self
     {
         $this->container['coverage_start_date'] = $coverage_start_date;
 
@@ -226,7 +226,7 @@ class CreateWarrantyRequest implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets coverage_end_date.
      */
-    public function getCoverageEndDate() : ?\DateTimeInterface
+    public function getCoverageEndDate() : ?DateTimeInterface
     {
         return $this->container['coverage_end_date'];
     }
@@ -234,9 +234,9 @@ class CreateWarrantyRequest implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets coverage_end_date.
      *
-     * @param null|\DateTimeInterface $coverage_end_date the end date of the warranty coverage to include in the message to the buyer
+     * @param null|DateTimeInterface $coverage_end_date the end date of the warranty coverage to include in the message to the buyer
      */
-    public function setCoverageEndDate(?\DateTimeInterface $coverage_end_date) : self
+    public function setCoverageEndDate(?DateTimeInterface $coverage_end_date) : self
     {
         $this->container['coverage_end_date'] = $coverage_end_date;
 

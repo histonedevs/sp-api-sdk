@@ -42,9 +42,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'carrier_name' => 'string',
         'shipping_service_id' => 'string',
         'shipping_service_offer_id' => 'string',
-        'ship_date' => '\DateTimeInterface',
-        'earliest_estimated_delivery_date' => '\DateTimeInterface',
-        'latest_estimated_delivery_date' => '\DateTimeInterface',
+        'ship_date' => 'DateTimeInterface',
+        'earliest_estimated_delivery_date' => 'DateTimeInterface',
+        'latest_estimated_delivery_date' => 'DateTimeInterface',
         'rate' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\CurrencyAmount',
         'shipping_service_options' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\ShippingServiceOptions',
         'available_shipping_service_options' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\AvailableShippingServiceOptions',
@@ -373,7 +373,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : \DateTimeInterface
+    public function getShipDate() : DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -381,9 +381,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets ship_date.
      *
-     * @param \DateTimeInterface $ship_date date-time formatted timestamp
+     * @param DateTimeInterface $ship_date date-time formatted timestamp
      */
-    public function setShipDate(\DateTimeInterface $ship_date) : self
+    public function setShipDate(DateTimeInterface $ship_date) : self
     {
         $this->container['ship_date'] = $ship_date;
 
@@ -393,7 +393,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets earliest_estimated_delivery_date.
      */
-    public function getEarliestEstimatedDeliveryDate() : ?\DateTimeInterface
+    public function getEarliestEstimatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['earliest_estimated_delivery_date'];
     }
@@ -401,9 +401,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets earliest_estimated_delivery_date.
      *
-     * @param null|\DateTimeInterface $earliest_estimated_delivery_date date-time formatted timestamp
+     * @param null|DateTimeInterface $earliest_estimated_delivery_date date-time formatted timestamp
      */
-    public function setEarliestEstimatedDeliveryDate(?\DateTimeInterface $earliest_estimated_delivery_date) : self
+    public function setEarliestEstimatedDeliveryDate(?DateTimeInterface $earliest_estimated_delivery_date) : self
     {
         $this->container['earliest_estimated_delivery_date'] = $earliest_estimated_delivery_date;
 
@@ -413,7 +413,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets latest_estimated_delivery_date.
      */
-    public function getLatestEstimatedDeliveryDate() : ?\DateTimeInterface
+    public function getLatestEstimatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['latest_estimated_delivery_date'];
     }
@@ -421,9 +421,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets latest_estimated_delivery_date.
      *
-     * @param null|\DateTimeInterface $latest_estimated_delivery_date date-time formatted timestamp
+     * @param null|DateTimeInterface $latest_estimated_delivery_date date-time formatted timestamp
      */
-    public function setLatestEstimatedDeliveryDate(?\DateTimeInterface $latest_estimated_delivery_date) : self
+    public function setLatestEstimatedDeliveryDate(?DateTimeInterface $latest_estimated_delivery_date) : self
     {
         $this->container['latest_estimated_delivery_date'] = $latest_estimated_delivery_date;
 

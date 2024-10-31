@@ -42,7 +42,7 @@ class ContentMetadata implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'marketplace_id' => 'string',
         'status' => '\AmazonPHP\SellingPartner\Model\APlus\ContentStatus',
         'badge_set' => '\AmazonPHP\SellingPartner\Model\APlus\ContentBadge[]',
-        'update_time' => '\DateTimeInterface',
+        'update_time' => 'DateTimeInterface',
     ];
 
     /**
@@ -309,7 +309,7 @@ class ContentMetadata implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets update_time.
      */
-    public function getUpdateTime() : \DateTimeInterface
+    public function getUpdateTime() : DateTimeInterface
     {
         return $this->container['update_time'];
     }
@@ -317,9 +317,9 @@ class ContentMetadata implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets update_time.
      *
-     * @param \DateTimeInterface $update_time the approximate age of the A+ Content document and metadata
+     * @param DateTimeInterface $update_time the approximate age of the A+ Content document and metadata
      */
-    public function setUpdateTime(\DateTimeInterface $update_time) : self
+    public function setUpdateTime(DateTimeInterface $update_time) : self
     {
         $this->container['update_time'] = $update_time;
 

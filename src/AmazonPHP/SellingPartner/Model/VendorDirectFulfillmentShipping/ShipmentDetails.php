@@ -42,11 +42,11 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'shipped_date' => '\DateTimeInterface',
+        'shipped_date' => 'DateTimeInterface',
         'shipment_status' => 'string',
         'is_priority_shipment' => 'bool',
         'vendor_order_number' => 'string',
-        'estimated_delivery_date' => '\DateTimeInterface',
+        'estimated_delivery_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -232,7 +232,7 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets shipped_date.
      */
-    public function getShippedDate() : \DateTimeInterface
+    public function getShippedDate() : DateTimeInterface
     {
         return $this->container['shipped_date'];
     }
@@ -240,9 +240,9 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets shipped_date.
      *
-     * @param \DateTimeInterface $shipped_date This field indicates the date of the departure of the shipment from vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Amazon destination warehouse, whichever is sooner. Shipped date mentioned in the Shipment Confirmation should not be in the future.
+     * @param DateTimeInterface $shipped_date This field indicates the date of the departure of the shipment from vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Amazon destination warehouse, whichever is sooner. Shipped date mentioned in the Shipment Confirmation should not be in the future.
      */
-    public function setShippedDate(\DateTimeInterface $shipped_date) : self
+    public function setShippedDate(DateTimeInterface $shipped_date) : self
     {
         $this->container['shipped_date'] = $shipped_date;
 
@@ -312,7 +312,7 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets estimated_delivery_date.
      */
-    public function getEstimatedDeliveryDate() : ?\DateTimeInterface
+    public function getEstimatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['estimated_delivery_date'];
     }
@@ -320,9 +320,9 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets estimated_delivery_date.
      *
-     * @param null|\DateTimeInterface $estimated_delivery_date Date on which the shipment is expected to reach the buyer's warehouse. It needs to be an estimate based on the average transit time between the ship-from location and the destination. The exact appointment time will be provided by buyer and is potentially not known when creating the shipment confirmation.
+     * @param null|DateTimeInterface $estimated_delivery_date Date on which the shipment is expected to reach the buyer's warehouse. It needs to be an estimate based on the average transit time between the ship-from location and the destination. The exact appointment time will be provided by buyer and is potentially not known when creating the shipment confirmation.
      */
-    public function setEstimatedDeliveryDate(?\DateTimeInterface $estimated_delivery_date) : self
+    public function setEstimatedDeliveryDate(?DateTimeInterface $estimated_delivery_date) : self
     {
         $this->container['estimated_delivery_date'] = $estimated_delivery_date;
 

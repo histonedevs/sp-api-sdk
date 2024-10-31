@@ -43,7 +43,7 @@ class ReportSchedule implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
         'marketplace_ids' => 'string[]',
         'report_options' => 'array<string,string>',
         'period' => 'string',
-        'next_report_creation_time' => '\DateTimeInterface',
+        'next_report_creation_time' => 'DateTimeInterface',
     ];
 
     /**
@@ -317,7 +317,7 @@ class ReportSchedule implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets next_report_creation_time.
      */
-    public function getNextReportCreationTime() : ?\DateTimeInterface
+    public function getNextReportCreationTime() : ?DateTimeInterface
     {
         return $this->container['next_report_creation_time'];
     }
@@ -325,9 +325,9 @@ class ReportSchedule implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets next_report_creation_time.
      *
-     * @param null|\DateTimeInterface $next_report_creation_time The date and time when the schedule will create its next report, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
+     * @param null|DateTimeInterface $next_report_creation_time The date and time when the schedule will create its next report, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
      */
-    public function setNextReportCreationTime(?\DateTimeInterface $next_report_creation_time) : self
+    public function setNextReportCreationTime(?DateTimeInterface $next_report_creation_time) : self
     {
         $this->container['next_report_creation_time'] = $next_report_creation_time;
 

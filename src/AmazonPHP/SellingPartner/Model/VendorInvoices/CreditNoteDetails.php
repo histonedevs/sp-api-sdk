@@ -41,7 +41,7 @@ class CreditNoteDetails implements \ArrayAccess, \JsonSerializable, \Stringable,
         'reference_invoice_number' => 'string',
         'debit_note_number' => 'string',
         'returns_reference_number' => 'string',
-        'goods_return_date' => '\DateTimeInterface',
+        'goods_return_date' => 'DateTimeInterface',
         'rma_id' => 'string',
         'coop_reference_number' => 'string',
         'consignors_reference_number' => 'string',
@@ -268,7 +268,7 @@ class CreditNoteDetails implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Gets goods_return_date.
      */
-    public function getGoodsReturnDate() : ?\DateTimeInterface
+    public function getGoodsReturnDate() : ?DateTimeInterface
     {
         return $this->container['goods_return_date'];
     }
@@ -276,9 +276,9 @@ class CreditNoteDetails implements \ArrayAccess, \JsonSerializable, \Stringable,
     /**
      * Sets goods_return_date.
      *
-     * @param null|\DateTimeInterface $goods_return_date Defines a date and time according to <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a>.
+     * @param null|DateTimeInterface $goods_return_date Defines a date and time according to <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a>.
      */
-    public function setGoodsReturnDate(?\DateTimeInterface $goods_return_date) : self
+    public function setGoodsReturnDate(?DateTimeInterface $goods_return_date) : self
     {
         $this->container['goods_return_date'] = $goods_return_date;
 

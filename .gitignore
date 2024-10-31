@@ -2,3 +2,5 @@ vendor/
 .openapi-generator
 var/
 .env
+.idea
+openapitools.json

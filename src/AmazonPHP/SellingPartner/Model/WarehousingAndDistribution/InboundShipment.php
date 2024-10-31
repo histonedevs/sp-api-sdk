@@ -9,9 +9,9 @@ use AmazonPHP\SellingPartner\ModelInterface;
 use AmazonPHP\SellingPartner\ObjectSerializer;
 
 /**
- * The Selling Partner API for AWD.
+ * The Selling Partner API for Amazon Warehousing and Distribution.
  *
- * The Selling Partner API for Amazon Warehousing and Distribution (AWD).
+ * The Selling Partner API for Amazon Warehousing and Distribution (AWD) provides programmatic access to information about AWD shipments and inventory.
  *
  * The version of the OpenAPI document: 2024-05-09
  *
@@ -39,18 +39,19 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
      */
     protected static array $openAPITypes = [
         'carrier_code' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\CarrierCode',
-        'created_at' => '\DateTimeInterface',
+        'created_at' => 'DateTimeInterface',
         'destination_address' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\Address',
         'external_reference_id' => 'string',
         'order_id' => 'string',
         'origin_address' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\Address',
         'received_quantity' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\InventoryQuantity[]',
-        'ship_by' => '\DateTimeInterface',
+        'ship_by' => 'DateTimeInterface',
         'shipment_container_quantities' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\DistributionPackageQuantity[]',
         'shipment_id' => 'string',
+        'shipment_sku_quantities' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\SkuQuantity[]',
         'shipment_status' => '\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\InboundShipmentStatus',
         'tracking_id' => 'string',
-        'updated_at' => '\DateTimeInterface',
+        'updated_at' => 'DateTimeInterface',
         'warehouse_reference_id' => 'string',
     ];
 
@@ -74,6 +75,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'ship_by' => 'date-time',
         'shipment_container_quantities' => null,
         'shipment_id' => null,
+        'shipment_sku_quantities' => null,
         'shipment_status' => null,
         'tracking_id' => null,
         'updated_at' => 'date-time',
@@ -97,6 +99,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'ship_by' => 'shipBy',
         'shipment_container_quantities' => 'shipmentContainerQuantities',
         'shipment_id' => 'shipmentId',
+        'shipment_sku_quantities' => 'shipmentSkuQuantities',
         'shipment_status' => 'shipmentStatus',
         'tracking_id' => 'trackingId',
         'updated_at' => 'updatedAt',
@@ -119,6 +122,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'ship_by' => 'setShipBy',
         'shipment_container_quantities' => 'setShipmentContainerQuantities',
         'shipment_id' => 'setShipmentId',
+        'shipment_sku_quantities' => 'setShipmentSkuQuantities',
         'shipment_status' => 'setShipmentStatus',
         'tracking_id' => 'setTrackingId',
         'updated_at' => 'setUpdatedAt',
@@ -141,6 +145,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'ship_by' => 'getShipBy',
         'shipment_container_quantities' => 'getShipmentContainerQuantities',
         'shipment_id' => 'getShipmentId',
+        'shipment_sku_quantities' => 'getShipmentSkuQuantities',
         'shipment_status' => 'getShipmentStatus',
         'tracking_id' => 'getTrackingId',
         'updated_at' => 'getUpdatedAt',
@@ -172,6 +177,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
         $this->container['ship_by'] = $data['ship_by'] ?? null;
         $this->container['shipment_container_quantities'] = $data['shipment_container_quantities'] ?? null;
         $this->container['shipment_id'] = $data['shipment_id'] ?? null;
+        $this->container['shipment_sku_quantities'] = $data['shipment_sku_quantities'] ?? null;
         $this->container['shipment_status'] = $data['shipment_status'] ?? null;
         $this->container['tracking_id'] = $data['tracking_id'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -313,7 +319,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets created_at.
      */
-    public function getCreatedAt() : ?\DateTimeInterface
+    public function getCreatedAt() : ?DateTimeInterface
     {
         return $this->container['created_at'];
     }
@@ -321,9 +327,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets created_at.
      *
-     * @param null|\DateTimeInterface $created_at Timestamp when the shipment was created. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
+     * @param null|DateTimeInterface $created_at Timestamp when the shipment was created. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
      */
-    public function setCreatedAt(?\DateTimeInterface $created_at) : self
+    public function setCreatedAt(?DateTimeInterface $created_at) : self
     {
         $this->container['created_at'] = $created_at;
 
@@ -435,7 +441,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets ship_by.
      */
-    public function getShipBy() : ?\DateTimeInterface
+    public function getShipBy() : ?DateTimeInterface
     {
         return $this->container['ship_by'];
     }
@@ -443,9 +449,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets ship_by.
      *
-     * @param null|\DateTimeInterface $ship_by timestamp when the shipment will be shipped
+     * @param null|DateTimeInterface $ship_by timestamp when the shipment will be shipped
      */
-    public function setShipBy(?\DateTimeInterface $ship_by) : self
+    public function setShipBy(?DateTimeInterface $ship_by) : self
     {
         $this->container['ship_by'] = $ship_by;
 
@@ -495,6 +501,28 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     }
 
     /**
+     * Gets shipment_sku_quantities.
+     *
+     * @return null|\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\SkuQuantity[]
+     */
+    public function getShipmentSkuQuantities() : ?array
+    {
+        return $this->container['shipment_sku_quantities'];
+    }
+
+    /**
+     * Sets shipment_sku_quantities.
+     *
+     * @param null|\AmazonPHP\SellingPartner\Model\WarehousingAndDistribution\SkuQuantity[] $shipment_sku_quantities Quantity details at SKU level for the shipment. This attribute will only appear if the skuQuantities parameter in the request is set to SHOW.
+     */
+    public function setShipmentSkuQuantities(?array $shipment_sku_quantities) : self
+    {
+        $this->container['shipment_sku_quantities'] = $shipment_sku_quantities;
+
+        return $this;
+    }
+
+    /**
      * Gets shipment_status.
      */
     public function getShipmentStatus() : InboundShipmentStatus
@@ -537,7 +565,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets updated_at.
      */
-    public function getUpdatedAt() : ?\DateTimeInterface
+    public function getUpdatedAt() : ?DateTimeInterface
     {
         return $this->container['updated_at'];
     }
@@ -545,9 +573,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets updated_at.
      *
-     * @param null|\DateTimeInterface $updated_at Timestamp when the shipment was updated. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
+     * @param null|DateTimeInterface $updated_at Timestamp when the shipment was updated. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
      */
-    public function setUpdatedAt(?\DateTimeInterface $updated_at) : self
+    public function setUpdatedAt(?DateTimeInterface $updated_at) : self
     {
         $this->container['updated_at'] = $updated_at;
 

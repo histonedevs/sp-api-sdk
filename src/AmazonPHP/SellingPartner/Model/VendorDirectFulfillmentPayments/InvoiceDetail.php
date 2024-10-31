@@ -39,7 +39,7 @@ class InvoiceDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
      */
     protected static array $openAPITypes = [
         'invoice_number' => 'string',
-        'invoice_date' => '\DateTimeInterface',
+        'invoice_date' => 'DateTimeInterface',
         'reference_number' => 'string',
         'remit_to_party' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentPayments\PartyIdentification',
         'ship_from_party' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentPayments\PartyIdentification',
@@ -297,7 +297,7 @@ class InvoiceDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets invoice_date.
      */
-    public function getInvoiceDate() : \DateTimeInterface
+    public function getInvoiceDate() : DateTimeInterface
     {
         return $this->container['invoice_date'];
     }
@@ -305,9 +305,9 @@ class InvoiceDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets invoice_date.
      *
-     * @param \DateTimeInterface $invoice_date invoice date
+     * @param DateTimeInterface $invoice_date invoice date
      */
-    public function setInvoiceDate(\DateTimeInterface $invoice_date) : self
+    public function setInvoiceDate(DateTimeInterface $invoice_date) : self
     {
         $this->container['invoice_date'] = $invoice_date;
 

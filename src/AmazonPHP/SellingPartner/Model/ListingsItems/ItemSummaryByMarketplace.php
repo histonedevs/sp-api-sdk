@@ -75,8 +75,8 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
         'status' => 'string[]',
         'fn_sku' => 'string',
         'item_name' => 'string',
-        'created_date' => '\DateTimeInterface',
-        'last_updated_date' => '\DateTimeInterface',
+        'created_date' => 'DateTimeInterface',
+        'last_updated_date' => 'DateTimeInterface',
         'main_image' => '\AmazonPHP\SellingPartner\Model\ListingsItems\ItemImage',
     ];
 
@@ -478,7 +478,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets created_date.
      */
-    public function getCreatedDate() : \DateTimeInterface
+    public function getCreatedDate() : DateTimeInterface
     {
         return $this->container['created_date'];
     }
@@ -486,9 +486,9 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets created_date.
      *
-     * @param \DateTimeInterface $created_date the date the listings item was created in ISO 8601 format
+     * @param DateTimeInterface $created_date the date the listings item was created in ISO 8601 format
      */
-    public function setCreatedDate(\DateTimeInterface $created_date) : self
+    public function setCreatedDate(DateTimeInterface $created_date) : self
     {
         $this->container['created_date'] = $created_date;
 
@@ -498,7 +498,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : \DateTimeInterface
+    public function getLastUpdatedDate() : DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -506,9 +506,9 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets last_updated_date.
      *
-     * @param \DateTimeInterface $last_updated_date the date the listings item was last updated in ISO 8601 format
+     * @param DateTimeInterface $last_updated_date the date the listings item was last updated in ISO 8601 format
      */
-    public function setLastUpdatedDate(\DateTimeInterface $last_updated_date) : self
+    public function setLastUpdatedDate(DateTimeInterface $last_updated_date) : self
     {
         $this->container['last_updated_date'] = $last_updated_date;
 

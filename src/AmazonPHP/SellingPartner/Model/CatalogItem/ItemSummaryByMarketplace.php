@@ -60,7 +60,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
         'model_number' => 'string',
         'package_quantity' => 'int',
         'part_number' => 'string',
-        'release_date' => '\DateTimeInterface',
+        'release_date' => 'DateTimeInterface',
         'size' => 'string',
         'style' => 'string',
         'trade_in_eligible' => 'bool',
@@ -610,7 +610,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets release_date.
      */
-    public function getReleaseDate() : ?\DateTimeInterface
+    public function getReleaseDate() : ?DateTimeInterface
     {
         return $this->container['release_date'];
     }
@@ -618,9 +618,9 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets release_date.
      *
-     * @param null|\DateTimeInterface $release_date first date on which an Amazon catalog item is shippable to customers
+     * @param null|DateTimeInterface $release_date first date on which an Amazon catalog item is shippable to customers
      */
-    public function setReleaseDate(?\DateTimeInterface $release_date) : self
+    public function setReleaseDate(?DateTimeInterface $release_date) : self
     {
         $this->container['release_date'] = $release_date;
 

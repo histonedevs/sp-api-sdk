@@ -44,7 +44,7 @@ class InboundShipmentItem implements \ArrayAccess, \JsonSerializable, \Stringabl
         'quantity_shipped' => 'int',
         'quantity_received' => 'int',
         'quantity_in_case' => 'int',
-        'release_date' => '\DateTimeInterface',
+        'release_date' => 'DateTimeInterface',
         'prep_details_list' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\PrepDetails[]',
     ];
 
@@ -341,7 +341,7 @@ class InboundShipmentItem implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets release_date.
      */
-    public function getReleaseDate() : ?\DateTimeInterface
+    public function getReleaseDate() : ?DateTimeInterface
     {
         return $this->container['release_date'];
     }
@@ -349,9 +349,9 @@ class InboundShipmentItem implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets release_date.
      *
-     * @param null|\DateTimeInterface $release_date Type containing date in string format
+     * @param null|DateTimeInterface $release_date Type containing date in string format
      */
-    public function setReleaseDate(?\DateTimeInterface $release_date) : self
+    public function setReleaseDate(?DateTimeInterface $release_date) : self
     {
         $this->container['release_date'] = $release_date;
 

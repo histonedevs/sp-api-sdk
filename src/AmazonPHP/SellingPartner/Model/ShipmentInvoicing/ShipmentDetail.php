@@ -41,7 +41,7 @@ class ShipmentDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
         'warehouse_id' => 'string',
         'amazon_order_id' => 'string',
         'amazon_shipment_id' => 'string',
-        'purchase_date' => '\DateTimeInterface',
+        'purchase_date' => 'DateTimeInterface',
         'shipping_address' => '\AmazonPHP\SellingPartner\Model\ShipmentInvoicing\Address',
         'payment_method_details' => 'string[]',
         'marketplace_id' => 'string',
@@ -321,7 +321,7 @@ class ShipmentDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets purchase_date.
      */
-    public function getPurchaseDate() : ?\DateTimeInterface
+    public function getPurchaseDate() : ?DateTimeInterface
     {
         return $this->container['purchase_date'];
     }
@@ -329,9 +329,9 @@ class ShipmentDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets purchase_date.
      *
-     * @param null|\DateTimeInterface $purchase_date the date and time when the order was created
+     * @param null|DateTimeInterface $purchase_date the date and time when the order was created
      */
-    public function setPurchaseDate(?\DateTimeInterface $purchase_date) : self
+    public function setPurchaseDate(?DateTimeInterface $purchase_date) : self
     {
         $this->container['purchase_date'] = $purchase_date;
 

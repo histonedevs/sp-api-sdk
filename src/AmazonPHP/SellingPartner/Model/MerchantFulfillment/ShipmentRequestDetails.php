@@ -44,8 +44,8 @@ class ShipmentRequestDetails implements \ArrayAccess, \JsonSerializable, \String
         'ship_from_address' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Address',
         'package_dimensions' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\PackageDimensions',
         'weight' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Weight',
-        'must_arrive_by_date' => '\DateTimeInterface',
-        'ship_date' => '\DateTimeInterface',
+        'must_arrive_by_date' => 'DateTimeInterface',
+        'ship_date' => 'DateTimeInterface',
         'shipping_service_options' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\ShippingServiceOptions',
         'label_customization' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\LabelCustomization',
     ];
@@ -387,7 +387,7 @@ class ShipmentRequestDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets must_arrive_by_date.
      */
-    public function getMustArriveByDate() : ?\DateTimeInterface
+    public function getMustArriveByDate() : ?DateTimeInterface
     {
         return $this->container['must_arrive_by_date'];
     }
@@ -395,9 +395,9 @@ class ShipmentRequestDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets must_arrive_by_date.
      *
-     * @param null|\DateTimeInterface $must_arrive_by_date date-time formatted timestamp
+     * @param null|DateTimeInterface $must_arrive_by_date date-time formatted timestamp
      */
-    public function setMustArriveByDate(?\DateTimeInterface $must_arrive_by_date) : self
+    public function setMustArriveByDate(?DateTimeInterface $must_arrive_by_date) : self
     {
         $this->container['must_arrive_by_date'] = $must_arrive_by_date;
 
@@ -407,7 +407,7 @@ class ShipmentRequestDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : ?\DateTimeInterface
+    public function getShipDate() : ?DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -415,9 +415,9 @@ class ShipmentRequestDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets ship_date.
      *
-     * @param null|\DateTimeInterface $ship_date date-time formatted timestamp
+     * @param null|DateTimeInterface $ship_date date-time formatted timestamp
      */
-    public function setShipDate(?\DateTimeInterface $ship_date) : self
+    public function setShipDate(?DateTimeInterface $ship_date) : self
     {
         $this->container['ship_date'] = $ship_date;
 

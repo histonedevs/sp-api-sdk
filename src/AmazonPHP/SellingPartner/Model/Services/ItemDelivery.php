@@ -38,7 +38,7 @@ class ItemDelivery implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'estimated_delivery_date' => '\DateTimeInterface',
+        'estimated_delivery_date' => 'DateTimeInterface',
         'item_delivery_promise' => '\AmazonPHP\SellingPartner\Model\Services\ItemDeliveryPromise',
     ];
 
@@ -181,7 +181,7 @@ class ItemDelivery implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets estimated_delivery_date.
      */
-    public function getEstimatedDeliveryDate() : ?\DateTimeInterface
+    public function getEstimatedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['estimated_delivery_date'];
     }
@@ -189,9 +189,9 @@ class ItemDelivery implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets estimated_delivery_date.
      *
-     * @param null|\DateTimeInterface $estimated_delivery_date The date and time of the latest Estimated Delivery Date (EDD) of all the items with an EDD. In ISO 8601 format.
+     * @param null|DateTimeInterface $estimated_delivery_date The date and time of the latest Estimated Delivery Date (EDD) of all the items with an EDD. In ISO 8601 format.
      */
-    public function setEstimatedDeliveryDate(?\DateTimeInterface $estimated_delivery_date) : self
+    public function setEstimatedDeliveryDate(?DateTimeInterface $estimated_delivery_date) : self
     {
         $this->container['estimated_delivery_date'] = $estimated_delivery_date;
 

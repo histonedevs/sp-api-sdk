@@ -36,7 +36,7 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * Operation confirmPreorder.
      *
      * @param string $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
-     * @param \DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
+     * @param DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace the shipment is tied to. (required)
      *
      * @deprecated
@@ -44,7 +44,7 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function confirmPreorder(AccessToken $accessToken, string $region, string $shipment_id, \DateTimeInterface $need_by_date, string $marketplace_id) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\ConfirmPreorderResponse
+    public function confirmPreorder(AccessToken $accessToken, string $region, string $shipment_id, DateTimeInterface $need_by_date, string $marketplace_id) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\ConfirmPreorderResponse
     {
         \trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
 
@@ -138,12 +138,12 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * Create request for operation 'confirmPreorder'.
      *
      * @param string $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation. (required)
-     * @param \DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
+     * @param DateTimeInterface $need_by_date Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace the shipment is tied to. (required)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function confirmPreorderRequest(AccessToken $accessToken, string $region, string $shipment_id, \DateTimeInterface $need_by_date, string $marketplace_id) : RequestInterface
+    public function confirmPreorderRequest(AccessToken $accessToken, string $region, string $shipment_id, DateTimeInterface $need_by_date, string $marketplace_id) : RequestInterface
     {
         // verify the required parameter 'shipment_id' is set
         if ($shipment_id === null || (\is_array($shipment_id) && \count($shipment_id) === 0)) {
@@ -1229,7 +1229,7 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @param string $page_type The page type to use to print the labels. Submitting a PageType value that is not supported in your marketplace returns an error. (required)
      * @param string $label_type The type of labels requested. (required)
      * @param null|int $number_of_packages The number of packages in the shipment. (optional)
-     * @param null|string[] $package_labels_to_print A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
+     * @param null|string[] $package_labels_to_print A list of identifiers that specify packages for which you want package labels printed.  If you provide box content information with the [FBA Inbound Shipment Carton Information Feed](https://developer-docs.amazon.com/sp-api/docs/fulfillment-by-amazon-feed-type-values#fba-inbound-shipment-carton-information-feed), then &#x60;PackageLabelsToPrint&#x60; must match the &#x60;CartonId&#x60; values you provide through that feed. If you provide box content information with the Fulfillment Inbound API v2024-03-20, then &#x60;PackageLabelsToPrint&#x60; must match the &#x60;boxID&#x60; values from the [&#x60;listShipmentBoxes&#x60;](https://developer-docs.amazon.com/sp-api/docs/fulfillment-inbound-api-v2024-03-20-reference#listshipmentboxes) response. If these values do not match as required, the operation returns the &#x60;IncorrectPackageIdentifier&#x60; error code. (optional)
      * @param null|int $number_of_pallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
      * @param null|int $page_size The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
      * @param null|int $page_start_index The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
@@ -1332,7 +1332,7 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @param string $page_type The page type to use to print the labels. Submitting a PageType value that is not supported in your marketplace returns an error. (required)
      * @param string $label_type The type of labels requested. (required)
      * @param null|int $number_of_packages The number of packages in the shipment. (optional)
-     * @param null|string[] $package_labels_to_print A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
+     * @param null|string[] $package_labels_to_print A list of identifiers that specify packages for which you want package labels printed.  If you provide box content information with the [FBA Inbound Shipment Carton Information Feed](https://developer-docs.amazon.com/sp-api/docs/fulfillment-by-amazon-feed-type-values#fba-inbound-shipment-carton-information-feed), then &#x60;PackageLabelsToPrint&#x60; must match the &#x60;CartonId&#x60; values you provide through that feed. If you provide box content information with the Fulfillment Inbound API v2024-03-20, then &#x60;PackageLabelsToPrint&#x60; must match the &#x60;boxID&#x60; values from the [&#x60;listShipmentBoxes&#x60;](https://developer-docs.amazon.com/sp-api/docs/fulfillment-inbound-api-v2024-03-20-reference#listshipmentboxes) response. If these values do not match as required, the operation returns the &#x60;IncorrectPackageIdentifier&#x60; error code. (optional)
      * @param null|int $number_of_pallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
      * @param null|int $page_size The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
      * @param null|int $page_start_index The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
@@ -1920,19 +1920,15 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      *
      * @param string $query_type Indicates whether items are returned using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or using NextToken, which continues returning items specified in a previous request. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored. (required)
-     * @param null|\DateTimeInterface $last_updated_after A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
-     * @param null|\DateTimeInterface $last_updated_before A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_after A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_before A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
-     *
-     * @deprecated
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getShipmentItems(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?\DateTimeInterface $last_updated_after = null, ?\DateTimeInterface $last_updated_before = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\GetShipmentItemsResponse
+    public function getShipmentItems(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?DateTimeInterface $last_updated_after = null, ?DateTimeInterface $last_updated_before = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\GetShipmentItemsResponse
     {
-        \trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
-
         $request = $this->getShipmentItemsRequest($accessToken, $region, $query_type, $marketplace_id, $last_updated_after, $last_updated_before, $next_token);
 
         $this->configuration->extensions()->preRequest('FulfillmentInboundV0', 'getShipmentItems', $request);
@@ -2024,13 +2020,13 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      *
      * @param string $query_type Indicates whether items are returned using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or using NextToken, which continues returning items specified in a previous request. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored. (required)
-     * @param null|\DateTimeInterface $last_updated_after A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
-     * @param null|\DateTimeInterface $last_updated_before A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_after A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_before A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getShipmentItemsRequest(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?\DateTimeInterface $last_updated_after = null, ?\DateTimeInterface $last_updated_before = null, ?string $next_token = null) : RequestInterface
+    public function getShipmentItemsRequest(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?DateTimeInterface $last_updated_after = null, ?DateTimeInterface $last_updated_before = null, ?string $next_token = null) : RequestInterface
     {
         // verify the required parameter 'query_type' is set
         if ($query_type === null || (\is_array($query_type) && \count($query_type) === 0)) {
@@ -2158,15 +2154,11 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @param string $shipment_id A shipment identifier used for selecting items in a specific inbound shipment. (required)
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored. (required)
      *
-     * @deprecated
-     *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
     public function getShipmentItemsByShipmentId(AccessToken $accessToken, string $region, string $shipment_id, string $marketplace_id) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\GetShipmentItemsResponse
     {
-        \trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
-
         $request = $this->getShipmentItemsByShipmentIdRequest($accessToken, $region, $shipment_id, $marketplace_id);
 
         $this->configuration->extensions()->preRequest('FulfillmentInboundV0', 'getShipmentItemsByShipmentId', $request);
@@ -2367,19 +2359,15 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored. (required)
      * @param null|string[] $shipment_status_list A list of ShipmentStatus values. Used to select shipments with a current status that matches the status values that you specify. (optional)
      * @param null|string[] $shipment_id_list A list of shipment IDs used to select the shipments that you want. If both ShipmentStatusList and ShipmentIdList are specified, only shipments that match both parameters are returned. (optional)
-     * @param null|\DateTimeInterface $last_updated_after A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
-     * @param null|\DateTimeInterface $last_updated_before A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_after A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_before A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
-     *
-     * @deprecated
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getShipments(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?array $shipment_status_list = null, ?array $shipment_id_list = null, ?\DateTimeInterface $last_updated_after = null, ?\DateTimeInterface $last_updated_before = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\GetShipmentsResponse
+    public function getShipments(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?array $shipment_status_list = null, ?array $shipment_id_list = null, ?DateTimeInterface $last_updated_after = null, ?DateTimeInterface $last_updated_before = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\GetShipmentsResponse
     {
-        \trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
-
         $request = $this->getShipmentsRequest($accessToken, $region, $query_type, $marketplace_id, $shipment_status_list, $shipment_id_list, $last_updated_after, $last_updated_before, $next_token);
 
         $this->configuration->extensions()->preRequest('FulfillmentInboundV0', 'getShipments', $request);
@@ -2473,13 +2461,13 @@ final class FulfillmentInboundV0SDK implements FulfillmentInboundV0SDKInterface
      * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored. (required)
      * @param null|string[] $shipment_status_list A list of ShipmentStatus values. Used to select shipments with a current status that matches the status values that you specify. (optional)
      * @param null|string[] $shipment_id_list A list of shipment IDs used to select the shipments that you want. If both ShipmentStatusList and ShipmentIdList are specified, only shipments that match both parameters are returned. (optional)
-     * @param null|\DateTimeInterface $last_updated_after A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
-     * @param null|\DateTimeInterface $last_updated_before A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_after A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
+     * @param null|DateTimeInterface $last_updated_before A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getShipmentsRequest(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?array $shipment_status_list = null, ?array $shipment_id_list = null, ?\DateTimeInterface $last_updated_after = null, ?\DateTimeInterface $last_updated_before = null, ?string $next_token = null) : RequestInterface
+    public function getShipmentsRequest(AccessToken $accessToken, string $region, string $query_type, string $marketplace_id, ?array $shipment_status_list = null, ?array $shipment_id_list = null, ?DateTimeInterface $last_updated_after = null, ?DateTimeInterface $last_updated_before = null, ?string $next_token = null) : RequestInterface
     {
         // verify the required parameter 'query_type' is set
         if ($query_type === null || (\is_array($query_type) && \count($query_type) === 0)) {

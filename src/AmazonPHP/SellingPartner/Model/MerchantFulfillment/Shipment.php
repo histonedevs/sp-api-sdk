@@ -51,8 +51,8 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
         'label' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Label',
         'status' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\ShipmentStatus',
         'tracking_id' => 'string',
-        'created_date' => '\DateTimeInterface',
-        'last_updated_date' => '\DateTimeInterface',
+        'created_date' => 'DateTimeInterface',
+        'last_updated_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -583,7 +583,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets created_date.
      */
-    public function getCreatedDate() : \DateTimeInterface
+    public function getCreatedDate() : DateTimeInterface
     {
         return $this->container['created_date'];
     }
@@ -591,9 +591,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets created_date.
      *
-     * @param \DateTimeInterface $created_date date-time formatted timestamp
+     * @param DateTimeInterface $created_date date-time formatted timestamp
      */
-    public function setCreatedDate(\DateTimeInterface $created_date) : self
+    public function setCreatedDate(DateTimeInterface $created_date) : self
     {
         $this->container['created_date'] = $created_date;
 
@@ -603,7 +603,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : ?\DateTimeInterface
+    public function getLastUpdatedDate() : ?DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -611,9 +611,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets last_updated_date.
      *
-     * @param null|\DateTimeInterface $last_updated_date date-time formatted timestamp
+     * @param null|DateTimeInterface $last_updated_date date-time formatted timestamp
      */
-    public function setLastUpdatedDate(?\DateTimeInterface $last_updated_date) : self
+    public function setLastUpdatedDate(?DateTimeInterface $last_updated_date) : self
     {
         $this->container['last_updated_date'] = $last_updated_date;
 

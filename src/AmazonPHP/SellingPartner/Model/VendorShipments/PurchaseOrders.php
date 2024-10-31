@@ -39,7 +39,7 @@ class PurchaseOrders implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
      */
     protected static array $openAPITypes = [
         'purchase_order_number' => 'string',
-        'purchase_order_date' => '\DateTimeInterface',
+        'purchase_order_date' => 'DateTimeInterface',
         'ship_window' => 'string',
         'items' => '\AmazonPHP\SellingPartner\Model\VendorShipments\PurchaseOrderItems[]',
     ];
@@ -210,7 +210,7 @@ class PurchaseOrders implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets purchase_order_date.
      */
-    public function getPurchaseOrderDate() : ?\DateTimeInterface
+    public function getPurchaseOrderDate() : ?DateTimeInterface
     {
         return $this->container['purchase_order_date'];
     }
@@ -218,9 +218,9 @@ class PurchaseOrders implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets purchase_order_date.
      *
-     * @param null|\DateTimeInterface $purchase_order_date purchase order numbers involved in this shipment, list all the PO that are involved as part of this shipment
+     * @param null|DateTimeInterface $purchase_order_date purchase order numbers involved in this shipment, list all the PO that are involved as part of this shipment
      */
-    public function setPurchaseOrderDate(?\DateTimeInterface $purchase_order_date) : self
+    public function setPurchaseOrderDate(?DateTimeInterface $purchase_order_date) : self
     {
         $this->container['purchase_order_date'] = $purchase_order_date;
 

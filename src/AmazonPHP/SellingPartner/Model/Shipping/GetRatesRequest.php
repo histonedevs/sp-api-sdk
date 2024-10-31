@@ -41,7 +41,7 @@ class GetRatesRequest implements \ArrayAccess, \JsonSerializable, \Stringable, M
         'ship_to' => '\AmazonPHP\SellingPartner\Model\Shipping\Address',
         'ship_from' => '\AmazonPHP\SellingPartner\Model\Shipping\Address',
         'service_types' => '\AmazonPHP\SellingPartner\Model\Shipping\ServiceType[]',
-        'ship_date' => '\DateTimeInterface',
+        'ship_date' => 'DateTimeInterface',
         'container_specifications' => '\AmazonPHP\SellingPartner\Model\Shipping\ContainerSpecification[]',
     ];
 
@@ -277,7 +277,7 @@ class GetRatesRequest implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : ?\DateTimeInterface
+    public function getShipDate() : ?DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -285,9 +285,9 @@ class GetRatesRequest implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets ship_date.
      *
-     * @param null|\DateTimeInterface $ship_date The start date and time. This defaults to the current date and time.
+     * @param null|DateTimeInterface $ship_date The start date and time. This defaults to the current date and time.
      */
-    public function setShipDate(?\DateTimeInterface $ship_date) : self
+    public function setShipDate(?DateTimeInterface $ship_date) : self
     {
         $this->container['ship_date'] = $ship_date;
 

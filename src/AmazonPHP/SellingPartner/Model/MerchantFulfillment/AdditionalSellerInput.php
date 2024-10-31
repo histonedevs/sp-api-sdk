@@ -42,7 +42,7 @@ class AdditionalSellerInput implements \ArrayAccess, \JsonSerializable, \Stringa
         'value_as_string' => 'string',
         'value_as_boolean' => 'bool',
         'value_as_integer' => 'int',
-        'value_as_timestamp' => '\DateTimeInterface',
+        'value_as_timestamp' => 'DateTimeInterface',
         'value_as_address' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Address',
         'value_as_weight' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Weight',
         'value_as_dimension' => '\AmazonPHP\SellingPartner\Model\MerchantFulfillment\Length',
@@ -315,7 +315,7 @@ class AdditionalSellerInput implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets value_as_timestamp.
      */
-    public function getValueAsTimestamp() : ?\DateTimeInterface
+    public function getValueAsTimestamp() : ?DateTimeInterface
     {
         return $this->container['value_as_timestamp'];
     }
@@ -323,9 +323,9 @@ class AdditionalSellerInput implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets value_as_timestamp.
      *
-     * @param null|\DateTimeInterface $value_as_timestamp date-time formatted timestamp
+     * @param null|DateTimeInterface $value_as_timestamp date-time formatted timestamp
      */
-    public function setValueAsTimestamp(?\DateTimeInterface $value_as_timestamp) : self
+    public function setValueAsTimestamp(?DateTimeInterface $value_as_timestamp) : self
     {
         $this->container['value_as_timestamp'] = $value_as_timestamp;
 

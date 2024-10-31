@@ -38,8 +38,8 @@ class TimeRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'start' => '\DateTimeInterface',
-        'end' => '\DateTimeInterface',
+        'start' => 'DateTimeInterface',
+        'end' => 'DateTimeInterface',
     ];
 
     /**
@@ -178,7 +178,7 @@ class TimeRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets start.
      */
-    public function getStart() : ?\DateTimeInterface
+    public function getStart() : ?DateTimeInterface
     {
         return $this->container['start'];
     }
@@ -186,9 +186,9 @@ class TimeRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets start.
      *
-     * @param null|\DateTimeInterface $start The start date and time. This defaults to the current date and time.
+     * @param null|DateTimeInterface $start The start date and time. This defaults to the current date and time.
      */
-    public function setStart(?\DateTimeInterface $start) : self
+    public function setStart(?DateTimeInterface $start) : self
     {
         $this->container['start'] = $start;
 
@@ -198,7 +198,7 @@ class TimeRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets end.
      */
-    public function getEnd() : ?\DateTimeInterface
+    public function getEnd() : ?DateTimeInterface
     {
         return $this->container['end'];
     }
@@ -206,9 +206,9 @@ class TimeRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets end.
      *
-     * @param null|\DateTimeInterface $end The end date and time. This must come after the value of start. This defaults to the next business day from the start.
+     * @param null|DateTimeInterface $end The end date and time. This must come after the value of start. This defaults to the next business day from the start.
      */
-    public function setEnd(?\DateTimeInterface $end) : self
+    public function setEnd(?DateTimeInterface $end) : self
     {
         $this->container['end'] = $end;
 

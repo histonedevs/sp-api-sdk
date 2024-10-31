@@ -45,7 +45,7 @@ class ReturnItem implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
         'return_comment' => 'string',
         'amazon_return_reason_code' => 'string',
         'status' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentReturnItemStatus',
-        'status_changed_date' => '\DateTimeInterface',
+        'status_changed_date' => 'DateTimeInterface',
         'return_authorization_id' => 'string',
         'return_received_condition' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ReturnItemDisposition',
         'fulfillment_center_id' => 'string',
@@ -395,7 +395,7 @@ class ReturnItem implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Gets status_changed_date.
      */
-    public function getStatusChangedDate() : \DateTimeInterface
+    public function getStatusChangedDate() : DateTimeInterface
     {
         return $this->container['status_changed_date'];
     }
@@ -403,9 +403,9 @@ class ReturnItem implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Sets status_changed_date.
      *
-     * @param \DateTimeInterface $status_changed_date Date timestamp
+     * @param DateTimeInterface $status_changed_date Date timestamp
      */
-    public function setStatusChangedDate(\DateTimeInterface $status_changed_date) : self
+    public function setStatusChangedDate(DateTimeInterface $status_changed_date) : self
     {
         $this->container['status_changed_date'] = $status_changed_date;
 

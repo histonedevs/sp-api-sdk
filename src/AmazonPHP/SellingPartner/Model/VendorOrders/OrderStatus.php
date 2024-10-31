@@ -44,8 +44,8 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     protected static array $openAPITypes = [
         'purchase_order_number' => 'string',
         'purchase_order_status' => 'string',
-        'purchase_order_date' => '\DateTimeInterface',
-        'last_updated_date' => '\DateTimeInterface',
+        'purchase_order_date' => 'DateTimeInterface',
+        'last_updated_date' => 'DateTimeInterface',
         'selling_party' => '\AmazonPHP\SellingPartner\Model\VendorOrders\PartyIdentification',
         'ship_to_party' => '\AmazonPHP\SellingPartner\Model\VendorOrders\PartyIdentification',
         'item_status' => '\AmazonPHP\SellingPartner\Model\VendorOrders\OrderItemStatus[]',
@@ -304,7 +304,7 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Gets purchase_order_date.
      */
-    public function getPurchaseOrderDate() : \DateTimeInterface
+    public function getPurchaseOrderDate() : DateTimeInterface
     {
         return $this->container['purchase_order_date'];
     }
@@ -312,9 +312,9 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Sets purchase_order_date.
      *
-     * @param \DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date/time format.
+     * @param DateTimeInterface $purchase_order_date The date the purchase order was placed. Must be in ISO-8601 date/time format.
      */
-    public function setPurchaseOrderDate(\DateTimeInterface $purchase_order_date) : self
+    public function setPurchaseOrderDate(DateTimeInterface $purchase_order_date) : self
     {
         $this->container['purchase_order_date'] = $purchase_order_date;
 
@@ -324,7 +324,7 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : ?\DateTimeInterface
+    public function getLastUpdatedDate() : ?DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -332,9 +332,9 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Sets last_updated_date.
      *
-     * @param null|\DateTimeInterface $last_updated_date The date when the purchase order was last updated. Must be in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date/time format.
+     * @param null|DateTimeInterface $last_updated_date The date when the purchase order was last updated. Must be in ISO-8601 date/time format.
      */
-    public function setLastUpdatedDate(?\DateTimeInterface $last_updated_date) : self
+    public function setLastUpdatedDate(?DateTimeInterface $last_updated_date) : self
     {
         $this->container['last_updated_date'] = $last_updated_date;
 

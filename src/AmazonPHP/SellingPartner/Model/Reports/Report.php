@@ -51,13 +51,13 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
         'marketplace_ids' => 'string[]',
         'report_id' => 'string',
         'report_type' => 'string',
-        'data_start_time' => '\DateTimeInterface',
-        'data_end_time' => '\DateTimeInterface',
+        'data_start_time' => 'DateTimeInterface',
+        'data_end_time' => 'DateTimeInterface',
         'report_schedule_id' => 'string',
-        'created_time' => '\DateTimeInterface',
+        'created_time' => 'DateTimeInterface',
         'processing_status' => 'string',
-        'processing_start_time' => '\DateTimeInterface',
-        'processing_end_time' => '\DateTimeInterface',
+        'processing_start_time' => 'DateTimeInterface',
+        'processing_end_time' => 'DateTimeInterface',
         'report_document_id' => 'string',
     ];
 
@@ -347,7 +347,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets data_start_time.
      */
-    public function getDataStartTime() : ?\DateTimeInterface
+    public function getDataStartTime() : ?DateTimeInterface
     {
         return $this->container['data_start_time'];
     }
@@ -355,9 +355,9 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets data_start_time.
      *
-     * @param null|\DateTimeInterface $data_start_time the start of a date and time range used for selecting the data to report
+     * @param null|DateTimeInterface $data_start_time the start of a date and time range used for selecting the data to report
      */
-    public function setDataStartTime(?\DateTimeInterface $data_start_time) : self
+    public function setDataStartTime(?DateTimeInterface $data_start_time) : self
     {
         $this->container['data_start_time'] = $data_start_time;
 
@@ -367,7 +367,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets data_end_time.
      */
-    public function getDataEndTime() : ?\DateTimeInterface
+    public function getDataEndTime() : ?DateTimeInterface
     {
         return $this->container['data_end_time'];
     }
@@ -375,9 +375,9 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets data_end_time.
      *
-     * @param null|\DateTimeInterface $data_end_time the end of a date and time range used for selecting the data to report
+     * @param null|DateTimeInterface $data_end_time the end of a date and time range used for selecting the data to report
      */
-    public function setDataEndTime(?\DateTimeInterface $data_end_time) : self
+    public function setDataEndTime(?DateTimeInterface $data_end_time) : self
     {
         $this->container['data_end_time'] = $data_end_time;
 
@@ -407,7 +407,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets created_time.
      */
-    public function getCreatedTime() : \DateTimeInterface
+    public function getCreatedTime() : DateTimeInterface
     {
         return $this->container['created_time'];
     }
@@ -415,9 +415,9 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets created_time.
      *
-     * @param \DateTimeInterface $created_time the date and time when the report was created
+     * @param DateTimeInterface $created_time the date and time when the report was created
      */
-    public function setCreatedTime(\DateTimeInterface $created_time) : self
+    public function setCreatedTime(DateTimeInterface $created_time) : self
     {
         $this->container['created_time'] = $created_time;
 
@@ -447,7 +447,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets processing_start_time.
      */
-    public function getProcessingStartTime() : ?\DateTimeInterface
+    public function getProcessingStartTime() : ?DateTimeInterface
     {
         return $this->container['processing_start_time'];
     }
@@ -455,9 +455,9 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets processing_start_time.
      *
-     * @param null|\DateTimeInterface $processing_start_time The date and time when the report processing started, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
+     * @param null|DateTimeInterface $processing_start_time The date and time when the report processing started, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
      */
-    public function setProcessingStartTime(?\DateTimeInterface $processing_start_time) : self
+    public function setProcessingStartTime(?DateTimeInterface $processing_start_time) : self
     {
         $this->container['processing_start_time'] = $processing_start_time;
 
@@ -467,7 +467,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets processing_end_time.
      */
-    public function getProcessingEndTime() : ?\DateTimeInterface
+    public function getProcessingEndTime() : ?DateTimeInterface
     {
         return $this->container['processing_end_time'];
     }
@@ -475,9 +475,9 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets processing_end_time.
      *
-     * @param null|\DateTimeInterface $processing_end_time The date and time when the report processing completed, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
+     * @param null|DateTimeInterface $processing_end_time The date and time when the report processing completed, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
      */
-    public function setProcessingEndTime(?\DateTimeInterface $processing_end_time) : self
+    public function setProcessingEndTime(?DateTimeInterface $processing_end_time) : self
     {
         $this->container['processing_end_time'] = $processing_end_time;
 

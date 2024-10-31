@@ -39,8 +39,8 @@ class Quote implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
      */
     protected static array $openAPITypes = [
         'cost' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\Currency',
-        'expiration' => '\DateTimeInterface',
-        'voidable_until' => '\DateTimeInterface',
+        'expiration' => 'DateTimeInterface',
+        'voidable_until' => 'DateTimeInterface',
     ];
 
     /**
@@ -209,7 +209,7 @@ class Quote implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Gets expiration.
      */
-    public function getExpiration() : ?\DateTimeInterface
+    public function getExpiration() : ?DateTimeInterface
     {
         return $this->container['expiration'];
     }
@@ -217,9 +217,9 @@ class Quote implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Sets expiration.
      *
-     * @param null|\DateTimeInterface $expiration The timestamp at which this transportation option quote becomes no longer valid. This is based in ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param null|DateTimeInterface $expiration The time at which this transportation option quote expires. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
      */
-    public function setExpiration(?\DateTimeInterface $expiration) : self
+    public function setExpiration(?DateTimeInterface $expiration) : self
     {
         $this->container['expiration'] = $expiration;
 
@@ -229,7 +229,7 @@ class Quote implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Gets voidable_until.
      */
-    public function getVoidableUntil() : ?\DateTimeInterface
+    public function getVoidableUntil() : ?DateTimeInterface
     {
         return $this->container['voidable_until'];
     }
@@ -237,9 +237,9 @@ class Quote implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Sets voidable_until.
      *
-     * @param null|\DateTimeInterface $voidable_until voidable until timestamp
+     * @param null|DateTimeInterface $voidable_until voidable until timestamp
      */
-    public function setVoidableUntil(?\DateTimeInterface $voidable_until) : self
+    public function setVoidableUntil(?DateTimeInterface $voidable_until) : self
     {
         $this->container['voidable_until'] = $voidable_until;
 

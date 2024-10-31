@@ -40,7 +40,7 @@ class OrderAcknowledgementItem implements \ArrayAccess, \JsonSerializable, \Stri
     protected static array $openAPITypes = [
         'purchase_order_number' => 'string',
         'vendor_order_number' => 'string',
-        'acknowledgement_date' => '\DateTimeInterface',
+        'acknowledgement_date' => 'DateTimeInterface',
         'acknowledgement_status' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\AcknowledgementStatus',
         'selling_party' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\PartyIdentification',
         'ship_from_party' => '\AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentOrders\PartyIdentification',
@@ -281,7 +281,7 @@ class OrderAcknowledgementItem implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets acknowledgement_date.
      */
-    public function getAcknowledgementDate() : \DateTimeInterface
+    public function getAcknowledgementDate() : DateTimeInterface
     {
         return $this->container['acknowledgement_date'];
     }
@@ -289,9 +289,9 @@ class OrderAcknowledgementItem implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets acknowledgement_date.
      *
-     * @param \DateTimeInterface $acknowledgement_date The date and time when the order is acknowledged, in ISO-8601 date/time format. For example: 2018-07-16T23:00:00Z / 2018-07-16T23:00:00-05:00 / 2018-07-16T23:00:00-08:00.
+     * @param DateTimeInterface $acknowledgement_date The date and time when the order is acknowledged, in ISO-8601 date/time format. For example: 2018-07-16T23:00:00Z / 2018-07-16T23:00:00-05:00 / 2018-07-16T23:00:00-08:00.
      */
-    public function setAcknowledgementDate(\DateTimeInterface $acknowledgement_date) : self
+    public function setAcknowledgementDate(DateTimeInterface $acknowledgement_date) : self
     {
         $this->container['acknowledgement_date'] = $acknowledgement_date;
 

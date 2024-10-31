@@ -41,7 +41,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
         'seller_fulfillment_order_id' => 'string',
         'marketplace_id' => 'string',
         'displayable_order_id' => 'string',
-        'displayable_order_date' => '\DateTimeInterface',
+        'displayable_order_date' => 'DateTimeInterface',
         'displayable_order_comment' => 'string',
         'shipping_speed_category' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ShippingSpeedCategory',
         'delivery_window' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\DeliveryWindow',
@@ -49,9 +49,9 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
         'fulfillment_action' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentAction',
         'fulfillment_policy' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentPolicy',
         'cod_settings' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\CODSettings',
-        'received_date' => '\DateTimeInterface',
+        'received_date' => 'DateTimeInterface',
         'fulfillment_order_status' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FulfillmentOrderStatus',
-        'status_updated_date' => '\DateTimeInterface',
+        'status_updated_date' => 'DateTimeInterface',
         'notification_emails' => 'string[]',
         'feature_constraints' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\FeatureSettings[]',
     ];
@@ -371,7 +371,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets displayable_order_date.
      */
-    public function getDisplayableOrderDate() : \DateTimeInterface
+    public function getDisplayableOrderDate() : DateTimeInterface
     {
         return $this->container['displayable_order_date'];
     }
@@ -379,9 +379,9 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets displayable_order_date.
      *
-     * @param \DateTimeInterface $displayable_order_date Date timestamp
+     * @param DateTimeInterface $displayable_order_date Date timestamp
      */
-    public function setDisplayableOrderDate(\DateTimeInterface $displayable_order_date) : self
+    public function setDisplayableOrderDate(DateTimeInterface $displayable_order_date) : self
     {
         $this->container['displayable_order_date'] = $displayable_order_date;
 
@@ -531,7 +531,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets received_date.
      */
-    public function getReceivedDate() : \DateTimeInterface
+    public function getReceivedDate() : DateTimeInterface
     {
         return $this->container['received_date'];
     }
@@ -539,9 +539,9 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets received_date.
      *
-     * @param \DateTimeInterface $received_date Date timestamp
+     * @param DateTimeInterface $received_date Date timestamp
      */
-    public function setReceivedDate(\DateTimeInterface $received_date) : self
+    public function setReceivedDate(DateTimeInterface $received_date) : self
     {
         $this->container['received_date'] = $received_date;
 
@@ -571,7 +571,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets status_updated_date.
      */
-    public function getStatusUpdatedDate() : \DateTimeInterface
+    public function getStatusUpdatedDate() : DateTimeInterface
     {
         return $this->container['status_updated_date'];
     }
@@ -579,9 +579,9 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets status_updated_date.
      *
-     * @param \DateTimeInterface $status_updated_date Date timestamp
+     * @param DateTimeInterface $status_updated_date Date timestamp
      */
-    public function setStatusUpdatedDate(\DateTimeInterface $status_updated_date) : self
+    public function setStatusUpdatedDate(DateTimeInterface $status_updated_date) : self
     {
         $this->container['status_updated_date'] = $status_updated_date;
 

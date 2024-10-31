@@ -11,7 +11,7 @@ use AmazonPHP\SellingPartner\ObjectSerializer;
 /**
  * Selling Partner API for Finances.
  *
- * The Selling Partner API for Finances helps you obtain financial information relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
+ * The Selling Partner API for Finances provides financial information that is relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
  *
  * The version of the OpenAPI document: v0
  *
@@ -43,12 +43,12 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
         'fund_transfer_status' => 'string',
         'original_total' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
         'converted_total' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
-        'fund_transfer_date' => '\DateTimeInterface',
+        'fund_transfer_date' => 'DateTimeInterface',
         'trace_id' => 'string',
         'account_tail' => 'string',
         'beginning_balance' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
-        'financial_event_group_start' => '\DateTimeInterface',
-        'financial_event_group_end' => '\DateTimeInterface',
+        'financial_event_group_start' => 'DateTimeInterface',
+        'financial_event_group_end' => 'DateTimeInterface',
     ];
 
     /**
@@ -271,7 +271,7 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets processing_status.
      *
-     * @param null|string $processing_status The processing status of the financial event group indicates whether the balance of the financial event group is settled.  Possible values:  * Open  * Closed
+     * @param null|string $processing_status The processing status of the financial event group indicates whether the balance of the financial event group is settled.  Possible values:  * `Open` * `Closed`
      */
     public function setProcessingStatus(?string $processing_status) : self
     {
@@ -343,7 +343,7 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets fund_transfer_date.
      */
-    public function getFundTransferDate() : ?\DateTimeInterface
+    public function getFundTransferDate() : ?DateTimeInterface
     {
         return $this->container['fund_transfer_date'];
     }
@@ -351,9 +351,9 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets fund_transfer_date.
      *
-     * @param null|\DateTimeInterface $fund_transfer_date fund_transfer_date
+     * @param null|DateTimeInterface $fund_transfer_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setFundTransferDate(?\DateTimeInterface $fund_transfer_date) : self
+    public function setFundTransferDate(?DateTimeInterface $fund_transfer_date) : self
     {
         $this->container['fund_transfer_date'] = $fund_transfer_date;
 
@@ -423,7 +423,7 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets financial_event_group_start.
      */
-    public function getFinancialEventGroupStart() : ?\DateTimeInterface
+    public function getFinancialEventGroupStart() : ?DateTimeInterface
     {
         return $this->container['financial_event_group_start'];
     }
@@ -431,9 +431,9 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets financial_event_group_start.
      *
-     * @param null|\DateTimeInterface $financial_event_group_start financial_event_group_start
+     * @param null|DateTimeInterface $financial_event_group_start A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setFinancialEventGroupStart(?\DateTimeInterface $financial_event_group_start) : self
+    public function setFinancialEventGroupStart(?DateTimeInterface $financial_event_group_start) : self
     {
         $this->container['financial_event_group_start'] = $financial_event_group_start;
 
@@ -443,7 +443,7 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets financial_event_group_end.
      */
-    public function getFinancialEventGroupEnd() : ?\DateTimeInterface
+    public function getFinancialEventGroupEnd() : ?DateTimeInterface
     {
         return $this->container['financial_event_group_end'];
     }
@@ -451,9 +451,9 @@ class FinancialEventGroup implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets financial_event_group_end.
      *
-     * @param null|\DateTimeInterface $financial_event_group_end financial_event_group_end
+     * @param null|DateTimeInterface $financial_event_group_end A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setFinancialEventGroupEnd(?\DateTimeInterface $financial_event_group_end) : self
+    public function setFinancialEventGroupEnd(?DateTimeInterface $financial_event_group_end) : self
     {
         $this->container['financial_event_group_end'] = $financial_event_group_end;
 

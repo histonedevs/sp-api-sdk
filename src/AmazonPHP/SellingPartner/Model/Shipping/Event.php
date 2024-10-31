@@ -39,7 +39,7 @@ class Event implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
      */
     protected static array $openAPITypes = [
         'event_code' => 'string',
-        'event_time' => '\DateTimeInterface',
+        'event_time' => 'DateTimeInterface',
         'location' => '\AmazonPHP\SellingPartner\Model\Shipping\Location',
     ];
 
@@ -223,7 +223,7 @@ class Event implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Gets event_time.
      */
-    public function getEventTime() : \DateTimeInterface
+    public function getEventTime() : DateTimeInterface
     {
         return $this->container['event_time'];
     }
@@ -231,9 +231,9 @@ class Event implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterf
     /**
      * Sets event_time.
      *
-     * @param \DateTimeInterface $event_time the date and time of an event for a shipment
+     * @param DateTimeInterface $event_time the date and time of an event for a shipment
      */
-    public function setEventTime(\DateTimeInterface $event_time) : self
+    public function setEventTime(DateTimeInterface $event_time) : self
     {
         $this->container['event_time'] = $event_time;
 

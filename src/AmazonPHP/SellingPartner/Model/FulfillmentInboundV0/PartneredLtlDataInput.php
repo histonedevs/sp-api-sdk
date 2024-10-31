@@ -41,7 +41,7 @@ class PartneredLtlDataInput implements \ArrayAccess, \JsonSerializable, \Stringa
         'contact' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Contact',
         'box_count' => 'int',
         'seller_freight_class' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\SellerFreightClass',
-        'freight_ready_date' => '\DateTimeInterface',
+        'freight_ready_date' => 'DateTimeInterface',
         'pallet_list' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Pallet[]',
         'total_weight' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Weight',
         'seller_declared_value' => '\AmazonPHP\SellingPartner\Model\FulfillmentInboundV0\Amount',
@@ -279,7 +279,7 @@ class PartneredLtlDataInput implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets freight_ready_date.
      */
-    public function getFreightReadyDate() : ?\DateTimeInterface
+    public function getFreightReadyDate() : ?DateTimeInterface
     {
         return $this->container['freight_ready_date'];
     }
@@ -287,9 +287,9 @@ class PartneredLtlDataInput implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets freight_ready_date.
      *
-     * @param null|\DateTimeInterface $freight_ready_date Type containing date in string format
+     * @param null|DateTimeInterface $freight_ready_date Type containing date in string format
      */
-    public function setFreightReadyDate(?\DateTimeInterface $freight_ready_date) : self
+    public function setFreightReadyDate(?DateTimeInterface $freight_ready_date) : self
     {
         $this->container['freight_ready_date'] = $freight_ready_date;
 

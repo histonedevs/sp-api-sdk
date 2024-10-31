@@ -44,8 +44,8 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
         'carrier_code' => 'string',
         'carrier_phone_number' => 'string',
         'carrier_url' => 'string',
-        'ship_date' => '\DateTimeInterface',
-        'estimated_arrival_date' => '\DateTimeInterface',
+        'ship_date' => 'DateTimeInterface',
+        'estimated_arrival_date' => 'DateTimeInterface',
         'ship_to_address' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\TrackingAddress',
         'current_status' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\CurrentStatus',
         'current_status_description' => 'string',
@@ -377,7 +377,7 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : ?\DateTimeInterface
+    public function getShipDate() : ?DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -385,9 +385,9 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets ship_date.
      *
-     * @param null|\DateTimeInterface $ship_date Date timestamp
+     * @param null|DateTimeInterface $ship_date Date timestamp
      */
-    public function setShipDate(?\DateTimeInterface $ship_date) : self
+    public function setShipDate(?DateTimeInterface $ship_date) : self
     {
         $this->container['ship_date'] = $ship_date;
 
@@ -397,7 +397,7 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets estimated_arrival_date.
      */
-    public function getEstimatedArrivalDate() : ?\DateTimeInterface
+    public function getEstimatedArrivalDate() : ?DateTimeInterface
     {
         return $this->container['estimated_arrival_date'];
     }
@@ -405,9 +405,9 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets estimated_arrival_date.
      *
-     * @param null|\DateTimeInterface $estimated_arrival_date Date timestamp
+     * @param null|DateTimeInterface $estimated_arrival_date Date timestamp
      */
-    public function setEstimatedArrivalDate(?\DateTimeInterface $estimated_arrival_date) : self
+    public function setEstimatedArrivalDate(?DateTimeInterface $estimated_arrival_date) : self
     {
         $this->container['estimated_arrival_date'] = $estimated_arrival_date;
 

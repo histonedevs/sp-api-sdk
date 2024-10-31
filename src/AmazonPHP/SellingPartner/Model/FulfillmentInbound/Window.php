@@ -38,9 +38,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'editable_until' => '\DateTimeInterface',
-        'end' => '\DateTimeInterface',
-        'start' => '\DateTimeInterface',
+        'editable_until' => 'DateTimeInterface',
+        'end' => 'DateTimeInterface',
+        'start' => 'DateTimeInterface',
     ];
 
     /**
@@ -191,7 +191,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets editable_until.
      */
-    public function getEditableUntil() : ?\DateTimeInterface
+    public function getEditableUntil() : ?DateTimeInterface
     {
         return $this->container['editable_until'];
     }
@@ -199,9 +199,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets editable_until.
      *
-     * @param null|\DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
+     * @param null|DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
      */
-    public function setEditableUntil(?\DateTimeInterface $editable_until) : self
+    public function setEditableUntil(?DateTimeInterface $editable_until) : self
     {
         $this->container['editable_until'] = $editable_until;
 
@@ -211,7 +211,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets end.
      */
-    public function getEnd() : \DateTimeInterface
+    public function getEnd() : DateTimeInterface
     {
         return $this->container['end'];
     }
@@ -219,9 +219,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets end.
      *
-     * @param \DateTimeInterface $end the end timestamp of the window
+     * @param DateTimeInterface $end the end timestamp of the window
      */
-    public function setEnd(\DateTimeInterface $end) : self
+    public function setEnd(DateTimeInterface $end) : self
     {
         $this->container['end'] = $end;
 
@@ -231,7 +231,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets start.
      */
-    public function getStart() : \DateTimeInterface
+    public function getStart() : DateTimeInterface
     {
         return $this->container['start'];
     }
@@ -239,9 +239,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets start.
      *
-     * @param \DateTimeInterface $start the start timestamp of the window
+     * @param DateTimeInterface $start the start timestamp of the window
      */
-    public function setStart(\DateTimeInterface $start) : self
+    public function setStart(DateTimeInterface $start) : self
     {
         $this->container['start'] = $start;
 

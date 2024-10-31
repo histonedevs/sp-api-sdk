@@ -40,9 +40,9 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     protected static array $openAPITypes = [
         'availability_type' => 'string',
         'delivery_window_option_id' => 'string',
-        'end_date' => '\DateTimeInterface',
-        'start_date' => '\DateTimeInterface',
-        'valid_until' => '\DateTimeInterface',
+        'end_date' => 'DateTimeInterface',
+        'start_date' => 'DateTimeInterface',
+        'valid_until' => 'DateTimeInterface',
     ];
 
     /**
@@ -267,7 +267,7 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets end_date.
      */
-    public function getEndDate() : \DateTimeInterface
+    public function getEndDate() : DateTimeInterface
     {
         return $this->container['end_date'];
     }
@@ -275,9 +275,9 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets end_date.
      *
-     * @param \DateTimeInterface $end_date The timestamp at which this delivery window option ends. This is based in ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param DateTimeInterface $end_date The time at which this delivery window option ends. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mmZ`.
      */
-    public function setEndDate(\DateTimeInterface $end_date) : self
+    public function setEndDate(DateTimeInterface $end_date) : self
     {
         $this->container['end_date'] = $end_date;
 
@@ -287,7 +287,7 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets start_date.
      */
-    public function getStartDate() : \DateTimeInterface
+    public function getStartDate() : DateTimeInterface
     {
         return $this->container['start_date'];
     }
@@ -295,9 +295,9 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets start_date.
      *
-     * @param \DateTimeInterface $start_date The timestamp at which this delivery window option starts. This is based in ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param DateTimeInterface $start_date The time at which this delivery window option starts. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mmZ`.
      */
-    public function setStartDate(\DateTimeInterface $start_date) : self
+    public function setStartDate(DateTimeInterface $start_date) : self
     {
         $this->container['start_date'] = $start_date;
 
@@ -307,7 +307,7 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets valid_until.
      */
-    public function getValidUntil() : \DateTimeInterface
+    public function getValidUntil() : DateTimeInterface
     {
         return $this->container['valid_until'];
     }
@@ -315,9 +315,9 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets valid_until.
      *
-     * @param \DateTimeInterface $valid_until The timestamp at which this window delivery option becomes no longer valid. This is based in ISO 8601 datetime with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param DateTimeInterface $valid_until The time at which this window delivery option is no longer valid. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mmZ`.
      */
-    public function setValidUntil(\DateTimeInterface $valid_until) : self
+    public function setValidUntil(DateTimeInterface $valid_until) : self
     {
         $this->container['valid_until'] = $valid_until;
 

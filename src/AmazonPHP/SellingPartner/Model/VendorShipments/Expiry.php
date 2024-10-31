@@ -38,8 +38,8 @@ class Expiry implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'manufacturer_date' => '\DateTimeInterface',
-        'expiry_date' => '\DateTimeInterface',
+        'manufacturer_date' => 'DateTimeInterface',
+        'expiry_date' => 'DateTimeInterface',
         'expiry_after_duration' => '\AmazonPHP\SellingPartner\Model\VendorShipments\Duration',
     ];
 
@@ -187,7 +187,7 @@ class Expiry implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets manufacturer_date.
      */
-    public function getManufacturerDate() : ?\DateTimeInterface
+    public function getManufacturerDate() : ?DateTimeInterface
     {
         return $this->container['manufacturer_date'];
     }
@@ -195,9 +195,9 @@ class Expiry implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets manufacturer_date.
      *
-     * @param null|\DateTimeInterface $manufacturer_date Production, packaging or assembly date determined by the manufacturer. Its meaning is determined based on the trade item context.
+     * @param null|DateTimeInterface $manufacturer_date Production, packaging or assembly date determined by the manufacturer. Its meaning is determined based on the trade item context.
      */
-    public function setManufacturerDate(?\DateTimeInterface $manufacturer_date) : self
+    public function setManufacturerDate(?DateTimeInterface $manufacturer_date) : self
     {
         $this->container['manufacturer_date'] = $manufacturer_date;
 
@@ -207,7 +207,7 @@ class Expiry implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets expiry_date.
      */
-    public function getExpiryDate() : ?\DateTimeInterface
+    public function getExpiryDate() : ?DateTimeInterface
     {
         return $this->container['expiry_date'];
     }
@@ -215,9 +215,9 @@ class Expiry implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets expiry_date.
      *
-     * @param null|\DateTimeInterface $expiry_date The date that determines the limit of consumption or use of a product. Its meaning is determined based on the trade item context.
+     * @param null|DateTimeInterface $expiry_date The date that determines the limit of consumption or use of a product. Its meaning is determined based on the trade item context.
      */
-    public function setExpiryDate(?\DateTimeInterface $expiry_date) : self
+    public function setExpiryDate(?DateTimeInterface $expiry_date) : self
     {
         $this->container['expiry_date'] = $expiry_date;
 

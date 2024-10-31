@@ -41,7 +41,7 @@ class CreateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
         'marketplace_id' => 'string',
         'seller_fulfillment_order_id' => 'string',
         'displayable_order_id' => 'string',
-        'displayable_order_date' => '\DateTimeInterface',
+        'displayable_order_date' => 'DateTimeInterface',
         'displayable_order_comment' => 'string',
         'shipping_speed_category' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ShippingSpeedCategory',
         'delivery_window' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\DeliveryWindow',
@@ -381,7 +381,7 @@ class CreateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
     /**
      * Gets displayable_order_date.
      */
-    public function getDisplayableOrderDate() : \DateTimeInterface
+    public function getDisplayableOrderDate() : DateTimeInterface
     {
         return $this->container['displayable_order_date'];
     }
@@ -389,9 +389,9 @@ class CreateFulfillmentOrderRequest implements \ArrayAccess, \JsonSerializable, 
     /**
      * Sets displayable_order_date.
      *
-     * @param \DateTimeInterface $displayable_order_date Date timestamp
+     * @param DateTimeInterface $displayable_order_date Date timestamp
      */
-    public function setDisplayableOrderDate(\DateTimeInterface $displayable_order_date) : self
+    public function setDisplayableOrderDate(DateTimeInterface $displayable_order_date) : self
     {
         $this->container['displayable_order_date'] = $displayable_order_date;
 

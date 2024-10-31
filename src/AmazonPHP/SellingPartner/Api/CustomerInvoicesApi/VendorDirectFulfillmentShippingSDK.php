@@ -226,8 +226,8 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
     /**
      * Operation getCustomerInvoices.
      *
-     * @param \DateTimeInterface $created_after Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param \DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_after Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned (optional)
      * @param null|string $sort_order Sort ASC or DESC by order creation date. (optional)
@@ -236,7 +236,7 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getCustomerInvoices(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\CustomerInvoiceList
+    public function getCustomerInvoices(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\VendorDirectFulfillmentShipping\CustomerInvoiceList
     {
         $request = $this->getCustomerInvoicesRequest($accessToken, $region, $created_after, $created_before, $ship_from_party_id, $limit, $sort_order, $next_token);
 
@@ -327,8 +327,8 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
     /**
      * Create request for operation 'getCustomerInvoices'.
      *
-     * @param \DateTimeInterface $created_after Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
-     * @param \DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_after Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param DateTimeInterface $created_before Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned (optional)
      * @param null|string $sort_order Sort ASC or DESC by order creation date. (optional)
@@ -336,7 +336,7 @@ final class VendorDirectFulfillmentShippingSDK implements VendorDirectFulfillmen
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getCustomerInvoicesRequest(AccessToken $accessToken, string $region, \DateTimeInterface $created_after, \DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : RequestInterface
+    public function getCustomerInvoicesRequest(AccessToken $accessToken, string $region, DateTimeInterface $created_after, DateTimeInterface $created_before, ?string $ship_from_party_id = null, ?int $limit = null, ?string $sort_order = null, ?string $next_token = null) : RequestInterface
     {
         // verify the required parameter 'created_after' is set
         if ($created_after === null || (\is_array($created_after) && \count($created_after) === 0)) {

@@ -38,8 +38,8 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'required_ship_date' => '\DateTimeInterface',
-        'promised_delivery_date' => '\DateTimeInterface',
+        'required_ship_date' => 'DateTimeInterface',
+        'promised_delivery_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -181,7 +181,7 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets required_ship_date.
      */
-    public function getRequiredShipDate() : \DateTimeInterface
+    public function getRequiredShipDate() : DateTimeInterface
     {
         return $this->container['required_ship_date'];
     }
@@ -189,9 +189,9 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets required_ship_date.
      *
-     * @param \DateTimeInterface $required_ship_date time by which the vendor is required to ship the order
+     * @param DateTimeInterface $required_ship_date time by which the vendor is required to ship the order
      */
-    public function setRequiredShipDate(\DateTimeInterface $required_ship_date) : self
+    public function setRequiredShipDate(DateTimeInterface $required_ship_date) : self
     {
         $this->container['required_ship_date'] = $required_ship_date;
 
@@ -201,7 +201,7 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets promised_delivery_date.
      */
-    public function getPromisedDeliveryDate() : ?\DateTimeInterface
+    public function getPromisedDeliveryDate() : ?DateTimeInterface
     {
         return $this->container['promised_delivery_date'];
     }
@@ -209,9 +209,9 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets promised_delivery_date.
      *
-     * @param null|\DateTimeInterface $promised_delivery_date delivery date promised to the Amazon customer
+     * @param null|DateTimeInterface $promised_delivery_date delivery date promised to the Amazon customer
      */
-    public function setPromisedDeliveryDate(?\DateTimeInterface $promised_delivery_date) : self
+    public function setPromisedDeliveryDate(?DateTimeInterface $promised_delivery_date) : self
     {
         $this->container['promised_delivery_date'] = $promised_delivery_date;
 

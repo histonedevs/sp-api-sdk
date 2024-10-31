@@ -38,7 +38,7 @@ class FeesEstimate implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'time_of_fees_estimation' => '\DateTimeInterface',
+        'time_of_fees_estimation' => 'DateTimeInterface',
         'total_fees_estimate' => '\AmazonPHP\SellingPartner\Model\ProductFees\MoneyType',
         'fee_detail_list' => '\AmazonPHP\SellingPartner\Model\ProductFees\FeeDetail[]',
     ];
@@ -191,7 +191,7 @@ class FeesEstimate implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets time_of_fees_estimation.
      */
-    public function getTimeOfFeesEstimation() : \DateTimeInterface
+    public function getTimeOfFeesEstimation() : DateTimeInterface
     {
         return $this->container['time_of_fees_estimation'];
     }
@@ -199,9 +199,9 @@ class FeesEstimate implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Sets time_of_fees_estimation.
      *
-     * @param \DateTimeInterface $time_of_fees_estimation The time at which the fees were estimated. This defaults to the time the request is made.
+     * @param DateTimeInterface $time_of_fees_estimation The time at which the fees were estimated. This defaults to the time the request is made.
      */
-    public function setTimeOfFeesEstimation(\DateTimeInterface $time_of_fees_estimation) : self
+    public function setTimeOfFeesEstimation(DateTimeInterface $time_of_fees_estimation) : self
     {
         $this->container['time_of_fees_estimation'] = $time_of_fees_estimation;
 

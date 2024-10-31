@@ -11,7 +11,7 @@ use AmazonPHP\SellingPartner\ObjectSerializer;
 /**
  * Selling Partner API for Finances.
  *
- * The Selling Partner API for Finances helps you obtain financial information relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
+ * The Selling Partner API for Finances provides financial information that is relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
  *
  * The version of the OpenAPI document: v0
  *
@@ -38,7 +38,7 @@ class ProductAdsPaymentEvent implements \ArrayAccess, \JsonSerializable, \String
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'posted_date' => '\DateTimeInterface',
+        'posted_date' => 'DateTimeInterface',
         'transaction_type' => 'string',
         'invoice_id' => 'string',
         'base_value' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
@@ -213,7 +213,7 @@ class ProductAdsPaymentEvent implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets posted_date.
      */
-    public function getPostedDate() : ?\DateTimeInterface
+    public function getPostedDate() : ?DateTimeInterface
     {
         return $this->container['posted_date'];
     }
@@ -221,9 +221,9 @@ class ProductAdsPaymentEvent implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets posted_date.
      *
-     * @param null|\DateTimeInterface $posted_date posted_date
+     * @param null|DateTimeInterface $posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setPostedDate(?\DateTimeInterface $posted_date) : self
+    public function setPostedDate(?DateTimeInterface $posted_date) : self
     {
         $this->container['posted_date'] = $posted_date;
 
@@ -241,7 +241,7 @@ class ProductAdsPaymentEvent implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets transaction_type.
      *
-     * @param null|string $transaction_type Indicates if the transaction is for a charge or a refund.  Possible values:  * charge - Charge  * refund - Refund
+     * @param null|string $transaction_type Indicates if the transaction is for a charge or a refund.  Possible values:  * `charge`  * `refund`
      */
     public function setTransactionType(?string $transaction_type) : self
     {
@@ -261,7 +261,7 @@ class ProductAdsPaymentEvent implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets invoice_id.
      *
-     * @param null|string $invoice_id identifier for the invoice that the transaction appears in
+     * @param null|string $invoice_id the identifier for the invoice that includes the transaction
      */
     public function setInvoiceId(?string $invoice_id) : self
     {

@@ -11,7 +11,7 @@ use AmazonPHP\SellingPartner\ObjectSerializer;
 /**
  * Selling Partner API for Finances.
  *
- * The Selling Partner API for Finances helps you obtain financial information relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
+ * The Selling Partner API for Finances provides financial information that is relevant to a seller's business. You can obtain financial events for a given order, financial event group, or date range without having to wait until a statement period closes. You can also obtain financial event groups for a given date range.
  *
  * The version of the OpenAPI document: v0
  *
@@ -40,8 +40,8 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     protected static array $openAPITypes = [
         'recovery_amount' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
         'original_amount' => '\AmazonPHP\SellingPartner\Model\Finances\Currency',
-        'group_begin_date' => '\DateTimeInterface',
-        'group_end_date' => '\DateTimeInterface',
+        'group_begin_date' => 'DateTimeInterface',
+        'group_end_date' => 'DateTimeInterface',
     ];
 
     /**
@@ -237,7 +237,7 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets group_begin_date.
      */
-    public function getGroupBeginDate() : ?\DateTimeInterface
+    public function getGroupBeginDate() : ?DateTimeInterface
     {
         return $this->container['group_begin_date'];
     }
@@ -245,9 +245,9 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets group_begin_date.
      *
-     * @param null|\DateTimeInterface $group_begin_date group_begin_date
+     * @param null|DateTimeInterface $group_begin_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setGroupBeginDate(?\DateTimeInterface $group_begin_date) : self
+    public function setGroupBeginDate(?DateTimeInterface $group_begin_date) : self
     {
         $this->container['group_begin_date'] = $group_begin_date;
 
@@ -257,7 +257,7 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets group_end_date.
      */
-    public function getGroupEndDate() : ?\DateTimeInterface
+    public function getGroupEndDate() : ?DateTimeInterface
     {
         return $this->container['group_end_date'];
     }
@@ -265,9 +265,9 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets group_end_date.
      *
-     * @param null|\DateTimeInterface $group_end_date group_end_date
+     * @param null|DateTimeInterface $group_end_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setGroupEndDate(?\DateTimeInterface $group_end_date) : self
+    public function setGroupEndDate(?DateTimeInterface $group_end_date) : self
     {
         $this->container['group_end_date'] = $group_end_date;
 

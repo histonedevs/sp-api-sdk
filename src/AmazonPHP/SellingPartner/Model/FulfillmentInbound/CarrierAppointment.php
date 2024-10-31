@@ -38,8 +38,8 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'end_time' => '\DateTimeInterface',
-        'start_time' => '\DateTimeInterface',
+        'end_time' => 'DateTimeInterface',
+        'start_time' => 'DateTimeInterface',
     ];
 
     /**
@@ -185,7 +185,7 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets end_time.
      */
-    public function getEndTime() : \DateTimeInterface
+    public function getEndTime() : DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -193,9 +193,9 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets end_time.
      *
-     * @param \DateTimeInterface $end_time the end timestamp of the appointment in UTC
+     * @param DateTimeInterface $end_time the end timestamp of the appointment in UTC
      */
-    public function setEndTime(\DateTimeInterface $end_time) : self
+    public function setEndTime(DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 
@@ -205,7 +205,7 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets start_time.
      */
-    public function getStartTime() : \DateTimeInterface
+    public function getStartTime() : DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -213,9 +213,9 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets start_time.
      *
-     * @param \DateTimeInterface $start_time the start timestamp of the appointment in UTC
+     * @param DateTimeInterface $start_time the start timestamp of the appointment in UTC
      */
-    public function setStartTime(\DateTimeInterface $start_time) : self
+    public function setStartTime(DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 

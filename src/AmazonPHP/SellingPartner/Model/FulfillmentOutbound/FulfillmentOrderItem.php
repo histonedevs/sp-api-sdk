@@ -47,8 +47,8 @@ class FulfillmentOrderItem implements \ArrayAccess, \JsonSerializable, \Stringab
         'order_item_disposition' => 'string',
         'cancelled_quantity' => 'int',
         'unfulfillable_quantity' => 'int',
-        'estimated_ship_date' => '\DateTimeInterface',
-        'estimated_arrival_date' => '\DateTimeInterface',
+        'estimated_ship_date' => 'DateTimeInterface',
+        'estimated_arrival_date' => 'DateTimeInterface',
         'per_unit_price' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\Money',
         'per_unit_tax' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\Money',
         'per_unit_declared_value' => '\AmazonPHP\SellingPartner\Model\FulfillmentOutbound\Money',
@@ -461,7 +461,7 @@ class FulfillmentOrderItem implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets estimated_ship_date.
      */
-    public function getEstimatedShipDate() : ?\DateTimeInterface
+    public function getEstimatedShipDate() : ?DateTimeInterface
     {
         return $this->container['estimated_ship_date'];
     }
@@ -469,9 +469,9 @@ class FulfillmentOrderItem implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets estimated_ship_date.
      *
-     * @param null|\DateTimeInterface $estimated_ship_date Date timestamp
+     * @param null|DateTimeInterface $estimated_ship_date Date timestamp
      */
-    public function setEstimatedShipDate(?\DateTimeInterface $estimated_ship_date) : self
+    public function setEstimatedShipDate(?DateTimeInterface $estimated_ship_date) : self
     {
         $this->container['estimated_ship_date'] = $estimated_ship_date;
 
@@ -481,7 +481,7 @@ class FulfillmentOrderItem implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets estimated_arrival_date.
      */
-    public function getEstimatedArrivalDate() : ?\DateTimeInterface
+    public function getEstimatedArrivalDate() : ?DateTimeInterface
     {
         return $this->container['estimated_arrival_date'];
     }
@@ -489,9 +489,9 @@ class FulfillmentOrderItem implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets estimated_arrival_date.
      *
-     * @param null|\DateTimeInterface $estimated_arrival_date Date timestamp
+     * @param null|DateTimeInterface $estimated_arrival_date Date timestamp
      */
-    public function setEstimatedArrivalDate(?\DateTimeInterface $estimated_arrival_date) : self
+    public function setEstimatedArrivalDate(?DateTimeInterface $estimated_arrival_date) : self
     {
         $this->container['estimated_arrival_date'] = $estimated_arrival_date;
 
