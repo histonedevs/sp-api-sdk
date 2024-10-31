@@ -191,7 +191,7 @@ class DeliveryOffer implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets expires_at.
      */
-    public function getExpiresAt() : ?DateTimeInterface
+    public function getExpiresAt() : ?\DateTimeInterface
     {
         return $this->container['expires_at'];
     }
@@ -199,9 +199,9 @@ class DeliveryOffer implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Sets expires_at.
      *
-     * @param null|DateTimeInterface $expires_at Date timestamp
+     * @param null|\DateTimeInterface $expires_at Date timestamp
      */
-    public function setExpiresAt(?DateTimeInterface $expires_at) : self
+    public function setExpiresAt(?\DateTimeInterface $expires_at) : self
     {
         $this->container['expires_at'] = $expires_at;
 

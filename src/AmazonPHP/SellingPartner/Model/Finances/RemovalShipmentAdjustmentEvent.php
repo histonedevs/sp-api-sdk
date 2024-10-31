@@ -202,7 +202,7 @@ class RemovalShipmentAdjustmentEvent implements \ArrayAccess, \JsonSerializable,
     /**
      * Gets posted_date.
      */
-    public function getPostedDate() : ?DateTimeInterface
+    public function getPostedDate() : ?\DateTimeInterface
     {
         return $this->container['posted_date'];
     }
@@ -210,9 +210,9 @@ class RemovalShipmentAdjustmentEvent implements \ArrayAccess, \JsonSerializable,
     /**
      * Sets posted_date.
      *
-     * @param null|DateTimeInterface $posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setPostedDate(?DateTimeInterface $posted_date) : self
+    public function setPostedDate(?\DateTimeInterface $posted_date) : self
     {
         $this->container['posted_date'] = $posted_date;
 

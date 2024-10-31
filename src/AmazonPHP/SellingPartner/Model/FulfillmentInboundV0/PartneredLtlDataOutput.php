@@ -477,7 +477,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets preview_pickup_date.
      */
-    public function getPreviewPickupDate() : ?DateTimeInterface
+    public function getPreviewPickupDate() : ?\DateTimeInterface
     {
         return $this->container['preview_pickup_date'];
     }
@@ -497,7 +497,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets preview_delivery_date.
      */
-    public function getPreviewDeliveryDate() : ?DateTimeInterface
+    public function getPreviewDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['preview_delivery_date'];
     }

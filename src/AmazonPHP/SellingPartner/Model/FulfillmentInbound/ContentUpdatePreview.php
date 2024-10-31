@@ -39,7 +39,7 @@ class ContentUpdatePreview implements \ArrayAccess, \JsonSerializable, \Stringab
      */
     protected static array $openAPITypes = [
         'content_update_preview_id' => 'string',
-        'expiration' => 'DateTimeInterface',
+        'expiration' => '\DateTimeInterface',
         'requested_updates' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\RequestedUpdates',
         'transportation_option' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\TransportationOption',
     ];
@@ -241,7 +241,7 @@ class ContentUpdatePreview implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets expiration.
      */
-    public function getExpiration() : DateTimeInterface
+    public function getExpiration() : \DateTimeInterface
     {
         return $this->container['expiration'];
     }
@@ -249,9 +249,9 @@ class ContentUpdatePreview implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets expiration.
      *
-     * @param DateTimeInterface $expiration The time at which the content update expires. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param \DateTimeInterface $expiration The time at which the content update expires. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
      */
-    public function setExpiration(DateTimeInterface $expiration) : self
+    public function setExpiration(\DateTimeInterface $expiration) : self
     {
         $this->container['expiration'] = $expiration;
 

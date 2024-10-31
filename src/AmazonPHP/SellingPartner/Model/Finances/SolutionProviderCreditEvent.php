@@ -409,7 +409,7 @@ class SolutionProviderCreditEvent implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Gets transaction_creation_date.
      */
-    public function getTransactionCreationDate() : ?DateTimeInterface
+    public function getTransactionCreationDate() : ?\DateTimeInterface
     {
         return $this->container['transaction_creation_date'];
     }
@@ -417,9 +417,9 @@ class SolutionProviderCreditEvent implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Sets transaction_creation_date.
      *
-     * @param null|DateTimeInterface $transaction_creation_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $transaction_creation_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setTransactionCreationDate(?DateTimeInterface $transaction_creation_date) : self
+    public function setTransactionCreationDate(?\DateTimeInterface $transaction_creation_date) : self
     {
         $this->container['transaction_creation_date'] = $transaction_creation_date;
 

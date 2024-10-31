@@ -178,7 +178,7 @@ class TaxWithholdingPeriod implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets start_date.
      */
-    public function getStartDate() : ?DateTimeInterface
+    public function getStartDate() : ?\DateTimeInterface
     {
         return $this->container['start_date'];
     }
@@ -186,9 +186,9 @@ class TaxWithholdingPeriod implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets start_date.
      *
-     * @param null|DateTimeInterface $start_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $start_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setStartDate(?DateTimeInterface $start_date) : self
+    public function setStartDate(?\DateTimeInterface $start_date) : self
     {
         $this->container['start_date'] = $start_date;
 
@@ -198,7 +198,7 @@ class TaxWithholdingPeriod implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets end_date.
      */
-    public function getEndDate() : ?DateTimeInterface
+    public function getEndDate() : ?\DateTimeInterface
     {
         return $this->container['end_date'];
     }
@@ -206,9 +206,9 @@ class TaxWithholdingPeriod implements \ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets end_date.
      *
-     * @param null|DateTimeInterface $end_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $end_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setEndDate(?DateTimeInterface $end_date) : self
+    public function setEndDate(?\DateTimeInterface $end_date) : self
     {
         $this->container['end_date'] = $end_date;
 

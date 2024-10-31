@@ -232,7 +232,7 @@ class ShipmentStatusDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets shipment_status_date.
      */
-    public function getShipmentStatusDate() : ?DateTimeInterface
+    public function getShipmentStatusDate() : ?\DateTimeInterface
     {
         return $this->container['shipment_status_date'];
     }
@@ -240,9 +240,9 @@ class ShipmentStatusDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets shipment_status_date.
      *
-     * @param null|DateTimeInterface $shipment_status_date Date and time on last status update received for the shipment
+     * @param null|\DateTimeInterface $shipment_status_date Date and time on last status update received for the shipment
      */
-    public function setShipmentStatusDate(?DateTimeInterface $shipment_status_date) : self
+    public function setShipmentStatusDate(?\DateTimeInterface $shipment_status_date) : self
     {
         $this->container['shipment_status_date'] = $shipment_status_date;
 

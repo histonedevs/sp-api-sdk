@@ -431,7 +431,7 @@ class Summary implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets offers_available_time.
      */
-    public function getOffersAvailableTime() : ?DateTimeInterface
+    public function getOffersAvailableTime() : ?\DateTimeInterface
     {
         return $this->container['offers_available_time'];
     }
@@ -439,9 +439,9 @@ class Summary implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets offers_available_time.
      *
-     * @param null|DateTimeInterface $offers_available_time when the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing
+     * @param null|\DateTimeInterface $offers_available_time when the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing
      */
-    public function setOffersAvailableTime(?DateTimeInterface $offers_available_time) : self
+    public function setOffersAvailableTime(?\DateTimeInterface $offers_available_time) : self
     {
         $this->container['offers_available_time'] = $offers_available_time;
 

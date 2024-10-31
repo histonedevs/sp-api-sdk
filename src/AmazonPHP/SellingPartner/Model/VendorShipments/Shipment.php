@@ -524,7 +524,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets currentshipment_status_date.
      */
-    public function getCurrentshipmentStatusDate() : ?DateTimeInterface
+    public function getCurrentshipmentStatusDate() : ?\DateTimeInterface
     {
         return $this->container['currentshipment_status_date'];
     }
@@ -532,9 +532,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets currentshipment_status_date.
      *
-     * @param null|DateTimeInterface $currentshipment_status_date date and time when the last status was updated
+     * @param null|\DateTimeInterface $currentshipment_status_date date and time when the last status was updated
      */
-    public function setCurrentshipmentStatusDate(?DateTimeInterface $currentshipment_status_date) : self
+    public function setCurrentshipmentStatusDate(?\DateTimeInterface $currentshipment_status_date) : self
     {
         $this->container['currentshipment_status_date'] = $currentshipment_status_date;
 
@@ -566,7 +566,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets shipment_create_date.
      */
-    public function getShipmentCreateDate() : ?DateTimeInterface
+    public function getShipmentCreateDate() : ?\DateTimeInterface
     {
         return $this->container['shipment_create_date'];
     }
@@ -574,9 +574,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets shipment_create_date.
      *
-     * @param null|DateTimeInterface $shipment_create_date the date and time of the shipment request created by vendor
+     * @param null|\DateTimeInterface $shipment_create_date the date and time of the shipment request created by vendor
      */
-    public function setShipmentCreateDate(?DateTimeInterface $shipment_create_date) : self
+    public function setShipmentCreateDate(?\DateTimeInterface $shipment_create_date) : self
     {
         $this->container['shipment_create_date'] = $shipment_create_date;
 
@@ -586,7 +586,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets shipment_confirm_date.
      */
-    public function getShipmentConfirmDate() : ?DateTimeInterface
+    public function getShipmentConfirmDate() : ?\DateTimeInterface
     {
         return $this->container['shipment_confirm_date'];
     }
@@ -594,9 +594,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets shipment_confirm_date.
      *
-     * @param null|DateTimeInterface $shipment_confirm_date The date and time of the departure of the shipment from the vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Buyer destination warehouse, whichever is sooner. Shipped date mentioned in the shipment confirmation should not be in the future.
+     * @param null|\DateTimeInterface $shipment_confirm_date The date and time of the departure of the shipment from the vendor's location. Vendors are requested to send ASNs within 30 minutes of departure from their warehouse/distribution center or at least 6 hours prior to the appointment time at the Buyer destination warehouse, whichever is sooner. Shipped date mentioned in the shipment confirmation should not be in the future.
      */
-    public function setShipmentConfirmDate(?DateTimeInterface $shipment_confirm_date) : self
+    public function setShipmentConfirmDate(?\DateTimeInterface $shipment_confirm_date) : self
     {
         $this->container['shipment_confirm_date'] = $shipment_confirm_date;
 
@@ -606,7 +606,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets package_label_create_date.
      */
-    public function getPackageLabelCreateDate() : ?DateTimeInterface
+    public function getPackageLabelCreateDate() : ?\DateTimeInterface
     {
         return $this->container['package_label_create_date'];
     }
@@ -614,9 +614,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets package_label_create_date.
      *
-     * @param null|DateTimeInterface $package_label_create_date the date and time of the package label created for the shipment by buyer
+     * @param null|\DateTimeInterface $package_label_create_date the date and time of the package label created for the shipment by buyer
      */
-    public function setPackageLabelCreateDate(?DateTimeInterface $package_label_create_date) : self
+    public function setPackageLabelCreateDate(?\DateTimeInterface $package_label_create_date) : self
     {
         $this->container['package_label_create_date'] = $package_label_create_date;
 

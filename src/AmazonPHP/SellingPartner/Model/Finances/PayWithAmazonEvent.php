@@ -249,7 +249,7 @@ class PayWithAmazonEvent implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets transaction_posted_date.
      */
-    public function getTransactionPostedDate() : ?DateTimeInterface
+    public function getTransactionPostedDate() : ?\DateTimeInterface
     {
         return $this->container['transaction_posted_date'];
     }
@@ -257,9 +257,9 @@ class PayWithAmazonEvent implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets transaction_posted_date.
      *
-     * @param null|DateTimeInterface $transaction_posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $transaction_posted_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setTransactionPostedDate(?DateTimeInterface $transaction_posted_date) : self
+    public function setTransactionPostedDate(?\DateTimeInterface $transaction_posted_date) : self
     {
         $this->container['transaction_posted_date'] = $transaction_posted_date;
 

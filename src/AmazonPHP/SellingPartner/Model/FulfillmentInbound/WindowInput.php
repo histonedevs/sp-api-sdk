@@ -38,7 +38,7 @@ class WindowInput implements \ArrayAccess, \JsonSerializable, \Stringable, Model
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'start' => 'DateTimeInterface',
+        'start' => '\DateTimeInterface',
     ];
 
     /**
@@ -175,7 +175,7 @@ class WindowInput implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Gets start.
      */
-    public function getStart() : DateTimeInterface
+    public function getStart() : \DateTimeInterface
     {
         return $this->container['start'];
     }
@@ -183,9 +183,9 @@ class WindowInput implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Sets start.
      *
-     * @param DateTimeInterface $start The start date of the window. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with minute precision. Supports patterns `yyyy-MM-ddTHH:mmZ`, `yyyy-MM-ddTHH:mm:ssZ`, or `yyyy-MM-ddTHH:mm:ss.sssZ`. Note that non-zero second and millisecond components are removed.
+     * @param \DateTimeInterface $start The start date of the window. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with minute precision. Supports patterns `yyyy-MM-ddTHH:mmZ`, `yyyy-MM-ddTHH:mm:ssZ`, or `yyyy-MM-ddTHH:mm:ss.sssZ`. Note that non-zero second and millisecond components are removed.
      */
-    public function setStart(DateTimeInterface $start) : self
+    public function setStart(\DateTimeInterface $start) : self
     {
         $this->container['start'] = $start;
 

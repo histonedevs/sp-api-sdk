@@ -319,7 +319,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets created_at.
      */
-    public function getCreatedAt() : ?DateTimeInterface
+    public function getCreatedAt() : ?\DateTimeInterface
     {
         return $this->container['created_at'];
     }
@@ -327,9 +327,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets created_at.
      *
-     * @param null|DateTimeInterface $created_at Timestamp when the shipment was created. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
+     * @param null|\DateTimeInterface $created_at Timestamp when the shipment was created. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
      */
-    public function setCreatedAt(?DateTimeInterface $created_at) : self
+    public function setCreatedAt(?\DateTimeInterface $created_at) : self
     {
         $this->container['created_at'] = $created_at;
 
@@ -441,7 +441,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets ship_by.
      */
-    public function getShipBy() : ?DateTimeInterface
+    public function getShipBy() : ?\DateTimeInterface
     {
         return $this->container['ship_by'];
     }
@@ -449,9 +449,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets ship_by.
      *
-     * @param null|DateTimeInterface $ship_by timestamp when the shipment will be shipped
+     * @param null|\DateTimeInterface $ship_by timestamp when the shipment will be shipped
      */
-    public function setShipBy(?DateTimeInterface $ship_by) : self
+    public function setShipBy(?\DateTimeInterface $ship_by) : self
     {
         $this->container['ship_by'] = $ship_by;
 
@@ -565,7 +565,7 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets updated_at.
      */
-    public function getUpdatedAt() : ?DateTimeInterface
+    public function getUpdatedAt() : ?\DateTimeInterface
     {
         return $this->container['updated_at'];
     }
@@ -573,9 +573,9 @@ class InboundShipment implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets updated_at.
      *
-     * @param null|DateTimeInterface $updated_at Timestamp when the shipment was updated. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
+     * @param null|\DateTimeInterface $updated_at Timestamp when the shipment was updated. The date is returned in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> format.
      */
-    public function setUpdatedAt(?DateTimeInterface $updated_at) : self
+    public function setUpdatedAt(?\DateTimeInterface $updated_at) : self
     {
         $this->container['updated_at'] = $updated_at;
 

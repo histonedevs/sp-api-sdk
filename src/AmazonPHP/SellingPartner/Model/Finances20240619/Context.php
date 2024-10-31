@@ -471,7 +471,7 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets payment_date.
      */
-    public function getPaymentDate() : ?DateTimeInterface
+    public function getPaymentDate() : ?\DateTimeInterface
     {
         return $this->container['payment_date'];
     }
@@ -479,9 +479,9 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets payment_date.
      *
-     * @param null|DateTimeInterface $payment_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $payment_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setPaymentDate(?DateTimeInterface $payment_date) : self
+    public function setPaymentDate(?\DateTimeInterface $payment_date) : self
     {
         $this->container['payment_date'] = $payment_date;
 
@@ -511,7 +511,7 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets maturity_date.
      */
-    public function getMaturityDate() : ?DateTimeInterface
+    public function getMaturityDate() : ?\DateTimeInterface
     {
         return $this->container['maturity_date'];
     }
@@ -519,9 +519,9 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets maturity_date.
      *
-     * @param null|DateTimeInterface $maturity_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $maturity_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setMaturityDate(?DateTimeInterface $maturity_date) : self
+    public function setMaturityDate(?\DateTimeInterface $maturity_date) : self
     {
         $this->container['maturity_date'] = $maturity_date;
 
@@ -551,7 +551,7 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets start_time.
      */
-    public function getStartTime() : ?DateTimeInterface
+    public function getStartTime() : ?\DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -559,9 +559,9 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets start_time.
      *
-     * @param null|DateTimeInterface $start_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $start_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setStartTime(?DateTimeInterface $start_time) : self
+    public function setStartTime(?\DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 
@@ -571,7 +571,7 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Gets end_time.
      */
-    public function getEndTime() : ?DateTimeInterface
+    public function getEndTime() : ?\DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -579,9 +579,9 @@ class Context implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInte
     /**
      * Sets end_time.
      *
-     * @param null|DateTimeInterface $end_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $end_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setEndTime(?DateTimeInterface $end_time) : self
+    public function setEndTime(?\DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 

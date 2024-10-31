@@ -184,7 +184,7 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Gets requested_pick_up.
      */
-    public function getRequestedPickUp() : ?DateTimeInterface
+    public function getRequestedPickUp() : ?\DateTimeInterface
     {
         return $this->container['requested_pick_up'];
     }
@@ -192,9 +192,9 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Sets requested_pick_up.
      *
-     * @param null|DateTimeInterface $requested_pick_up date on which the items can be picked up from vendor warehouse by Buyer used for WePay/Collect vendors
+     * @param null|\DateTimeInterface $requested_pick_up date on which the items can be picked up from vendor warehouse by Buyer used for WePay/Collect vendors
      */
-    public function setRequestedPickUp(?DateTimeInterface $requested_pick_up) : self
+    public function setRequestedPickUp(?\DateTimeInterface $requested_pick_up) : self
     {
         $this->container['requested_pick_up'] = $requested_pick_up;
 
@@ -204,7 +204,7 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Gets scheduled_pick_up.
      */
-    public function getScheduledPickUp() : ?DateTimeInterface
+    public function getScheduledPickUp() : ?\DateTimeInterface
     {
         return $this->container['scheduled_pick_up'];
     }
@@ -212,9 +212,9 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Sets scheduled_pick_up.
      *
-     * @param null|DateTimeInterface $scheduled_pick_up date on which the items are scheduled to be picked from vendor warehouse by Buyer used for WePay/Collect vendors
+     * @param null|\DateTimeInterface $scheduled_pick_up date on which the items are scheduled to be picked from vendor warehouse by Buyer used for WePay/Collect vendors
      */
-    public function setScheduledPickUp(?DateTimeInterface $scheduled_pick_up) : self
+    public function setScheduledPickUp(?\DateTimeInterface $scheduled_pick_up) : self
     {
         $this->container['scheduled_pick_up'] = $scheduled_pick_up;
 
@@ -224,7 +224,7 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Gets carrier_assignment_date.
      */
-    public function getCarrierAssignmentDate() : ?DateTimeInterface
+    public function getCarrierAssignmentDate() : ?\DateTimeInterface
     {
         return $this->container['carrier_assignment_date'];
     }
@@ -232,9 +232,9 @@ class CollectFreightPickupDetails implements \ArrayAccess, \JsonSerializable, \S
     /**
      * Sets carrier_assignment_date.
      *
-     * @param null|DateTimeInterface $carrier_assignment_date date on which the carrier is being scheduled to pickup items from vendor warehouse by Byer used for WePay/Collect vendors
+     * @param null|\DateTimeInterface $carrier_assignment_date date on which the carrier is being scheduled to pickup items from vendor warehouse by Byer used for WePay/Collect vendors
      */
-    public function setCarrierAssignmentDate(?DateTimeInterface $carrier_assignment_date) : self
+    public function setCarrierAssignmentDate(?\DateTimeInterface $carrier_assignment_date) : self
     {
         $this->container['carrier_assignment_date'] = $carrier_assignment_date;
 

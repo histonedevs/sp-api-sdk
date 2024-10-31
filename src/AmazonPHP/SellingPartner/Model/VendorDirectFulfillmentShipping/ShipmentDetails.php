@@ -312,7 +312,7 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets estimated_delivery_date.
      */
-    public function getEstimatedDeliveryDate() : ?DateTimeInterface
+    public function getEstimatedDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['estimated_delivery_date'];
     }
@@ -320,9 +320,9 @@ class ShipmentDetails implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets estimated_delivery_date.
      *
-     * @param null|DateTimeInterface $estimated_delivery_date Date on which the shipment is expected to reach the buyer's warehouse. It needs to be an estimate based on the average transit time between the ship-from location and the destination. The exact appointment time will be provided by buyer and is potentially not known when creating the shipment confirmation.
+     * @param null|\DateTimeInterface $estimated_delivery_date Date on which the shipment is expected to reach the buyer's warehouse. It needs to be an estimate based on the average transit time between the ship-from location and the destination. The exact appointment time will be provided by buyer and is potentially not known when creating the shipment confirmation.
      */
-    public function setEstimatedDeliveryDate(?DateTimeInterface $estimated_delivery_date) : self
+    public function setEstimatedDeliveryDate(?\DateTimeInterface $estimated_delivery_date) : self
     {
         $this->container['estimated_delivery_date'] = $estimated_delivery_date;
 

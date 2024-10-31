@@ -38,7 +38,7 @@ class CarrierAppointment implements \ArrayAccess, \JsonSerializable, \Stringable
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'end_time' => 'DateTimeInterface',
+        'end_time' => '\DateTimeInterface',
         'start_time' => 'DateTimeInterface',
     ];
 

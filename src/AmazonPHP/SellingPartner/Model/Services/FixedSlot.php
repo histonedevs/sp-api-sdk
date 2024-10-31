@@ -196,7 +196,7 @@ class FixedSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets start_date_time.
      */
-    public function getStartDateTime() : ?DateTimeInterface
+    public function getStartDateTime() : ?\DateTimeInterface
     {
         return $this->container['start_date_time'];
     }
@@ -204,9 +204,9 @@ class FixedSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets start_date_time.
      *
-     * @param null|DateTimeInterface $start_date_time start date time of slot in ISO 8601 format with precision of seconds
+     * @param null|\DateTimeInterface $start_date_time start date time of slot in ISO 8601 format with precision of seconds
      */
-    public function setStartDateTime(?DateTimeInterface $start_date_time) : self
+    public function setStartDateTime(?\DateTimeInterface $start_date_time) : self
     {
         $this->container['start_date_time'] = $start_date_time;
 

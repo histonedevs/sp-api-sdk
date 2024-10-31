@@ -277,7 +277,7 @@ class FulfillmentShipmentPackage implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Gets estimated_arrival_date.
      */
-    public function getEstimatedArrivalDate() : ?DateTimeInterface
+    public function getEstimatedArrivalDate() : ?\DateTimeInterface
     {
         return $this->container['estimated_arrival_date'];
     }
@@ -285,9 +285,9 @@ class FulfillmentShipmentPackage implements \ArrayAccess, \JsonSerializable, \St
     /**
      * Sets estimated_arrival_date.
      *
-     * @param null|DateTimeInterface $estimated_arrival_date Date timestamp
+     * @param null|\DateTimeInterface $estimated_arrival_date Date timestamp
      */
-    public function setEstimatedArrivalDate(?DateTimeInterface $estimated_arrival_date) : self
+    public function setEstimatedArrivalDate(?\DateTimeInterface $estimated_arrival_date) : self
     {
         $this->container['estimated_arrival_date'] = $estimated_arrival_date;
 

@@ -39,7 +39,7 @@ class PlacementOption implements \ArrayAccess, \JsonSerializable, \Stringable, M
      */
     protected static array $openAPITypes = [
         'discounts' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\Incentive[]',
-        'expiration' => 'DateTimeInterface',
+        'expiration' => '\DateTimeInterface',
         'fees' => '\AmazonPHP\SellingPartner\Model\FulfillmentInbound\Incentive[]',
         'placement_option_id' => 'string',
         'shipment_ids' => 'string[]',
@@ -263,7 +263,7 @@ class PlacementOption implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets expiration.
      */
-    public function getExpiration() : ?DateTimeInterface
+    public function getExpiration() : ?\DateTimeInterface
     {
         return $this->container['expiration'];
     }
@@ -271,9 +271,9 @@ class PlacementOption implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets expiration.
      *
-     * @param null|DateTimeInterface $expiration The expiration date of the placement option. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param null|\DateTimeInterface $expiration The expiration date of the placement option. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
      */
-    public function setExpiration(?DateTimeInterface $expiration) : self
+    public function setExpiration(?\DateTimeInterface $expiration) : self
     {
         $this->container['expiration'] = $expiration;
 

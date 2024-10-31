@@ -38,7 +38,7 @@ class InboundPlanSummary implements \ArrayAccess, \JsonSerializable, \Stringable
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'created_at' => 'DateTimeInterface',
+        'created_at' => '\DateTimeInterface',
         'inbound_plan_id' => 'string',
         'last_updated_at' => 'DateTimeInterface',
         'marketplace_ids' => 'string[]',

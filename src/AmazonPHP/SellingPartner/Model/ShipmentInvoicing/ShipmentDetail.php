@@ -321,7 +321,7 @@ class ShipmentDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets purchase_date.
      */
-    public function getPurchaseDate() : ?DateTimeInterface
+    public function getPurchaseDate() : ?\DateTimeInterface
     {
         return $this->container['purchase_date'];
     }
@@ -329,9 +329,9 @@ class ShipmentDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets purchase_date.
      *
-     * @param null|DateTimeInterface $purchase_date the date and time when the order was created
+     * @param null|\DateTimeInterface $purchase_date the date and time when the order was created
      */
-    public function setPurchaseDate(?DateTimeInterface $purchase_date) : self
+    public function setPurchaseDate(?\DateTimeInterface $purchase_date) : self
     {
         $this->container['purchase_date'] = $purchase_date;
 

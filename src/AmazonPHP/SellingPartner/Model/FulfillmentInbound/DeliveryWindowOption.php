@@ -40,7 +40,7 @@ class DeliveryWindowOption implements \ArrayAccess, \JsonSerializable, \Stringab
     protected static array $openAPITypes = [
         'availability_type' => 'string',
         'delivery_window_option_id' => 'string',
-        'end_date' => 'DateTimeInterface',
+        'end_date' => '\DateTimeInterface',
         'start_date' => 'DateTimeInterface',
         'valid_until' => 'DateTimeInterface',
     ];

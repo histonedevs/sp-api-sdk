@@ -43,7 +43,7 @@ class InventorySummary implements \ArrayAccess, \JsonSerializable, \Stringable, 
         'seller_sku' => 'string',
         'condition' => 'string',
         'inventory_details' => '\AmazonPHP\SellingPartner\Model\FBAInventory\InventoryDetails',
-        'last_updated_time' => 'DateTimeInterface',
+        'last_updated_time' => '\DateTimeInterface',
         'product_name' => 'string',
         'total_quantity' => 'int',
         'stores' => 'string[]',
@@ -323,7 +323,7 @@ class InventorySummary implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets last_updated_time.
      */
-    public function getLastUpdatedTime() : ?DateTimeInterface
+    public function getLastUpdatedTime() : ?\DateTimeInterface
     {
         return $this->container['last_updated_time'];
     }
@@ -331,9 +331,9 @@ class InventorySummary implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets last_updated_time.
      *
-     * @param null|DateTimeInterface $last_updated_time the date and time that any quantity was last updated
+     * @param null|\DateTimeInterface $last_updated_time the date and time that any quantity was last updated
      */
-    public function setLastUpdatedTime(?DateTimeInterface $last_updated_time) : self
+    public function setLastUpdatedTime(?\DateTimeInterface $last_updated_time) : self
     {
         $this->container['last_updated_time'] = $last_updated_time;
 

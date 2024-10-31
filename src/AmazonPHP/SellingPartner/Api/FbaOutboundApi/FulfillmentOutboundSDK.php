@@ -804,12 +804,12 @@ final class FulfillmentOutboundSDK implements FulfillmentOutboundSDKInterface
      * @param string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
      * @param string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
      * @param null|string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
-     * @param null|DateTimeInterface $query_start_date A date that you can use to select inventory that has been updated since a specified date. An update is defined as any change in feature-enabled inventory availability. The date must be in the format yyyy-MM-ddTHH:mm:ss.sssZ (optional)
+     * @param null|\DateTimeInterface $query_start_date A date that you can use to select inventory that has been updated since a specified date. An update is defined as any change in feature-enabled inventory availability. The date must be in the format yyyy-MM-ddTHH:mm:ss.sssZ (optional)
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function getFeatureInventory(AccessToken $accessToken, string $region, string $marketplace_id, string $feature_name, ?string $next_token = null, ?DateTimeInterface $query_start_date = null) : \AmazonPHP\SellingPartner\Model\FulfillmentOutbound\GetFeatureInventoryResponse
+    public function getFeatureInventory(AccessToken $accessToken, string $region, string $marketplace_id, string $feature_name, ?string $next_token = null, ?\DateTimeInterface $query_start_date = null) : \AmazonPHP\SellingPartner\Model\FulfillmentOutbound\GetFeatureInventoryResponse
     {
         $request = $this->getFeatureInventoryRequest($accessToken, $region, $marketplace_id, $feature_name, $next_token, $query_start_date);
 
@@ -903,11 +903,11 @@ final class FulfillmentOutboundSDK implements FulfillmentOutboundSDKInterface
      * @param string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
      * @param string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
      * @param null|string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
-     * @param null|DateTimeInterface $query_start_date A date that you can use to select inventory that has been updated since a specified date. An update is defined as any change in feature-enabled inventory availability. The date must be in the format yyyy-MM-ddTHH:mm:ss.sssZ (optional)
+     * @param null|\DateTimeInterface $query_start_date A date that you can use to select inventory that has been updated since a specified date. An update is defined as any change in feature-enabled inventory availability. The date must be in the format yyyy-MM-ddTHH:mm:ss.sssZ (optional)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function getFeatureInventoryRequest(AccessToken $accessToken, string $region, string $marketplace_id, string $feature_name, ?string $next_token = null, ?DateTimeInterface $query_start_date = null) : RequestInterface
+    public function getFeatureInventoryRequest(AccessToken $accessToken, string $region, string $marketplace_id, string $feature_name, ?string $next_token = null, ?\DateTimeInterface $query_start_date = null) : RequestInterface
     {
         // verify the required parameter 'marketplace_id' is set
         if ($marketplace_id === null || (\is_array($marketplace_id) && \count($marketplace_id) === 0)) {
@@ -1996,13 +1996,13 @@ final class FulfillmentOutboundSDK implements FulfillmentOutboundSDKInterface
     /**
      * Operation listAllFulfillmentOrders.
      *
-     * @param null|DateTimeInterface $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param null|\DateTimeInterface $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
      */
-    public function listAllFulfillmentOrders(AccessToken $accessToken, string $region, ?DateTimeInterface $query_start_date = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ListAllFulfillmentOrdersResponse
+    public function listAllFulfillmentOrders(AccessToken $accessToken, string $region, ?\DateTimeInterface $query_start_date = null, ?string $next_token = null) : \AmazonPHP\SellingPartner\Model\FulfillmentOutbound\ListAllFulfillmentOrdersResponse
     {
         $request = $this->listAllFulfillmentOrdersRequest($accessToken, $region, $query_start_date, $next_token);
 
@@ -2093,12 +2093,12 @@ final class FulfillmentOutboundSDK implements FulfillmentOutboundSDKInterface
     /**
      * Create request for operation 'listAllFulfillmentOrders'.
      *
-     * @param null|DateTimeInterface $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param null|\DateTimeInterface $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
      * @param null|string $next_token A string token returned in the response to your previous request. (optional)
      *
      * @throws \AmazonPHP\SellingPartner\Exception\InvalidArgumentException
      */
-    public function listAllFulfillmentOrdersRequest(AccessToken $accessToken, string $region, ?DateTimeInterface $query_start_date = null, ?string $next_token = null) : RequestInterface
+    public function listAllFulfillmentOrdersRequest(AccessToken $accessToken, string $region, ?\DateTimeInterface $query_start_date = null, ?string $next_token = null) : RequestInterface
     {
         $resourcePath = '/fba/outbound/2020-07-01/fulfillmentOrders';
         $formParams = [];

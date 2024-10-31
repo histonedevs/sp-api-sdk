@@ -315,7 +315,7 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets shipped_date.
      */
-    public function getShippedDate() : ?DateTimeInterface
+    public function getShippedDate() : ?\DateTimeInterface
     {
         return $this->container['shipped_date'];
     }
@@ -323,9 +323,9 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets shipped_date.
      *
-     * @param null|DateTimeInterface $shipped_date Date when shipment is performed by the Vendor to Buyer
+     * @param null|\DateTimeInterface $shipped_date Date when shipment is performed by the Vendor to Buyer
      */
-    public function setShippedDate(?DateTimeInterface $shipped_date) : self
+    public function setShippedDate(?\DateTimeInterface $shipped_date) : self
     {
         $this->container['shipped_date'] = $shipped_date;
 
@@ -335,7 +335,7 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets estimated_delivery_date.
      */
-    public function getEstimatedDeliveryDate() : ?DateTimeInterface
+    public function getEstimatedDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['estimated_delivery_date'];
     }
@@ -343,9 +343,9 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets estimated_delivery_date.
      *
-     * @param null|DateTimeInterface $estimated_delivery_date Estimated Date on which shipment will be delivered from Vendor to Buyer
+     * @param null|\DateTimeInterface $estimated_delivery_date Estimated Date on which shipment will be delivered from Vendor to Buyer
      */
-    public function setEstimatedDeliveryDate(?DateTimeInterface $estimated_delivery_date) : self
+    public function setEstimatedDeliveryDate(?\DateTimeInterface $estimated_delivery_date) : self
     {
         $this->container['estimated_delivery_date'] = $estimated_delivery_date;
 
@@ -355,7 +355,7 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets shipment_delivery_date.
      */
-    public function getShipmentDeliveryDate() : ?DateTimeInterface
+    public function getShipmentDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['shipment_delivery_date'];
     }
@@ -363,9 +363,9 @@ class TransportationDetails implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets shipment_delivery_date.
      *
-     * @param null|DateTimeInterface $shipment_delivery_date Date on which shipment will be delivered from Vendor to Buyer
+     * @param null|\DateTimeInterface $shipment_delivery_date Date on which shipment will be delivered from Vendor to Buyer
      */
-    public function setShipmentDeliveryDate(?DateTimeInterface $shipment_delivery_date) : self
+    public function setShipmentDeliveryDate(?\DateTimeInterface $shipment_delivery_date) : self
     {
         $this->container['shipment_delivery_date'] = $shipment_delivery_date;
 

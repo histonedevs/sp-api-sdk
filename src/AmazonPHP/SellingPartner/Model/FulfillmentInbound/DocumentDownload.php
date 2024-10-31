@@ -39,7 +39,7 @@ class DocumentDownload implements \ArrayAccess, \JsonSerializable, \Stringable, 
      */
     protected static array $openAPITypes = [
         'download_type' => 'string',
-        'expiration' => 'DateTimeInterface',
+        'expiration' => '\DateTimeInterface',
         'uri' => 'string',
     ];
 
@@ -211,7 +211,7 @@ class DocumentDownload implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets expiration.
      */
-    public function getExpiration() : ?DateTimeInterface
+    public function getExpiration() : ?\DateTimeInterface
     {
         return $this->container['expiration'];
     }
@@ -219,9 +219,9 @@ class DocumentDownload implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets expiration.
      *
-     * @param null|DateTimeInterface $expiration The URI's expiration time. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
+     * @param null|\DateTimeInterface $expiration The URI's expiration time. In [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) datetime format with pattern `yyyy-MM-ddTHH:mm:ss.sssZ`.
      */
-    public function setExpiration(?DateTimeInterface $expiration) : self
+    public function setExpiration(?\DateTimeInterface $expiration) : self
     {
         $this->container['expiration'] = $expiration;
 

@@ -233,7 +233,7 @@ class IssueExemption implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets expiry_date.
      */
-    public function getExpiryDate() : ?DateTimeInterface
+    public function getExpiryDate() : ?\DateTimeInterface
     {
         return $this->container['expiry_date'];
     }
@@ -241,9 +241,9 @@ class IssueExemption implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets expiry_date.
      *
-     * @param null|DateTimeInterface $expiry_date this field represents the timestamp, following the ISO 8601 format, which specifies the date when temporary exemptions, if applicable, will expire, and Amazon will begin enforcing the listed actions
+     * @param null|\DateTimeInterface $expiry_date this field represents the timestamp, following the ISO 8601 format, which specifies the date when temporary exemptions, if applicable, will expire, and Amazon will begin enforcing the listed actions
      */
-    public function setExpiryDate(?DateTimeInterface $expiry_date) : self
+    public function setExpiryDate(?\DateTimeInterface $expiry_date) : self
     {
         $this->container['expiry_date'] = $expiry_date;
 

@@ -178,7 +178,7 @@ class ConfirmPreorderResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets confirmed_need_by_date.
      */
-    public function getConfirmedNeedByDate() : ?DateTimeInterface
+    public function getConfirmedNeedByDate() : ?\DateTimeInterface
     {
         return $this->container['confirmed_need_by_date'];
     }
@@ -186,9 +186,9 @@ class ConfirmPreorderResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets confirmed_need_by_date.
      *
-     * @param null|DateTimeInterface $confirmed_need_by_date Type containing date in string format
+     * @param null|\DateTimeInterface $confirmed_need_by_date Type containing date in string format
      */
-    public function setConfirmedNeedByDate(?DateTimeInterface $confirmed_need_by_date) : self
+    public function setConfirmedNeedByDate(?\DateTimeInterface $confirmed_need_by_date) : self
     {
         $this->container['confirmed_need_by_date'] = $confirmed_need_by_date;
 
@@ -198,7 +198,7 @@ class ConfirmPreorderResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets confirmed_fulfillable_date.
      */
-    public function getConfirmedFulfillableDate() : ?DateTimeInterface
+    public function getConfirmedFulfillableDate() : ?\DateTimeInterface
     {
         return $this->container['confirmed_fulfillable_date'];
     }
@@ -206,9 +206,9 @@ class ConfirmPreorderResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets confirmed_fulfillable_date.
      *
-     * @param null|DateTimeInterface $confirmed_fulfillable_date Type containing date in string format
+     * @param null|\DateTimeInterface $confirmed_fulfillable_date Type containing date in string format
      */
-    public function setConfirmedFulfillableDate(?DateTimeInterface $confirmed_fulfillable_date) : self
+    public function setConfirmedFulfillableDate(?\DateTimeInterface $confirmed_fulfillable_date) : self
     {
         $this->container['confirmed_fulfillable_date'] = $confirmed_fulfillable_date;
 

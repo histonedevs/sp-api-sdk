@@ -309,7 +309,7 @@ class OrderItemAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets scheduled_ship_date.
      */
-    public function getScheduledShipDate() : ?DateTimeInterface
+    public function getScheduledShipDate() : ?\DateTimeInterface
     {
         return $this->container['scheduled_ship_date'];
     }
@@ -317,9 +317,9 @@ class OrderItemAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets scheduled_ship_date.
      *
-     * @param null|DateTimeInterface $scheduled_ship_date Estimated ship date per line item. Must be in ISO-8601 date/time format.
+     * @param null|\DateTimeInterface $scheduled_ship_date Estimated ship date per line item. Must be in ISO-8601 date/time format.
      */
-    public function setScheduledShipDate(?DateTimeInterface $scheduled_ship_date) : self
+    public function setScheduledShipDate(?\DateTimeInterface $scheduled_ship_date) : self
     {
         $this->container['scheduled_ship_date'] = $scheduled_ship_date;
 
@@ -329,7 +329,7 @@ class OrderItemAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets scheduled_delivery_date.
      */
-    public function getScheduledDeliveryDate() : ?DateTimeInterface
+    public function getScheduledDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['scheduled_delivery_date'];
     }
@@ -337,9 +337,9 @@ class OrderItemAcknowledgement implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets scheduled_delivery_date.
      *
-     * @param null|DateTimeInterface $scheduled_delivery_date Estimated delivery date per line item. Must be in ISO-8601 date/time format.
+     * @param null|\DateTimeInterface $scheduled_delivery_date Estimated delivery date per line item. Must be in ISO-8601 date/time format.
      */
-    public function setScheduledDeliveryDate(?DateTimeInterface $scheduled_delivery_date) : self
+    public function setScheduledDeliveryDate(?\DateTimeInterface $scheduled_delivery_date) : self
     {
         $this->container['scheduled_delivery_date'] = $scheduled_delivery_date;
 

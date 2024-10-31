@@ -178,7 +178,7 @@ class TimeRangeContext implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets start_time.
      */
-    public function getStartTime() : ?DateTimeInterface
+    public function getStartTime() : ?\DateTimeInterface
     {
         return $this->container['start_time'];
     }
@@ -186,9 +186,9 @@ class TimeRangeContext implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets start_time.
      *
-     * @param null|DateTimeInterface $start_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $start_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setStartTime(?DateTimeInterface $start_time) : self
+    public function setStartTime(?\DateTimeInterface $start_time) : self
     {
         $this->container['start_time'] = $start_time;
 
@@ -198,7 +198,7 @@ class TimeRangeContext implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets end_time.
      */
-    public function getEndTime() : ?DateTimeInterface
+    public function getEndTime() : ?\DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -206,9 +206,9 @@ class TimeRangeContext implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets end_time.
      *
-     * @param null|DateTimeInterface $end_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $end_time A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setEndTime(?DateTimeInterface $end_time) : self
+    public function setEndTime(?\DateTimeInterface $end_time) : self
     {
         $this->container['end_time'] = $end_time;
 

@@ -273,7 +273,7 @@ class Rate implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Gets expiration_time.
      */
-    public function getExpirationTime() : ?DateTimeInterface
+    public function getExpirationTime() : ?\DateTimeInterface
     {
         return $this->container['expiration_time'];
     }
@@ -281,9 +281,9 @@ class Rate implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Sets expiration_time.
      *
-     * @param null|DateTimeInterface $expiration_time the time after which the offering will expire
+     * @param null|\DateTimeInterface $expiration_time the time after which the offering will expire
      */
-    public function setExpirationTime(?DateTimeInterface $expiration_time) : self
+    public function setExpirationTime(?\DateTimeInterface $expiration_time) : self
     {
         $this->container['expiration_time'] = $expiration_time;
 

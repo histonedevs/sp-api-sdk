@@ -603,7 +603,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : ?DateTimeInterface
+    public function getLastUpdatedDate() : ?\DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -611,9 +611,9 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets last_updated_date.
      *
-     * @param null|DateTimeInterface $last_updated_date date-time formatted timestamp
+     * @param null|\DateTimeInterface $last_updated_date date-time formatted timestamp
      */
-    public function setLastUpdatedDate(?DateTimeInterface $last_updated_date) : self
+    public function setLastUpdatedDate(?\DateTimeInterface $last_updated_date) : self
     {
         $this->container['last_updated_date'] = $last_updated_date;
 

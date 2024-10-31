@@ -237,7 +237,7 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets group_begin_date.
      */
-    public function getGroupBeginDate() : ?DateTimeInterface
+    public function getGroupBeginDate() : ?\DateTimeInterface
     {
         return $this->container['group_begin_date'];
     }
@@ -245,9 +245,9 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets group_begin_date.
      *
-     * @param null|DateTimeInterface $group_begin_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $group_begin_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setGroupBeginDate(?DateTimeInterface $group_begin_date) : self
+    public function setGroupBeginDate(?\DateTimeInterface $group_begin_date) : self
     {
         $this->container['group_begin_date'] = $group_begin_date;
 
@@ -257,7 +257,7 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets group_end_date.
      */
-    public function getGroupEndDate() : ?DateTimeInterface
+    public function getGroupEndDate() : ?\DateTimeInterface
     {
         return $this->container['group_end_date'];
     }
@@ -265,9 +265,9 @@ class DebtRecoveryItem implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets group_end_date.
      *
-     * @param null|DateTimeInterface $group_end_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $group_end_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setGroupEndDate(?DateTimeInterface $group_end_date) : self
+    public function setGroupEndDate(?\DateTimeInterface $group_end_date) : self
     {
         $this->container['group_end_date'] = $group_end_date;
 

@@ -253,7 +253,7 @@ class CreateReportSpecification implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets data_start_time.
      */
-    public function getDataStartTime() : ?DateTimeInterface
+    public function getDataStartTime() : ?\DateTimeInterface
     {
         return $this->container['data_start_time'];
     }
@@ -261,9 +261,9 @@ class CreateReportSpecification implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets data_start_time.
      *
-     * @param null|DateTimeInterface $data_start_time The start of a date and time range, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format, used for selecting the data to report. The default is now. The value must be prior to or equal to the current date and time. Not all report types make use of this.
+     * @param null|\DateTimeInterface $data_start_time The start of a date and time range, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format, used for selecting the data to report. The default is now. The value must be prior to or equal to the current date and time. Not all report types make use of this.
      */
-    public function setDataStartTime(?DateTimeInterface $data_start_time) : self
+    public function setDataStartTime(?\DateTimeInterface $data_start_time) : self
     {
         $this->container['data_start_time'] = $data_start_time;
 
@@ -273,7 +273,7 @@ class CreateReportSpecification implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets data_end_time.
      */
-    public function getDataEndTime() : ?DateTimeInterface
+    public function getDataEndTime() : ?\DateTimeInterface
     {
         return $this->container['data_end_time'];
     }
@@ -281,9 +281,9 @@ class CreateReportSpecification implements \ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets data_end_time.
      *
-     * @param null|DateTimeInterface $data_end_time The end of a date and time range, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format, used for selecting the data to report. The default is now. The value must be prior to or equal to the current date and time. Not all report types make use of this.
+     * @param null|\DateTimeInterface $data_end_time The end of a date and time range, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format, used for selecting the data to report. The default is now. The value must be prior to or equal to the current date and time. Not all report types make use of this.
      */
-    public function setDataEndTime(?DateTimeInterface $data_end_time) : self
+    public function setDataEndTime(?\DateTimeInterface $data_end_time) : self
     {
         $this->container['data_end_time'] = $data_end_time;
 

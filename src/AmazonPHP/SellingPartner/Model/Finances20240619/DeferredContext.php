@@ -204,7 +204,7 @@ class DeferredContext implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets maturity_date.
      */
-    public function getMaturityDate() : ?DateTimeInterface
+    public function getMaturityDate() : ?\DateTimeInterface
     {
         return $this->container['maturity_date'];
     }
@@ -212,9 +212,9 @@ class DeferredContext implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets maturity_date.
      *
-     * @param null|DateTimeInterface $maturity_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
+     * @param null|\DateTimeInterface $maturity_date A date in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date-time format.
      */
-    public function setMaturityDate(?DateTimeInterface $maturity_date) : self
+    public function setMaturityDate(?\DateTimeInterface $maturity_date) : self
     {
         $this->container['maturity_date'] = $maturity_date;
 

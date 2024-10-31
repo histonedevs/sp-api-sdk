@@ -221,7 +221,7 @@ class InboundShipmentSummary implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets created_at.
      */
-    public function getCreatedAt() : ?DateTimeInterface
+    public function getCreatedAt() : ?\DateTimeInterface
     {
         return $this->container['created_at'];
     }
@@ -229,9 +229,9 @@ class InboundShipmentSummary implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets created_at.
      *
-     * @param null|DateTimeInterface $created_at timestamp when the shipment was created
+     * @param null|\DateTimeInterface $created_at timestamp when the shipment was created
      */
-    public function setCreatedAt(?DateTimeInterface $created_at) : self
+    public function setCreatedAt(?\DateTimeInterface $created_at) : self
     {
         $this->container['created_at'] = $created_at;
 
@@ -321,7 +321,7 @@ class InboundShipmentSummary implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets updated_at.
      */
-    public function getUpdatedAt() : ?DateTimeInterface
+    public function getUpdatedAt() : ?\DateTimeInterface
     {
         return $this->container['updated_at'];
     }
@@ -329,9 +329,9 @@ class InboundShipmentSummary implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets updated_at.
      *
-     * @param null|DateTimeInterface $updated_at timestamp when the shipment was updated
+     * @param null|\DateTimeInterface $updated_at timestamp when the shipment was updated
      */
-    public function setUpdatedAt(?DateTimeInterface $updated_at) : self
+    public function setUpdatedAt(?\DateTimeInterface $updated_at) : self
     {
         $this->container['updated_at'] = $updated_at;
 

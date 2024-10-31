@@ -379,7 +379,7 @@ class InboundShipmentInfo implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets confirmed_need_by_date.
      */
-    public function getConfirmedNeedByDate() : ?DateTimeInterface
+    public function getConfirmedNeedByDate() : ?\DateTimeInterface
     {
         return $this->container['confirmed_need_by_date'];
     }
@@ -387,9 +387,9 @@ class InboundShipmentInfo implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets confirmed_need_by_date.
      *
-     * @param null|DateTimeInterface $confirmed_need_by_date Type containing date in string format
+     * @param null|\DateTimeInterface $confirmed_need_by_date Type containing date in string format
      */
-    public function setConfirmedNeedByDate(?DateTimeInterface $confirmed_need_by_date) : self
+    public function setConfirmedNeedByDate(?\DateTimeInterface $confirmed_need_by_date) : self
     {
         $this->container['confirmed_need_by_date'] = $confirmed_need_by_date;
 

@@ -393,7 +393,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets earliest_estimated_delivery_date.
      */
-    public function getEarliestEstimatedDeliveryDate() : ?DateTimeInterface
+    public function getEarliestEstimatedDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['earliest_estimated_delivery_date'];
     }
@@ -401,9 +401,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets earliest_estimated_delivery_date.
      *
-     * @param null|DateTimeInterface $earliest_estimated_delivery_date date-time formatted timestamp
+     * @param null|\DateTimeInterface $earliest_estimated_delivery_date date-time formatted timestamp
      */
-    public function setEarliestEstimatedDeliveryDate(?DateTimeInterface $earliest_estimated_delivery_date) : self
+    public function setEarliestEstimatedDeliveryDate(?\DateTimeInterface $earliest_estimated_delivery_date) : self
     {
         $this->container['earliest_estimated_delivery_date'] = $earliest_estimated_delivery_date;
 
@@ -413,7 +413,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets latest_estimated_delivery_date.
      */
-    public function getLatestEstimatedDeliveryDate() : ?DateTimeInterface
+    public function getLatestEstimatedDeliveryDate() : ?\DateTimeInterface
     {
         return $this->container['latest_estimated_delivery_date'];
     }
@@ -421,9 +421,9 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets latest_estimated_delivery_date.
      *
-     * @param null|DateTimeInterface $latest_estimated_delivery_date date-time formatted timestamp
+     * @param null|\DateTimeInterface $latest_estimated_delivery_date date-time formatted timestamp
      */
-    public function setLatestEstimatedDeliveryDate(?DateTimeInterface $latest_estimated_delivery_date) : self
+    public function setLatestEstimatedDeliveryDate(?\DateTimeInterface $latest_estimated_delivery_date) : self
     {
         $this->container['latest_estimated_delivery_date'] = $latest_estimated_delivery_date;
 

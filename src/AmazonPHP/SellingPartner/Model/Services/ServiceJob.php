@@ -341,7 +341,7 @@ class ServiceJob implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Gets create_time.
      */
-    public function getCreateTime() : ?DateTimeInterface
+    public function getCreateTime() : ?\DateTimeInterface
     {
         return $this->container['create_time'];
     }
@@ -349,9 +349,9 @@ class ServiceJob implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Sets create_time.
      *
-     * @param null|DateTimeInterface $create_time the date and time of the creation of the job in ISO 8601 format
+     * @param null|\DateTimeInterface $create_time the date and time of the creation of the job in ISO 8601 format
      */
-    public function setCreateTime(?DateTimeInterface $create_time) : self
+    public function setCreateTime(?\DateTimeInterface $create_time) : self
     {
         $this->container['create_time'] = $create_time;
 

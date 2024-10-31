@@ -376,7 +376,7 @@ class CreateReportScheduleSpecification implements \ArrayAccess, \JsonSerializab
     /**
      * Gets next_report_creation_time.
      */
-    public function getNextReportCreationTime() : ?DateTimeInterface
+    public function getNextReportCreationTime() : ?\DateTimeInterface
     {
         return $this->container['next_report_creation_time'];
     }
@@ -384,9 +384,9 @@ class CreateReportScheduleSpecification implements \ArrayAccess, \JsonSerializab
     /**
      * Sets next_report_creation_time.
      *
-     * @param null|DateTimeInterface $next_report_creation_time The date and time when the schedule will create its next report, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
+     * @param null|\DateTimeInterface $next_report_creation_time The date and time when the schedule will create its next report, in <a href='https://developer-docs.amazon.com/sp-api/docs/iso-8601'>ISO 8601</a> date time format.
      */
-    public function setNextReportCreationTime(?DateTimeInterface $next_report_creation_time) : self
+    public function setNextReportCreationTime(?\DateTimeInterface $next_report_creation_time) : self
     {
         $this->container['next_report_creation_time'] = $next_report_creation_time;
 

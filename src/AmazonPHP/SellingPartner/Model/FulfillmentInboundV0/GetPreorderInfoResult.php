@@ -230,7 +230,7 @@ class GetPreorderInfoResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets need_by_date.
      */
-    public function getNeedByDate() : ?DateTimeInterface
+    public function getNeedByDate() : ?\DateTimeInterface
     {
         return $this->container['need_by_date'];
     }
@@ -238,9 +238,9 @@ class GetPreorderInfoResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets need_by_date.
      *
-     * @param null|DateTimeInterface $need_by_date Type containing date in string format
+     * @param null|\DateTimeInterface $need_by_date Type containing date in string format
      */
-    public function setNeedByDate(?DateTimeInterface $need_by_date) : self
+    public function setNeedByDate(?\DateTimeInterface $need_by_date) : self
     {
         $this->container['need_by_date'] = $need_by_date;
 
@@ -250,7 +250,7 @@ class GetPreorderInfoResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets confirmed_fulfillable_date.
      */
-    public function getConfirmedFulfillableDate() : ?DateTimeInterface
+    public function getConfirmedFulfillableDate() : ?\DateTimeInterface
     {
         return $this->container['confirmed_fulfillable_date'];
     }
@@ -258,9 +258,9 @@ class GetPreorderInfoResult implements \ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets confirmed_fulfillable_date.
      *
-     * @param null|DateTimeInterface $confirmed_fulfillable_date Type containing date in string format
+     * @param null|\DateTimeInterface $confirmed_fulfillable_date Type containing date in string format
      */
-    public function setConfirmedFulfillableDate(?DateTimeInterface $confirmed_fulfillable_date) : self
+    public function setConfirmedFulfillableDate(?\DateTimeInterface $confirmed_fulfillable_date) : self
     {
         $this->container['confirmed_fulfillable_date'] = $confirmed_fulfillable_date;
 

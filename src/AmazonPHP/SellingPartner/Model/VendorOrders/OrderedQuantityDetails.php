@@ -191,7 +191,7 @@ class OrderedQuantityDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets updated_date.
      */
-    public function getUpdatedDate() : ?DateTimeInterface
+    public function getUpdatedDate() : ?\DateTimeInterface
     {
         return $this->container['updated_date'];
     }
@@ -199,9 +199,9 @@ class OrderedQuantityDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets updated_date.
      *
-     * @param null|DateTimeInterface $updated_date The date when the line item quantity was updated by buyer. Must be in ISO-8601 date/time format.
+     * @param null|\DateTimeInterface $updated_date The date when the line item quantity was updated by buyer. Must be in ISO-8601 date/time format.
      */
-    public function setUpdatedDate(?DateTimeInterface $updated_date) : self
+    public function setUpdatedDate(?\DateTimeInterface $updated_date) : self
     {
         $this->container['updated_date'] = $updated_date;
 

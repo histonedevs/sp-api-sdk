@@ -324,7 +324,7 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : ?DateTimeInterface
+    public function getLastUpdatedDate() : ?\DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -332,9 +332,9 @@ class OrderStatus implements \ArrayAccess, \JsonSerializable, \Stringable, Model
     /**
      * Sets last_updated_date.
      *
-     * @param null|DateTimeInterface $last_updated_date The date when the purchase order was last updated. Must be in ISO-8601 date/time format.
+     * @param null|\DateTimeInterface $last_updated_date The date when the purchase order was last updated. Must be in ISO-8601 date/time format.
      */
-    public function setLastUpdatedDate(?DateTimeInterface $last_updated_date) : self
+    public function setLastUpdatedDate(?\DateTimeInterface $last_updated_date) : self
     {
         $this->container['last_updated_date'] = $last_updated_date;
 

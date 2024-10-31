@@ -377,7 +377,7 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : ?DateTimeInterface
+    public function getShipDate() : ?\DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -385,9 +385,9 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets ship_date.
      *
-     * @param null|DateTimeInterface $ship_date Date timestamp
+     * @param null|\DateTimeInterface $ship_date Date timestamp
      */
-    public function setShipDate(?DateTimeInterface $ship_date) : self
+    public function setShipDate(?\DateTimeInterface $ship_date) : self
     {
         $this->container['ship_date'] = $ship_date;
 
@@ -397,7 +397,7 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets estimated_arrival_date.
      */
-    public function getEstimatedArrivalDate() : ?DateTimeInterface
+    public function getEstimatedArrivalDate() : ?\DateTimeInterface
     {
         return $this->container['estimated_arrival_date'];
     }
@@ -405,9 +405,9 @@ class PackageTrackingDetails implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets estimated_arrival_date.
      *
-     * @param null|DateTimeInterface $estimated_arrival_date Date timestamp
+     * @param null|\DateTimeInterface $estimated_arrival_date Date timestamp
      */
-    public function setEstimatedArrivalDate(?DateTimeInterface $estimated_arrival_date) : self
+    public function setEstimatedArrivalDate(?\DateTimeInterface $estimated_arrival_date) : self
     {
         $this->container['estimated_arrival_date'] = $estimated_arrival_date;
 

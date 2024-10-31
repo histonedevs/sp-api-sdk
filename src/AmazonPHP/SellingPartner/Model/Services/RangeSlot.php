@@ -184,7 +184,7 @@ class RangeSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets start_date_time.
      */
-    public function getStartDateTime() : ?DateTimeInterface
+    public function getStartDateTime() : ?\DateTimeInterface
     {
         return $this->container['start_date_time'];
     }
@@ -192,9 +192,9 @@ class RangeSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets start_date_time.
      *
-     * @param null|DateTimeInterface $start_date_time start date time of slot in ISO 8601 format with precision of seconds
+     * @param null|\DateTimeInterface $start_date_time start date time of slot in ISO 8601 format with precision of seconds
      */
-    public function setStartDateTime(?DateTimeInterface $start_date_time) : self
+    public function setStartDateTime(?\DateTimeInterface $start_date_time) : self
     {
         $this->container['start_date_time'] = $start_date_time;
 
@@ -204,7 +204,7 @@ class RangeSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets end_date_time.
      */
-    public function getEndDateTime() : ?DateTimeInterface
+    public function getEndDateTime() : ?\DateTimeInterface
     {
         return $this->container['end_date_time'];
     }
@@ -212,9 +212,9 @@ class RangeSlot implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets end_date_time.
      *
-     * @param null|DateTimeInterface $end_date_time end date time of slot in ISO 8601 format with precision of seconds
+     * @param null|\DateTimeInterface $end_date_time end date time of slot in ISO 8601 format with precision of seconds
      */
-    public function setEndDateTime(?DateTimeInterface $end_date_time) : self
+    public function setEndDateTime(?\DateTimeInterface $end_date_time) : self
     {
         $this->container['end_date_time'] = $end_date_time;
 

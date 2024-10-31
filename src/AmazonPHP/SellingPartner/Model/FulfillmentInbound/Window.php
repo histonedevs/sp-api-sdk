@@ -38,9 +38,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
      * @var string[]
      */
     protected static array $openAPITypes = [
-        'editable_until' => 'DateTimeInterface',
-        'end' => 'DateTimeInterface',
-        'start' => 'DateTimeInterface',
+        'editable_until' => '\DateTimeInterface',
+        'end' => '\DateTimeInterface',
+        'start' => '\DateTimeInterface',
     ];
 
     /**
@@ -191,7 +191,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets editable_until.
      */
-    public function getEditableUntil() : ?DateTimeInterface
+    public function getEditableUntil() : ?\DateTimeInterface
     {
         return $this->container['editable_until'];
     }
@@ -199,9 +199,9 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets editable_until.
      *
-     * @param null|DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
+     * @param null|\DateTimeInterface $editable_until the timestamp at which this Window can no longer be edited
      */
-    public function setEditableUntil(?DateTimeInterface $editable_until) : self
+    public function setEditableUntil(?\DateTimeInterface $editable_until) : self
     {
         $this->container['editable_until'] = $editable_until;
 
