@@ -326,7 +326,7 @@ class OrderDetails implements \ArrayAccess, \JsonSerializable, \Stringable, Mode
     /**
      * Gets order_date.
      */
-    public function getOrderDate() : DateTimeInterface
+    public function getOrderDate() : \DateTimeInterface
     {
         return $this->container['order_date'];
     }

@@ -395,7 +395,7 @@ class ReturnItem implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Gets status_changed_date.
      */
-    public function getStatusChangedDate() : DateTimeInterface
+    public function getStatusChangedDate() : \DateTimeInterface
     {
         return $this->container['status_changed_date'];
     }
@@ -403,7 +403,7 @@ class ReturnItem implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Sets status_changed_date.
      *
-     * @param DateTimeInterface $status_changed_date Date timestamp
+     * @param \DateTimeInterface $status_changed_date Date timestamp
      */
     public function setStatusChangedDate(DateTimeInterface $status_changed_date) : self
     {

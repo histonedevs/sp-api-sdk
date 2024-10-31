@@ -60,7 +60,7 @@ interface VendorDirectFulfillmentShippingSDKInterface
     /**
      * Operation getShippingLabels.
      *
-     * @param DateTimeInterface $created_after Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_after Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param DateTimeInterface $created_before Shipping labels that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|int $limit The limit to the number of records returned. (optional)

@@ -281,7 +281,7 @@ class OrderAcknowledgementItem implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets acknowledgement_date.
      */
-    public function getAcknowledgementDate() : DateTimeInterface
+    public function getAcknowledgementDate() : \DateTimeInterface
     {
         return $this->container['acknowledgement_date'];
     }

@@ -373,7 +373,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Gets ship_date.
      */
-    public function getShipDate() : DateTimeInterface
+    public function getShipDate() : \DateTimeInterface
     {
         return $this->container['ship_date'];
     }
@@ -381,7 +381,7 @@ class ShippingService implements \ArrayAccess, \JsonSerializable, \Stringable, M
     /**
      * Sets ship_date.
      *
-     * @param DateTimeInterface $ship_date date-time formatted timestamp
+     * @param \DateTimeInterface $ship_date date-time formatted timestamp
      */
     public function setShipDate(DateTimeInterface $ship_date) : self
     {

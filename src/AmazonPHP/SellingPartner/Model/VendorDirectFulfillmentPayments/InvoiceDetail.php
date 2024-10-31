@@ -297,7 +297,7 @@ class InvoiceDetail implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets invoice_date.
      */
-    public function getInvoiceDate() : DateTimeInterface
+    public function getInvoiceDate() : \DateTimeInterface
     {
         return $this->container['invoice_date'];
     }

@@ -211,7 +211,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets end.
      */
-    public function getEnd() : DateTimeInterface
+    public function getEnd() : \DateTimeInterface
     {
         return $this->container['end'];
     }
@@ -219,7 +219,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets end.
      *
-     * @param DateTimeInterface $end the end timestamp of the window
+     * @param \DateTimeInterface $end the end timestamp of the window
      */
     public function setEnd(DateTimeInterface $end) : self
     {
@@ -231,7 +231,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets start.
      */
-    public function getStart() : DateTimeInterface
+    public function getStart() : \DateTimeInterface
     {
         return $this->container['start'];
     }
@@ -239,7 +239,7 @@ class Window implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets start.
      *
-     * @param DateTimeInterface $start the start timestamp of the window
+     * @param \DateTimeInterface $start the start timestamp of the window
      */
     public function setStart(DateTimeInterface $start) : self
     {

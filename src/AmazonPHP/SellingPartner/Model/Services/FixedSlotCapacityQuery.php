@@ -239,7 +239,7 @@ class FixedSlotCapacityQuery implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets start_date_time.
      */
-    public function getStartDateTime() : DateTimeInterface
+    public function getStartDateTime() : \DateTimeInterface
     {
         return $this->container['start_date_time'];
     }
@@ -247,7 +247,7 @@ class FixedSlotCapacityQuery implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets start_date_time.
      *
-     * @param DateTimeInterface $start_date_time start date time from which the capacity slots are being requested in ISO 8601 format
+     * @param \DateTimeInterface $start_date_time start date time from which the capacity slots are being requested in ISO 8601 format
      */
     public function setStartDateTime(DateTimeInterface $start_date_time) : self
     {
@@ -259,7 +259,7 @@ class FixedSlotCapacityQuery implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets end_date_time.
      */
-    public function getEndDateTime() : DateTimeInterface
+    public function getEndDateTime() : \DateTimeInterface
     {
         return $this->container['end_date_time'];
     }
@@ -267,7 +267,7 @@ class FixedSlotCapacityQuery implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets end_date_time.
      *
-     * @param DateTimeInterface $end_date_time end date time up to which the capacity slots are being requested in ISO 8601 format
+     * @param \DateTimeInterface $end_date_time end date time up to which the capacity slots are being requested in ISO 8601 format
      */
     public function setEndDateTime(DateTimeInterface $end_date_time) : self
     {

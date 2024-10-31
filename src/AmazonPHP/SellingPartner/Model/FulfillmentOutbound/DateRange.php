@@ -185,7 +185,7 @@ class DateRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets earliest.
      */
-    public function getEarliest() : DateTimeInterface
+    public function getEarliest() : \DateTimeInterface
     {
         return $this->container['earliest'];
     }
@@ -193,7 +193,7 @@ class DateRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets earliest.
      *
-     * @param DateTimeInterface $earliest Date timestamp
+     * @param \DateTimeInterface $earliest Date timestamp
      */
     public function setEarliest(DateTimeInterface $earliest) : self
     {
@@ -205,7 +205,7 @@ class DateRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Gets latest.
      */
-    public function getLatest() : DateTimeInterface
+    public function getLatest() : \DateTimeInterface
     {
         return $this->container['latest'];
     }
@@ -213,7 +213,7 @@ class DateRange implements \ArrayAccess, \JsonSerializable, \Stringable, ModelIn
     /**
      * Sets latest.
      *
-     * @param DateTimeInterface $latest Date timestamp
+     * @param \DateTimeInterface $latest Date timestamp
      */
     public function setLatest(DateTimeInterface $latest) : self
     {

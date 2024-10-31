@@ -583,7 +583,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Gets created_date.
      */
-    public function getCreatedDate() : DateTimeInterface
+    public function getCreatedDate() : \DateTimeInterface
     {
         return $this->container['created_date'];
     }
@@ -591,7 +591,7 @@ class Shipment implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInt
     /**
      * Sets created_date.
      *
-     * @param DateTimeInterface $created_date date-time formatted timestamp
+     * @param \DateTimeInterface $created_date date-time formatted timestamp
      */
     public function setCreatedDate(DateTimeInterface $created_date) : self
     {

@@ -187,7 +187,7 @@ class Recurrence implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Gets end_time.
      */
-    public function getEndTime() : DateTimeInterface
+    public function getEndTime() : \DateTimeInterface
     {
         return $this->container['end_time'];
     }
@@ -195,7 +195,7 @@ class Recurrence implements \ArrayAccess, \JsonSerializable, \Stringable, ModelI
     /**
      * Sets end_time.
      *
-     * @param DateTimeInterface $end_time end time of the recurrence
+     * @param \DateTimeInterface $end_time end time of the recurrence
      */
     public function setEndTime(DateTimeInterface $end_time) : self
     {

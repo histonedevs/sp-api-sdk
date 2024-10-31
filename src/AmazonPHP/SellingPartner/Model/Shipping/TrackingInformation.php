@@ -255,7 +255,7 @@ class TrackingInformation implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Gets promised_delivery_date.
      */
-    public function getPromisedDeliveryDate() : DateTimeInterface
+    public function getPromisedDeliveryDate() : \DateTimeInterface
     {
         return $this->container['promised_delivery_date'];
     }
@@ -263,7 +263,7 @@ class TrackingInformation implements \ArrayAccess, \JsonSerializable, \Stringabl
     /**
      * Sets promised_delivery_date.
      *
-     * @param DateTimeInterface $promised_delivery_date the promised delivery date and time of a shipment
+     * @param \DateTimeInterface $promised_delivery_date the promised delivery date and time of a shipment
      */
     public function setPromisedDeliveryDate(DateTimeInterface $promised_delivery_date) : self
     {

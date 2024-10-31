@@ -267,7 +267,7 @@ class PrescriptionDetail implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets expiration_date.
      */
-    public function getExpirationDate() : DateTimeInterface
+    public function getExpirationDate() : \DateTimeInterface
     {
         return $this->container['expiration_date'];
     }
@@ -275,7 +275,7 @@ class PrescriptionDetail implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets expiration_date.
      *
-     * @param DateTimeInterface $expiration_date The expiration date of the prescription used to verify the regulated product, in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date time format.
+     * @param \DateTimeInterface $expiration_date The expiration date of the prescription used to verify the regulated product, in [ISO 8601](https://developer-docs.amazon.com/sp-api/docs/iso-8601) date time format.
      */
     public function setExpirationDate(DateTimeInterface $expiration_date) : self
     {

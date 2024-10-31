@@ -375,7 +375,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Gets freight_ready_date.
      */
-    public function getFreightReadyDate() : DateTimeInterface
+    public function getFreightReadyDate() : \DateTimeInterface
     {
         return $this->container['freight_ready_date'];
     }
@@ -383,7 +383,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets freight_ready_date.
      *
-     * @param DateTimeInterface $freight_ready_date Type containing date in string format
+     * @param \DateTimeInterface $freight_ready_date Type containing date in string format
      */
     public function setFreightReadyDate(DateTimeInterface $freight_ready_date) : self
     {
@@ -485,7 +485,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets preview_pickup_date.
      *
-     * @param DateTimeInterface $preview_pickup_date Type containing date in string format
+     * @param \DateTimeInterface $preview_pickup_date Type containing date in string format
      */
     public function setPreviewPickupDate(DateTimeInterface $preview_pickup_date) : self
     {
@@ -505,7 +505,7 @@ class PartneredLtlDataOutput implements \ArrayAccess, \JsonSerializable, \String
     /**
      * Sets preview_delivery_date.
      *
-     * @param DateTimeInterface $preview_delivery_date Type containing date in string format
+     * @param \DateTimeInterface $preview_delivery_date Type containing date in string format
      */
     public function setPreviewDeliveryDate(DateTimeInterface $preview_delivery_date) : self
     {

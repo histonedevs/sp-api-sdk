@@ -329,7 +329,7 @@ class Feed implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Gets created_time.
      */
-    public function getCreatedTime() : DateTimeInterface
+    public function getCreatedTime() : \DateTimeInterface
     {
         return $this->container['created_time'];
     }
@@ -337,7 +337,7 @@ class Feed implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInterfa
     /**
      * Sets created_time.
      *
-     * @param DateTimeInterface $created_time the date and time when the feed was created, in ISO 8601 date time format
+     * @param \DateTimeInterface $created_time the date and time when the feed was created, in ISO 8601 date time format
      */
     public function setCreatedTime(DateTimeInterface $created_time) : self
     {

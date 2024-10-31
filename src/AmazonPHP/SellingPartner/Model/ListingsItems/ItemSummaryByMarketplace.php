@@ -478,7 +478,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets created_date.
      */
-    public function getCreatedDate() : DateTimeInterface
+    public function getCreatedDate() : \DateTimeInterface
     {
         return $this->container['created_date'];
     }
@@ -486,7 +486,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets created_date.
      *
-     * @param DateTimeInterface $created_date the date the listings item was created in ISO 8601 format
+     * @param \DateTimeInterface $created_date the date the listings item was created in ISO 8601 format
      */
     public function setCreatedDate(DateTimeInterface $created_date) : self
     {
@@ -498,7 +498,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets last_updated_date.
      */
-    public function getLastUpdatedDate() : DateTimeInterface
+    public function getLastUpdatedDate() : \DateTimeInterface
     {
         return $this->container['last_updated_date'];
     }
@@ -506,7 +506,7 @@ class ItemSummaryByMarketplace implements \ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets last_updated_date.
      *
-     * @param DateTimeInterface $last_updated_date the date the listings item was last updated in ISO 8601 format
+     * @param \DateTimeInterface $last_updated_date the date the listings item was last updated in ISO 8601 format
      */
     public function setLastUpdatedDate(DateTimeInterface $last_updated_date) : self
     {

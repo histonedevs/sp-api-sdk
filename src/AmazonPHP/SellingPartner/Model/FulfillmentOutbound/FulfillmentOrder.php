@@ -371,7 +371,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets displayable_order_date.
      */
-    public function getDisplayableOrderDate() : DateTimeInterface
+    public function getDisplayableOrderDate() : \DateTimeInterface
     {
         return $this->container['displayable_order_date'];
     }
@@ -379,7 +379,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets displayable_order_date.
      *
-     * @param DateTimeInterface $displayable_order_date Date timestamp
+     * @param \DateTimeInterface $displayable_order_date Date timestamp
      */
     public function setDisplayableOrderDate(DateTimeInterface $displayable_order_date) : self
     {
@@ -531,7 +531,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets received_date.
      */
-    public function getReceivedDate() : DateTimeInterface
+    public function getReceivedDate() : \DateTimeInterface
     {
         return $this->container['received_date'];
     }
@@ -539,7 +539,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets received_date.
      *
-     * @param DateTimeInterface $received_date Date timestamp
+     * @param \DateTimeInterface $received_date Date timestamp
      */
     public function setReceivedDate(DateTimeInterface $received_date) : self
     {
@@ -571,7 +571,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Gets status_updated_date.
      */
-    public function getStatusUpdatedDate() : DateTimeInterface
+    public function getStatusUpdatedDate() : \DateTimeInterface
     {
         return $this->container['status_updated_date'];
     }
@@ -579,7 +579,7 @@ class FulfillmentOrder implements \ArrayAccess, \JsonSerializable, \Stringable, 
     /**
      * Sets status_updated_date.
      *
-     * @param DateTimeInterface $status_updated_date Date timestamp
+     * @param \DateTimeInterface $status_updated_date Date timestamp
      */
     public function setStatusUpdatedDate(DateTimeInterface $status_updated_date) : self
     {

@@ -222,7 +222,7 @@ final class VendorDirectFulfillmentOrdersSDK implements VendorDirectFulfillmentO
     /**
      * Operation getOrders.
      *
-     * @param DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
+     * @param \DateTimeInterface $created_after Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param DateTimeInterface $created_before Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format. (required)
      * @param null|string $ship_from_party_id The vendor warehouse identifier for the fulfillment warehouse. If not specified, the result will contain orders for all warehouses. (optional)
      * @param null|string $status Returns only the purchase orders that match the specified status. If not specified, the result will contain orders that match any status. (optional)

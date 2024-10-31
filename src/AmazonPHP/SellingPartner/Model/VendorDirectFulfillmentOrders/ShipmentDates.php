@@ -181,7 +181,7 @@ class ShipmentDates implements \ArrayAccess, \JsonSerializable, \Stringable, Mod
     /**
      * Gets required_ship_date.
      */
-    public function getRequiredShipDate() : DateTimeInterface
+    public function getRequiredShipDate() : \DateTimeInterface
     {
         return $this->container['required_ship_date'];
     }

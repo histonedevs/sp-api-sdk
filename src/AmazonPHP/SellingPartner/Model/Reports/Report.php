@@ -407,7 +407,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Gets created_time.
      */
-    public function getCreatedTime() : DateTimeInterface
+    public function getCreatedTime() : \DateTimeInterface
     {
         return $this->container['created_time'];
     }
@@ -415,7 +415,7 @@ class Report implements \ArrayAccess, \JsonSerializable, \Stringable, ModelInter
     /**
      * Sets created_time.
      *
-     * @param DateTimeInterface $created_time the date and time when the report was created
+     * @param \DateTimeInterface $created_time the date and time when the report was created
      */
     public function setCreatedTime(DateTimeInterface $created_time) : self
     {

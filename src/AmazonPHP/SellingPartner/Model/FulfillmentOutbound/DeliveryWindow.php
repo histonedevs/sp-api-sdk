@@ -185,7 +185,7 @@ class DeliveryWindow implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets start_date.
      */
-    public function getStartDate() : DateTimeInterface
+    public function getStartDate() : \DateTimeInterface
     {
         return $this->container['start_date'];
     }
@@ -193,7 +193,7 @@ class DeliveryWindow implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets start_date.
      *
-     * @param DateTimeInterface $start_date Date timestamp
+     * @param \DateTimeInterface $start_date Date timestamp
      */
     public function setStartDate(DateTimeInterface $start_date) : self
     {
@@ -205,7 +205,7 @@ class DeliveryWindow implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Gets end_date.
      */
-    public function getEndDate() : DateTimeInterface
+    public function getEndDate() : \DateTimeInterface
     {
         return $this->container['end_date'];
     }
@@ -213,7 +213,7 @@ class DeliveryWindow implements \ArrayAccess, \JsonSerializable, \Stringable, Mo
     /**
      * Sets end_date.
      *
-     * @param DateTimeInterface $end_date Date timestamp
+     * @param \DateTimeInterface $end_date Date timestamp
      */
     public function setEndDate(DateTimeInterface $end_date) : self
     {

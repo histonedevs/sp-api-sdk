@@ -1,6 +1,6 @@
 {
     "name": "histonedevs/sp-api-sdk",
-    "version": "v6.0.4",
+    "version": "v6.0.5",
     "description": "Amazon Selling Partner API - PHP SDK",
     "keywords": ["amazon", "selling-partner-api", "php", "sdk", "rest", "api"],
     "homepage": "https://openapi-generator.tech",

@@ -235,7 +235,7 @@ class PaymentInformation implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Gets payment_date.
      */
-    public function getPaymentDate() : DateTimeInterface
+    public function getPaymentDate() : \DateTimeInterface
     {
         return $this->container['payment_date'];
     }
@@ -243,7 +243,7 @@ class PaymentInformation implements \ArrayAccess, \JsonSerializable, \Stringable
     /**
      * Sets payment_date.
      *
-     * @param DateTimeInterface $payment_date Date timestamp
+     * @param \DateTimeInterface $payment_date Date timestamp
      */
     public function setPaymentDate(DateTimeInterface $payment_date) : self
     {
