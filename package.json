@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "openapitools": "github:openapitools/openapi-generator-cli"
+  }
+}

@@ -4,3 +4,4 @@ var/
 .env
 .idea
 openapitools.json
+node_modules
