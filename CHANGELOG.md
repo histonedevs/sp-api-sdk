@@ -3,6 +3,9 @@
 ### Added
 - [#683](https://github.com/amazon-php/sp-api-sdk/pull/683) - **Updated API SDKs and Models** - [@jasonhebert](https://github.com/jasonhebert)
 
+### Changed
+- [#684](https://github.com/amazon-php/sp-api-sdk/pull/684) - **Update dependabot.yml configuration** - [@jasonhebert](https://github.com/jasonhebert)
+
 ## [6.0.1] - 2024-07-17
 
 ### Added
