@@ -1,4 +1,4 @@
-## [Unreleased] - 2024-11-04
+## [6.1.0] - 2024-11-05
 
 ### Added
 - [#683](https://github.com/amazon-php/sp-api-sdk/pull/683) - **Updated API SDKs and Models** - [@jasonhebert](https://github.com/jasonhebert)
